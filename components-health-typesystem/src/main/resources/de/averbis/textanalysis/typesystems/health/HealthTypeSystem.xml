@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+	<name>de.averbis.textanalysis.typesystems.health.HealthTypeSystem</name>
+	<description/>
+	<version>${project.version}</version>
+	<vendor>Averbis GmbH</vendor>
+	<imports>
+		<import name="de.averbis.textanalysis.typesystems.AverbisTypeSystem"/>
+	</imports>
+	<types>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.Status</name>
+			<description>Supertype for status annotations of a diagnosis, medication etc.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>interpretation</name>
+					<description>Interpretation of referenced value.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>statusReference</name>
+					<description>Reference to annotation that specifies/ verifies status.</description>
+					<rangeTypeName>uima.tcas.Annotation</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.StatusIndicator</name>
+			<description>Indicator for a status of a diagnosis, medication etc..</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<features>
+		        <featureDescription>
+		          <name>interpretation</name>
+		          <description>Interpretation of referenced value, e.g. ASSURED, NEGATED, SUSPECTED etc.</description>
+		          <rangeTypeName>uima.cas.String</rangeTypeName>
+		        </featureDescription>
+	      	</features>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.Laterality</name>
+			<description>Laterality of an annotation, e.g. diagnosis or ophthalmology.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>value</name>
+					<description>Laterality value, e.g. RIGHT, LEFT, BOTH</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>reference</name>
+					<description>Indicator that determines the laterality.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.LateralityIndicator</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.LateralityIndicator</name>
+			<description>Indicator for the laterality of an annotation, e.g. diagnosis or ophthalmology.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>value</name>
+					<description>Value the indicator stands for, e.g. RIGHT, LEFT, BOTH</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.LateralityForCodeIndicator</name>
+			<description>Indicator for the laterality of an annotation, e.g. diagnosis. Only valid if close to a ICD-10 Code.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>value</name>
+					<description>Value the indicator stands for, e.g. RIGHT, LEFT, BOTH</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.LateralityContext</name>
+			<description>Context with the same laterality.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>reference</name>
+					<description>Laterality of the context.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.Laterality</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.FamilyIndicator</name>
+			<description>Indicator for a diagnosis in the family.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+		</typeDescription>
+	</types>
+</typeSystemDescription>

@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+	<name>de.averbis.textanalysis.typesystems.health.ClinicalSectionTypeSystem</name>
+	<description/>
+	<version>${project.version}</version>
+	<vendor>Averbis GmbH</vendor>
+	<imports>
+		<import name="de.averbis.textanalysis.typesystems.AverbisTypeSystem"/>
+	</imports>
+	<types>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.ClinicalSectionCandidate</name>
+			<description>Candidates of clinical sections.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>headline</name>
+					<description>Headline of actual clinical section candidate.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.ClinicalSectionHeadline</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>content</name>
+					<description>Content of actual clinical section candidate.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.ClinicalSectionContent</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.ClinicalSectionCandidateWithoutHeadline</name>
+			<description>Candidates of clinical sections without headline.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.ClinicalSectionCandidate</supertypeName>
+			<features>
+				<featureDescription>
+					<name>concept</name>
+					<description>Non headline concept indicating actual section.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.ClinicalSectionKeywordConcept</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.ClinicalSectionHeadline</name>
+			<description>Clinical section headline.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>headlineConcept</name>
+					<description>Concept annotation indicating headline.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.ClinicalSectionKeywordConcept</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.ClinicalSectionContent</name>
+			<description>Clinical section content.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+		</typeDescription>
+
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.ClinicalSectionKeywordConcept</name>
+			<description>Concept type for clinical section keywords.</description>
+			<supertypeName>de.averbis.extraction.types.Concept</supertypeName>
+		</typeDescription>
+	
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.ClinicalSection</name>
+			<description>Section type for clinical sections.</description>
+			<supertypeName>de.averbis.extraction.types.Section</supertypeName>
+			<features>
+				<featureDescription>
+					<name>concept</name>
+					<description>Concept indicating actual section.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.ClinicalSectionKeywordConcept</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>headline</name>
+					<description>Headline annotation of actual section.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.ClinicalSectionHeadline</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>content</name>
+					<description>Content annotation of actual section.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.ClinicalSectionContent</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+		
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.AnamnesisSection</name>
+			<description>History general describes all aspects of medical history of the patient even if not pertinent to the 
+	 	 					current procedure, and may include chief complaint, past medical history, social history, family 
+	 	 					history, surgical or procedure history, medication history, and other history information. 
+	 	 					The history may be limited to information pertinent to the current procedure or may be more 
+	 	 					comprehensive. It may also be reported as a collection of random clinical statements or it may be 
+	 	 					reported categorically. Categorical report formats may be divided into multiple subsections, including 
+	 	 					Past Medical History and Social History.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.ClinicalSection</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.FamilyAnamnesisSection</name>
+			<description>History of family member diseases is a report of health information, including medical, genetic, 
+		 					environmental, and lifestyle factors, pertaining to the patient and his or her genetic relatives 
+		 					(living or deceased). The family history information is used to determine possible or relevant health 
+		 					risk factors that may have a potential impact on the patient's healthcare risk profile.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.AnamnesisSection</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.SocialAnamnesisSection</name>
+			<description>The Social history section contains data defining the patient's occupational, personal (e.g. lifestyle), 
+		 					social, and environmental history and health risk factors, as well as administrative data such as 
+		 					marital status, race, ethnicity and religious affiliation.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.AnamnesisSection</supertypeName>
+		</typeDescription>		
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.FunctionalStatusSection</name>
+			<description>Functional status assessment describes the patient's status of normal functioning at the time a care 
+		 					record was created. Functional statuses include information regarding the patient relative to 
+		 					ambulatory ability, mental status or competency, activities of daily living (ADLs) (i.e. bathing, 
+		 					dressing, feeding, grooming), home/living situation having an effect on the health status of the 
+		 					patient, ability to care for self, social activity (i.e. issues with social cognition, participation 
+		 					with friends and acquaintances other than family members), occupation activity (i.e. activities partly 
+		 					or directly related to working), housework or volunteering, family and home responsibilities or 
+		 					activities related to home and family, communication ability (i.e. issues with speech, writing or 
+		 					cognition required for communication), and perception, including sight, hearing, taste, skin sensation, 
+		 					kinesthetic sense, proprioception, or balance.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.AnamnesisSection</supertypeName>
+		</typeDescription>
+
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.TherapySection</name>
+			<description>This term was originally created for, though not limited in use to, the HL7 Implementation Guide for 
+		  					CDA: Progress Note. The Interventions section contains information about the specific interventions 
+		  					provided during the healthcare visit. Depending on the type of intervention(s) provided (procedural, 
+		  					education, application of assistive equipment, etc.), the details will vary but may include specification 
+		  					of frequency, intensity, and duration.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.ClinicalSection</supertypeName>
+		</typeDescription>		
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.TreatmentRecommendationSection</name>
+			<description>Plan of care notes (previously defined as "Plan of treatment") contains data that defines pending 
+		 					orders, interventions, encounters, services, and procedures for the patient. The plan includes 
+		 					prospective, unfulfilled, or incomplete orders and requests only. The plan may also contain 
+		 					information about ongoing care of the patient and information regarding goals and clinical reminders.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.TherapySection</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.ConditioningTreatmentSection</name>
+			<description>Myeloablative conditioning treatment such as irradiation therapy or chemotherapy.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.TherapySection</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.MedicationSection</name>
+			<description>Medications administered defines medications and fluids administered during the procedure, excluding 
+		 					anesthetic medications. Medications administered for anesthesia are typically documented in the 
+		 					section on Anesthesia.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.TherapySection</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.MedicationHistorySection</name>
+			<description>History of medication use defines a patient's current medications and history of pertinent medications. 
+		 					This term may also include a patient's prescription and dispense history.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.MedicationSection</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.AdmissionMedicationSection</name>
+			<description>Admission can refer to hospital admission, long-term care admission, or home health admission.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.MedicationSection</supertypeName>
+		</typeDescription>		
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.DischargeMedicationSection</name>
+			<description>Hospital discharge medications defines the medications that the patient is intended to take (or stop) after 
+		 					discharge. This may also include a patient's prescription history and indicate the source of the medication 
+		 					list, for example, from a pharmacy system versus from the patient.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.MedicationSection</supertypeName>
+		</typeDescription>		
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.MedicationRecommendationSection</name>
+			<description>Recommendation for medication after discharge.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.MedicationSection</supertypeName>
+		</typeDescription>		
+		
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.DiagnosisSection</name>
+			<description>History of present illness describes the history related to the reason for a given procedure. It 
+		 					contains the historical details leading up to and pertaining to the patient's current complaint or 
+		 					reason for seeking medical care. Because history of present illness can include past surgical history 
+		 					and other procedures, the Procedure History section may be included under the History of Present 
+		 					Illness section or it may stand alone as its own section.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.ClinicalSection</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.MainDiagnosisSection</name>
+			<description>Chief complaint records the patient's primary complaint (the patient's own description).</description>
+			<supertypeName>de.averbis.textanalysis.types.health.DiagnosisSection</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.DiagnosisHistorySection</name>
+			<description>History of past illness describes the history related to their current complaints, problems, 
+		 					or diagnoses.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.DiagnosisSection</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.AdmissionDiagnosisSection</name>
+			<description>Section containing information about diagnosis on admission.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.DiagnosisSection</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.AdmissionReasonSection</name>
+			<description>This section records the patient's reason for their visit (the provider's description of the reason 
+		 					for visit). Local policy determines whether the information is divided into two sections or recorded 
+		 					in one section serving both purposes.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.DiagnosisSection</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.DischargeDiagnosisSection</name>
+			<description>Hospital discharge diagnosis describes the patient's relevant problems or diagnoses that occurred 
+		 					during the hospitalization or that need to be followed after hospitalization.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.DiagnosisSection</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.AdverseEventSection</name>
+			<description>Contains a list and description of any allergies or adverse reactions pertinent to current or past 
+		 					medical history. At a minimum this section should contain currently active and any relevant historical 
+		 					allergies and adverse reactions.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.DiagnosisSection</supertypeName>
+		</typeDescription>
+		
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.ObservationSection</name>
+			<description>The Procedure findings section records clinically significant observations confirmed or discovered 
+		 					during a procedure, treatment or service.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.ClinicalSection</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.LaboratorySection</name>
+			<description>Section containing laboratory information.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.ObservationSection</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.VitalSignSection</name>
+			<description>Section containing information about vital signs.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.ObservationSection</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.SonographySection</name>
+			<description>Section containing information about sonography.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.ObservationSection</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.EchocardiographySection</name>
+			<description>Section containing information about echocardiography.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.ObservationSection</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.ECGSection</name>
+			<description>Section containing information about ECG.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.ObservationSection</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.AngiogramSection</name>
+			<description>Section containing information about angiogram.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.ObservationSection</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.OphthalmologySection</name>
+			<description>Section containing information about ophthalmology.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.ObservationSection</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.VisualAcuitySection</name>
+			<description>Section containing information about the visual acuity.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.OphthalmologySection</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.TensioSection</name>
+			<description>Section containing information about the tensio.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.OphthalmologySection</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.AnteriorEyeSegmentSection</name>
+			<description>Section containing information about the anterior eye segment.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.OphthalmologySection</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.OcularFundusSection</name>
+			<description>Section containing information about the ocular fundus.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.OphthalmologySection</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.OpticalCoherenceTomographySection</name>
+			<description>Section containing information about the optical coherence tomography.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.OphthalmologySection</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.FunctionalAngiographySection</name>
+			<description>Section containing information about the functional angiography.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.OphthalmologySection</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.FindingSection</name>
+			<description>Section containing information about findings.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.ObservationSection</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.DischargeFindingSection</name>
+			<description>Hospital discharge physical findings records a narrative description of the patient's physical findings.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.FindingSection</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.GeneralConditionSection</name>
+			<description>Physical findings (of general status) describes general observations and readily observable attributes 
+		 					of the patient, including affect and demeanor, apparent age compared to actual age, gender, ethnicity, 
+		 					nutritional status based on appearance, body build and habitus (e.g., muscular, cachectic, obese), 
+		 					developmental or other deformities, gait and mobility, personal hygiene, evidence of distress, and 
+		 					voice quality and speech.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.FindingSection</supertypeName>
+		</typeDescription>
+
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.SpecimenSection</name>
+			<description>The Procedure specimens taken section records the tissues, objects, or samples taken from the patient 
+		 					during the procedure including biopsies, aspiration fluid, or other samples sent for pathological 
+		 					analysis. The narrative may include a description of the specimens.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.ClinicalSection</supertypeName>
+		</typeDescription>
+
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.SymptomSection</name>
+			<description>The Review of systems section contains a relevant collection of symptoms and functions systematically 
+		 					gathered by a clinician. It includes symptoms the patient is currently experiencing, some of which 
+		 					were not elicited during the history of present illness, as well as a potentially large number of 
+		 					pertinent negatives, for example, symptoms that the patient denied experiencing.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.ClinicalSection</supertypeName>
+		</typeDescription>
+
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.ProcedureSection</name>
+			<description>Procedure records the descriptions of the procedure with an extensive narrative and may include 
+		 					procedure site preparation, pertinent details related to measurements and markings, procedure times, 
+		 					instrumentation, and vital signs and other monitoring data.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.ClinicalSection</supertypeName>
+		</typeDescription>
+
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.ProcedureHistorySection</name>
+			<description>This section defines all interventional, surgical, diagnostic, or therapeutic procedures or treatments 
+							pertinent to the patient historically and at the time the document is generated.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.ProcedureSection</supertypeName>
+		</typeDescription>
+		
+
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.EpicrisisSection</name>
+			<description>An evaluation (also called asessment, impression or diagnoses) note represents the clinician's 
+		 					conclusions and working assumptions that will guide treatment of the patient. The assessment 
+		 					formulates a specific plan or set of recommendations. The assessment may be a list of specific 
+		 					disease entities or a narrative block.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.ClinicalSection</supertypeName>
+		</typeDescription>
+		
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.MiscClinicalSection</name>
+			<description>Section containing other information.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.ClinicalSection</supertypeName>
+		</typeDescription>
+		
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.DocumentFooterSection</name>
+			<description>Section containing document footer.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.MiscClinicalSection</supertypeName>
+		</typeDescription>		
+	</types>
+</typeSystemDescription>

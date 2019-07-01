@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+	<name>de.averbis.textanalysis.typesystems.health.OncologyTypeSystem</name>
+	<description/>
+	<version>${project.version}</version>
+	<vendor>Averbis GmbH</vendor>
+	<imports>
+		<import name="de.averbis.textanalysis.typesystems.AverbisTypeSystem"/>
+		<import name="de.averbis.textanalysis.typesystems.NumericValueTypeSystem"/>
+		<import name="de.averbis.textanalysis.typesystems.MeasurementTypeSystem"/>
+		<import name="de.averbis.textanalysis.typesystems.health.HealthTypeSystem"/>
+		<import name="de.averbis.textanalysis.typesystems.health.DiagnosisTypeSystem"/>
+	</imports>
+	<types>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.MorphologyConcept</name>
+			<description>The concept type for all morphology concepts.</description>
+			<supertypeName>de.averbis.extraction.types.Concept</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.MorphologyCodeConcept</name>
+			<description>The concept type for morphology concepts given by their codes.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.MorphologyConcept</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.MorphologySpecialConcept</name>
+			<description>The concept type for morphology concepts mostly induced by some additional logic.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.MorphologyConcept</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.TopographyConcept</name>
+			<description>The concept type for all topography concepts.</description>
+			<supertypeName>de.averbis.extraction.types.Concept</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.TopographyCodeConcept</name>
+			<description>The concept type for topography concepts given by their code.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.TopographyConcept</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.TopographySpecialConcept</name>
+			<description>The concept type for special topography concepts mostly induced by some additional logic.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.TopographyConcept</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.BreastQuadrant</name>
+			<description>Aggregating annotation for breast quadrants storing additional information.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>clock</name>
+					<description>The location given by a clock value.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.LocationClock</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>side</name>
+					<description>The side of the quadrant.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.LocationSide</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>horizontal</name>
+					<description>The horizontal orientation.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.LocationHorizontal</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>vertical</name>
+					<description>The vertical orientation.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.LocationVertical</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.LocationClock</name>
+			<description>The position/location given by a clock value.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.QuadrantElement</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.LocationSide</name>
+			<description>The location given by the side: R, L, T, U</description>
+			<supertypeName>de.averbis.textanalysis.types.health.QuadrantElement</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.LocationHorizontal</name>
+			<description>The position/location given by a horizontal orientation.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.QuadrantElement</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.LocationVertical</name>
+			<description>The position/location given by a vertical orientation.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.QuadrantElement</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.QuadrantElement</name>
+			<description>Abstract type for element of a quadrant.</description>
+			<supertypeName>de.averbis.extraction.types.Entity</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.GleasonScore</name>
+			<description>The Gleason score.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>score</name>
+					<description>The combined score.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.numericvalue.NumericValue</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>primary</name>
+					<description>The primary score.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.numericvalue.NumericValue</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>secondary</name>
+					<description>The secondary score.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.numericvalue.NumericValue</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.Receptor</name>
+			<description>A generic receptor providing a status and percentage.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>status</name>
+					<description>The status with an interpretation, e.g., "++"".</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.ReceptorStatus</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>percentage</name>
+					<description>The percentage represented as a measurement.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.measurement.Measurement</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.EstrogenReceptor</name>
+			<description>A estrogen receptor providing a status and percentage.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.Receptor</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.ProgesteroneReceptor</name>
+			<description>A progesterone receptor providing a status and percentage.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.Receptor</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.HER2</name>
+			<description>A HER2 receptor providing a status and percentage.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.Receptor</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.ReceptorStatus</name>
+			<description>The status of a receptor.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.Status</supertypeName>
+		</typeDescription>
+		
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.TumorStage</name>
+			<description>Stage information describing a tumor mention.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>stage</name>
+					<description>The stage of the tumor.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.TumorStageIndicator</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>modifier</name>
+					<description>Modifier of the tumor stage.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.TumorStageModifierIndicator</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.TumorStageIndicator</name>
+			<description>Indicator for a tumor stage representing a numeric value.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>value</name>
+					<description>Numeric value of the stage.</description>
+					<rangeTypeName>uima.cas.Integer</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.TumorStageModifierIndicator</name>
+			<description>Indicator for a tumor stage modifier.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>value</name>
+					<description>Value of the tumor stage modifier indicator.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+		<typeDescription>
+      	<name>de.averbis.textanalysis.types.health.Specimen</name>
+      	<description>Specimen procedure information type.</description>
+      	<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+      	<features>
+      		<featureDescription>
+    	      	<name>identifier</name>
+   		      	<description>Identifier of this specimen.</description>
+        		<rangeTypeName>uima.cas.String</rangeTypeName>
+        	</featureDescription>
+        	<featureDescription>
+    	      	<name>diagnosis</name>
+   		      	<description>The diagnosis of the specimen.</description>
+        		<rangeTypeName>de.averbis.textanalysis.types.health.DiagnosisConcept</rangeTypeName>
+        	</featureDescription>
+        	<featureDescription>
+          		<name>morphology</name>
+          		<description>The morphology of the specimen.</description>
+          		<rangeTypeName>de.averbis.textanalysis.types.health.MorphologyConcept</rangeTypeName>
+        	</featureDescription>
+        	<featureDescription>
+          		<name>topography</name>
+          		<description>The topography of the specimen.</description>
+          		<rangeTypeName>de.averbis.textanalysis.types.health.TopographyConcept</rangeTypeName>
+        	</featureDescription>
+      		<featureDescription>
+          		<name>laterality</name>
+          		<description>Optional laterality.</description>
+          		<rangeTypeName>de.averbis.textanalysis.types.health.Laterality</rangeTypeName>
+        	</featureDescription>
+        	<featureDescription>
+          		<name>descriptions</name>
+          		<description>Additional descriptions of the specimen.</description>
+          		<rangeTypeName>uima.cas.FSArray</rangeTypeName>
+        	</featureDescription>
+      	</features>
+	</typeDescription>
+	</types>
+</typeSystemDescription>

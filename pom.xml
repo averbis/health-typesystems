@@ -1,0 +1,64 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>health-typesystems</artifactId>
+    <version>2.25.0-SNAPSHOT</version>
+
+	<name>${project.groupId}:${project.artifactId}</name>
+	<description>The UIMA type systems of the Averbis health components</description>
+	<url>https://github.com/averbis/health-typesystems</url>
+
+	<parent>
+		<groupId>de.averbis.textanalysis</groupId>
+		<artifactId>parent-pom-typesystems</artifactId>
+		<version>3.21.0-SNAPSHOT</version>
+	</parent>
+
+	<packaging>pom</packaging>
+	
+	<properties>
+		<core-typesystems-version>3.21.0-SNAPSHOT</core-typesystems-version>
+	</properties>
+	
+	<licenses>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+	
+	<developers>
+	    <developer>
+			<email>info@averbis.com</email>
+			<organization>Averbis</organization>
+			<organizationUrl>https://averbis.com/</organizationUrl>
+		</developer>
+	</developers>
+	
+	<scm>
+		<connection>scm:git:git://github.com/averbis/health-typesystems</connection>
+		<developerConnection>scm:git:git@github.com:averbis/health-typesystems.git</developerConnection>
+		<url>https://github.com/averbis/health-typesystems</url>
+		<tag>HEAD</tag>
+	</scm>
+	
+	<modules>
+		<module>components-health-typesystem</module>
+		<module>tnm-typesystem</module>
+		<module>diagnosis-typesystem</module>
+		<module>oncology-typesystem</module>
+		<module>therapy-typesystem</module>
+		<module>medication-typesystem</module>
+		<module>observation-typesystem</module>
+		<module>laboratory-value-typesystem</module>
+		<module>clinical-section-typesystem</module>
+		<module>medical-negation-typesystem</module>
+		<module>patient-information-typesystem</module>
+		<module>ehr-information-typesystem</module>
+		<module>procedure-typesystem</module>
+		<module>medical-disambiguation-typesystem</module>
+		<module>pathology-typesystem</module>
+	</modules>
+	
+</project>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+	<name>de.averbis.textanalysis.typesystems.health.LaboratoryValueTypeSystem</name>
+	<description/>
+	<version>${project.version}</version>
+	<vendor>Averbis GmbH</vendor>
+	<imports>
+		<import name="de.averbis.textanalysis.typesystems.MeasurementTypeSystem"/>
+		<import name="de.averbis.textanalysis.typesystems.health.ObservationTypeSystem"/>
+	</imports>
+	<types>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.LaboratoryValue</name>
+			<description>The actual laboratory value containing the concept and additional information.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.AbstractObservation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>fact</name>
+					<description>Measurement or numeric value of actual laboratory value.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.measurement.Measurement</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>factAssessment</name>
+					<description>A optional relative assessment of the fact.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.measurement.ComparisonIndicator</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>lowerLimit</name>
+					<description>Lower reference value of actual laboratory value.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.measurement.Measurement</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>upperLimit</name>
+					<description>Upper reference value of actual laboratory value.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.measurement.Measurement</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>interpretation</name>
+					<description>Interpretation of fact depending on reference values or interpretation in text.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.AbstractInterpretation</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>qualitativeValue</name>
+					<description>Qualitative value of the actual laboratory value, e.g. positive, negative.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.QualitativeValue</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+		            <name>belongsTo</name>
+		            <description>Laboratory value belongs to patient or other person. Possible values are 'RECIPIENT', 'DONOR' or 'FAMILY'.</description>
+		            <rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.LaboratoryConcept</name>
+			<description>Laboratory parameter concept.</description>
+			<supertypeName>de.averbis.extraction.types.Concept</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.Limit</name>
+			<description>Limit value from text or external source.</description>
+			<supertypeName>de.averbis.textanalysis.types.measurement.Measurement</supertypeName>
+			<features>
+				<featureDescription>
+					<name>externalSource</name>
+					<description>Information about limit value from external source.</description>
+					<rangeTypeName>uima.cas.Boolean</rangeTypeName>
+				</featureDescription>			
+			</features>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PriorLaboratoryValue</name>
+			<description>A prior LaboratoryValue.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.LaboratoryValue</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.LabValueIgnore</name>
+			<description>Helper type for representing text spans that should be ignored by the pattern building LaboratoryValue.</description>
+			<supertypeName>uima.tcas.Annotation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PriorLabValueIndicator</name>
+			<description>Helper type for representing text spans that indicating a prior LaboratoryValue.</description>
+			<supertypeName>uima.tcas.Annotation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.NoLaboratoryValue</name>
+			<description>An indicator annotation specifying that this span is no part of a laboratory value.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.NoLaboratoryValueContext</name>
+			<description>An indicator annotation specifying that a nearby span is no part of a lab value.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.NoLaboratoryValueContextBlocker</name>
+			<description>An indicator annotation specifying that a nearby context is applicable for changing the semantic of the lab value.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.LaboratoryValueContext</name>
+			<description>An indicator annotation specifying that a nearby span is part of a lab value.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.TransplantationRoleIndicator</name>
+			<description>An indicator annotation specifying the role of a person, e.g. recipient/donor.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>role</name>
+					<description>The role of a person.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>			
+			</features>
+		</typeDescription>
+	</types>
+</typeSystemDescription>

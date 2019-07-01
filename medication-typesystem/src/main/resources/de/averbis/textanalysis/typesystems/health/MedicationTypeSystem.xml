@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+	<name>de.averbis.textanalysis.typesystems.health.MedicationTypeSystem</name>
+	<description/>
+	<version>${project.version}</version>
+	<vendor>Averbis GmbH</vendor>
+	<imports>
+		<import name="de.averbis.textanalysis.typesystems.health.HealthTypeSystem"/>
+		<import name="de.averbis.textanalysis.typesystems.MeasurementTypeSystem"/>
+	</imports>
+	<types>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.Medication</name>
+			<description>The actual medication containing the concept and additional information.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>drug</name>
+					<description>Drug or multi drug of the actual medication.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.AbstractDrug</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>doseForm</name>
+					<description>Dose form of the actual medication.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.DoseFormConcept</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>doseFrequency</name>
+					<description>Dose frequency of the actual medication. Could be AbstractDoseFrequency or DailyDoseFrequency, WeeklyDoseFrequency etc.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.DoseFrequency</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>date</name>
+					<description>Temporal information about the actual medication.</description>
+					<rangeTypeName>de.averbis.extraction.types.CoreAnnotation</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>administrations</name>
+					<description>The routes of administration of this medication.</description>
+					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
+					<elementType>de.averbis.textanalysis.types.health.Administration</elementType>
+				</featureDescription>
+				<featureDescription>
+					<name>additionalAmounts</name>
+					<description>Additional mentions of dose amounts, e.g., 2 doses.</description>
+					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
+					<elementType>de.averbis.textanalysis.types.health.AdditionalDoseAmount</elementType>
+				</featureDescription>
+				<featureDescription>
+					<name>status</name>
+					<description>Status of the medication, e.g. ADMISSION, DISCHARGE. For all available value see MedicationStatus.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.MedicationStatus</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>termTypes</name>
+					<description>Additional information on clinical drug, e.g. semantic clinical drug (RxNorm Term Type).</description>
+					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
+					<elementType>de.averbis.textanalysis.types.health.TTY</elementType>
+				</featureDescription>
+			</features>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.AbstractDrug</name>
+			<description>Supertype of the drugs.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>brandName</name>
+					<description>The brand name of the drug.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.Drug</name>
+			<description>Drug with only one ingredient.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.AbstractDrug</supertypeName>
+			<features>
+				<featureDescription>
+					<name>ingredient</name>
+					<description>The ingredient concept of the actual drug.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.IngredientConcept</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>strength</name>
+					<description>Strength of the drug</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.Strength</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.MultiDrug</name>
+			<description>Drug with more than one ingredient.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.AbstractDrug</supertypeName>
+			<features>
+				<featureDescription>
+					<name>drugs</name>
+					<description>List of all drugs contained in the actual multi drug</description>
+					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
+					<elementType>de.averbis.textanalysis.types.health.Drug</elementType>
+				</featureDescription>
+				<featureDescription>
+					<name>concept</name>
+					<description>The original ingredient concept responsible for the multi drug.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.IngredientConcept</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.Strength</name>
+			<description>The strength of a drug concerning a medication.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>concept</name>
+					<description>An optional concept describing the strength.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.StrengthConcept</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>measurement</name>
+					<description>The actual strength as a measurement</description>
+					<rangeTypeName>de.averbis.textanalysis.types.measurement.Measurement</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>		
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.IngredientConcept</name>
+			<description>Concept type for ingredients.</description>
+			<supertypeName>de.averbis.extraction.types.Concept</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.DoseFormConcept</name>
+			<description>Concept type for dose forms.</description>
+			<supertypeName>de.averbis.extraction.types.Concept</supertypeName>
+		</typeDescription>		
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.StrengthConcept</name>
+			<description>Concept type for strengths.</description>
+			<supertypeName>de.averbis.extraction.types.Concept</supertypeName>
+		</typeDescription>	
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.DoseFrequency</name>
+			<description>Supertype of the dose frequencies.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>interval</name>
+					<description>The taking interval of a medication, e.g. day, week, month etc.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>totalCount</name>
+					<description>Total count of taken drug units per interval.</description>
+					<rangeTypeName>uima.cas.Double</rangeTypeName>
+				</featureDescription>		
+				<featureDescription>
+					<name>totalDose</name>
+					<description>Total dose of taken drug per interval.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.measurement.Measurement</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>regimen</name>
+					<description>Annotation of the mentioned regimen, e.g. 'three times daily'</description>
+					<rangeTypeName>uima.tcas.Annotation</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>concept</name>
+					<description>Optional concept that was the origin of the dose frequency.</description>
+					<rangeTypeName>de.averbis.extraction.types.Concept</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>	
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.DoseFrequencyConcept</name>
+			<description>Concept type for dose frequencies.</description>
+			<supertypeName>de.averbis.extraction.types.Concept</supertypeName>
+		</typeDescription>		
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.DayTimeDoseFrequency</name>
+			<description>Details of dose frequency for a specific time of day.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.DoseFrequency</supertypeName>
+			<features>
+				<featureDescription>
+					<name>morning</name>
+					<description>Number of drug units in the morning.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.numericvalue.NumericValue</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>midday</name>
+					<description>Number of drug units at midday.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.numericvalue.NumericValue</rangeTypeName>
+				</featureDescription>		
+				<featureDescription>
+					<name>evening</name>
+					<description>Number of drug units in the evening.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.numericvalue.NumericValue</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>atNight</name>
+					<description>Number of drug units at night or bedtime.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.numericvalue.NumericValue</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.TimeMeasurementDoseFrequency</name>
+			<description>Details of dose frequency with interval given by a time measurement like daily or each two weeks.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.DoseFrequency</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.WeekDayDoseFrequency</name>
+			<description>Details of dose frequency for a specific weekday.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.DoseFrequency</supertypeName>
+			<features>
+				<featureDescription>
+					<name>monday</name>
+					<description>Number of drug units on monday.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.numericvalue.NumericValue</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>tuesday</name>
+					<description>Number of drug units on tuesday.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.numericvalue.NumericValue</rangeTypeName>
+				</featureDescription>	
+				<featureDescription>
+					<name>wednesday</name>
+					<description>Number of drug units on wednesday.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.numericvalue.NumericValue</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>thursday</name>
+					<description>Number of drug units on thursday.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.numericvalue.NumericValue</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>friday</name>
+					<description>Number of drug units on friday.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.numericvalue.NumericValue</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>saturday</name>
+					<description>Number of drug units on saturday.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.numericvalue.NumericValue</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>sunday</name>
+					<description>Number of drug units on sunday.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.numericvalue.NumericValue</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.Administration</name>
+			<description>Textspan specifying a route of administration.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.AdditionalDoseAmount</name>
+			<description>Textspan specifying additional information of the dose amount.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>value</name>
+					<description>The numeric value describing the additional amount.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.numericvalue.NumericValue</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.TTY</name>
+			<description>RxNorm Term Type</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>kind</name>
+					<description>Kind of term type, e.g. SCD.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>code</name>
+					<description>Term type code for actual medication.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>description</name>
+					<description>Term type description for actual medication.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.AdditionalDoseAmountIndicator</name>
+			<description>Indicator for following additional dose amount.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.MedicationIgnore</name>
+			<description>Abstract super type for text spans that should be ignored when building the medication relation.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.MedicationIgnorePhrase</name>
+			<description>Text spans based on dictionaries or patterns that should be ignored when building the medication relation.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.MedicationIgnoreEntity</name>
+			<description>Text spans based on a given annotation that should be ignored when building the medication relation.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.NoMedication</name>
+			<description>An indicator annotation specifying that this span is no part of a medication.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.NoMedicationContext</name>
+			<description>An indicator annotation specifying that a nearby span is no part of a medication.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.NoMedicationContextBlocker</name>
+			<description>An indicator annotation specifying that a nearby context is applicable for changing the semantic of the medication.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.MedicationContext</name>
+			<description>An indicator annotation specifying that a nearby span is part of a medication.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.MedicationStatus</name>
+			<description>Status of the medication. Available values: ADMISSION, INPATIENT, DISCHARGE, NEGATED, CONSIDERED, INTENDED, FAMILY.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.Status</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.MedicationStatusIndicator</name>
+			<description>Indicator for a status of a medication. Interpretation could be e.g. NEGATED, CONSIDERED, ADMISSION, DISCHARGE. For all available value see MedicationStatus.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.StatusIndicator</supertypeName>
+		</typeDescription>
+	</types>
+</typeSystemDescription>
