@@ -13,5 +13,23 @@
 			<description>Concept type for specialist department.</description>
 			<supertypeName>de.averbis.extraction.types.Concept</supertypeName>
 		</typeDescription>
+
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.SpecialistDepartment</name>
+			<description>Specialist department with additional information e.g. about department type.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>concept</name>
+					<description>The actual concept of the specialist department.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.SpecialistDepartmentConcept</rangeTypeName>
+		        </featureDescription>
+				<featureDescription>
+					<name>departmentType</name>
+					<description>Type of the department, e.g. sender.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+		        </featureDescription>
+		    </features>
+		</typeDescription>
 	</types>
 </typeSystemDescription>
