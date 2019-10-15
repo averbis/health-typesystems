@@ -102,7 +102,12 @@
 					<name>matchedTerm</name>
 					<description>Additional information about the match.</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
-		        </featureDescription>		        
+		        </featureDescription>
+		        <featureDescription>
+					<name>kind</name>
+					<description>The kind of the CodingCandidate, i.e. 'ICD' or 'OPS'.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+		        </featureDescription>		        	        
 		      </features>
 		  </typeDescription>    	
 		<typeDescription>
