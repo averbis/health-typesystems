@@ -43,6 +43,23 @@
 			<supertypeName>de.averbis.textanalysis.types.health.TopographyConcept</supertypeName>
 		</typeDescription>
 		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.BreastTopographyConcept</name>
+			<description>The concept type for topography concepts describing a part of breast.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.TopographyConcept</supertypeName>
+			<features>
+				<featureDescription>
+					<name>concept</name>
+					<description>The referenced source concept.</description>
+					<rangeTypeName>de.averbis.extraction.types.Concept</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>quadrant</name>
+					<description>The referenced source quadrant.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.BreastQuadrant</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.BreastQuadrant</name>
 			<description>Aggregating annotation for breast quadrants storing additional information.</description>
 			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
