@@ -42,6 +42,11 @@
 			<supertypeName>de.averbis.textanalysis.types.health.Status</supertypeName>
 		</typeDescription>
 		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.ProcedureStatusIndicator</name>
+			<description>Indicator for status of procedure. Interpretation could be e.g. NEGATED, CANCELED, COMNPLETED or PLANNED.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.StatusIndicator</supertypeName>
+		</typeDescription>
+		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.ProcedureConcept</name>
 			<description>Concept type for procedures.</description>
 			<supertypeName>de.averbis.extraction.types.Concept</supertypeName>
