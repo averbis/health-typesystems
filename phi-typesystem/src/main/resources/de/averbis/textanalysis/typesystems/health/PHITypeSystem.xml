@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+	<name>de.averbis.textanalysis.typesystems.health.PHITypeSystem</name>
+	<description>Typesystem used to represent Protected Health Information.</description>
+	<version>${project.version}</version>
+	<vendor>Averbis GmbH</vendor>
+	<imports>
+		<import name="de.averbis.textanalysis.typesystems.AverbisTypeSystem" />
+	</imports>
+	<types>
+
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PHI</name>
+			<description>Protected health information.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<featureDescription>
+				<name>kind</name>
+				<description>Fine-grained kind about the type of protected health information.</description>
+				<rangeTypeName>uima.cas.String</rangeTypeName>
+			</featureDescription>
+		</typeDescription>
+
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PHIDate</name>
+			<description>Mention of a date.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.PHI</supertypeName>
+		</typeDescription>
+
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PHIAge</name>
+			<description>Age of the patient.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.PHI</supertypeName>
+		</typeDescription>
+
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PHIName</name>
+			<description>Name of the patient, doctor, or a user name</description>
+			<supertypeName>de.averbis.textanalysis.types.health.PHI</supertypeName>
+		</typeDescription>
+
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PHILocation</name>
+			<description>Location information like hospital, street, city or country.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.PHI</supertypeName>
+		</typeDescription>
+
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PHIID</name>
+			<description>Different kinds of IDs like social security numbers, medical record number or health plan number.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.PHI</supertypeName>
+		</typeDescription>
+
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PHIContact</name>
+			<description>Contact information like phone, fax, email, url or IP.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.PHI</supertypeName>
+		</typeDescription>
+
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PHIProfession</name>
+			<description>Mention of a profession.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.PHI</supertypeName>
+		</typeDescription>
+	</types>
+</typeSystemDescription>

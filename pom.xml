@@ -59,6 +59,7 @@
 		<module>procedure-typesystem</module>
 		<module>medical-disambiguation-typesystem</module>
 		<module>pathology-typesystem</module>
+		<module>phi-typesystem</module>
 	</modules>
 	
 </project>
