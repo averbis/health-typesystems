@@ -17,7 +17,7 @@
 	<packaging>pom</packaging>
 	
 	<properties>
-		<core-typesystems-version>3.22.0</core-typesystems-version>
+		<core-typesystems-version>3.23.0</core-typesystems-version>
 	</properties>
 	
 	<licenses>
