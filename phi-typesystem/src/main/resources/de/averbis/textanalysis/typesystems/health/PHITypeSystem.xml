@@ -5,7 +5,7 @@
 	<version>${project.version}</version>
 	<vendor>Averbis GmbH</vendor>
 	<imports>
-		<import name="de.averbis.textanalysis.typesystems.AverbisTypeSystem" />
+		<import name="de.averbis.textanalysis.typesystems.AverbisTypeSystem"/>
 	</imports>
 	<types>
 
@@ -13,12 +13,19 @@
 			<name>de.averbis.textanalysis.types.health.PHI</name>
 			<description>Protected health information.</description>
 			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
-			<featureDescription>
+			<features>
+        <featureDescription>
 				<name>kind</name>
-				<description>Fine-grained kind about the type of protected health information.</description>
+				<description>Fine-grained kind of the type of protected health information.</description>
 				<rangeTypeName>uima.cas.String</rangeTypeName>
 			</featureDescription>
-		</typeDescription>
+		<featureDescription>
+          <name>coarseKind</name>
+          <description>Coarse kind of the type of protected health information.</description>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
 
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.PHIDate</name>
