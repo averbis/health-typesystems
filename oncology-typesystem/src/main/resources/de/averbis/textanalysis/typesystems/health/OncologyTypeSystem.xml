@@ -109,7 +109,19 @@
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.QuadrantElement</name>
 			<description>Abstract type for element of a quadrant.</description>
-			<supertypeName>de.averbis.extraction.types.Entity</supertypeName>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+      <features>
+				<featureDescription>
+					<name>label</name>
+					<description>Label storing the type of indicator, e.g., VERTICAL or SIDE.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>value</name>
+					<description>The value of the indicator annotation, e.g., BOTTOM or R</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+			</features>		
 		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.GleasonScore</name>
