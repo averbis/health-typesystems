@@ -1,31 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+<typeSystemDescription
+	xmlns="http://uima.apache.org/resourceSpecifier">
 	<name>de.averbis.textanalysis.typesystems.health.PHITypeSystem</name>
-	<description>Typesystem used to represent Protected Health Information.</description>
+	<description>Typesystem used to represent Protected Health Information.
+	</description>
 	<version>${project.version}</version>
 	<vendor>Averbis GmbH</vendor>
 	<imports>
-		<import name="de.averbis.textanalysis.typesystems.AverbisTypeSystem"/>
+		<import
+			name="de.averbis.textanalysis.typesystems.AverbisTypeSystem" />
 	</imports>
 	<types>
 
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.PHI</name>
 			<description>Protected health information.</description>
-			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation
+			</supertypeName>
 			<features>
-        <featureDescription>
-				<name>kind</name>
-				<description>Fine-grained kind of the type of protected health information.</description>
-				<rangeTypeName>uima.cas.String</rangeTypeName>
-			</featureDescription>
-		<featureDescription>
-          <name>coarseKind</name>
-          <description>Coarse kind of the type of protected health information.</description>
-          <rangeTypeName>uima.cas.String</rangeTypeName>
-        </featureDescription>
-      </features>
-    </typeDescription>
+				<featureDescription>
+					<name>kind</name>
+					<description>Fine-grained kind of the type of protected health information.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>coarseKind</name>
+					<description>Coarse kind of the type of protected health information.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
 
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.PHIDate</name>
