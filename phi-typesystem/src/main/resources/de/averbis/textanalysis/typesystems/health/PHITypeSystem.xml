@@ -28,6 +28,16 @@
 					<description>Coarse kind of the type of protected health information.</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
+				<featureDescription>
+					<name>replacement</name>
+					<description>The text the deidentified text span should be replaced with..</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>replacementKind</name>
+					<description>The approach of the replacement.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
 			</features>
 		</typeDescription>
 
@@ -69,6 +79,12 @@
 
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.PHIProfession</name>
+			<description>Mention of a profession.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.PHI</supertypeName>
+		</typeDescription>
+		
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PHIOther</name>
 			<description>Mention of a profession.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.PHI</supertypeName>
 		</typeDescription>
