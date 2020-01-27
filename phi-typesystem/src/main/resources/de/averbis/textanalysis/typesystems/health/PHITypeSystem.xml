@@ -30,7 +30,7 @@
 				</featureDescription>
 				<featureDescription>
 					<name>replacement</name>
-					<description>The text the deidentified text span should be replaced with..</description>
+					<description>The textual replacement for the identified text span.</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
