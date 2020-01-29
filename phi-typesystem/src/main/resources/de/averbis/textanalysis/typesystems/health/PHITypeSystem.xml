@@ -58,11 +58,61 @@
 			<description>Name of the patient, doctor, or a user name</description>
 			<supertypeName>de.averbis.textanalysis.types.health.PHI</supertypeName>
 		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PHIPatient</name>
+			<description>Mention of patient's name.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.PHIName</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PHIDoctor</name>
+			<description>Mention of doctor's name.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.PHIName</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PHIUsername</name>
+			<description>Mention of username.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.PHIName</supertypeName>
+		</typeDescription>
 
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.PHILocation</name>
 			<description>Location information like hospital, street, city or country.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.PHI</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PHIStreet</name>
+			<description>Mention of a street.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.PHILocation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PHIHospital</name>
+			<description>Mention of a hospital.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.PHILocation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PHICountry</name>
+			<description>Mention of a country.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.PHILocation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PHICity</name>
+			<description>Mention of a city.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.PHILocation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PHIState</name>
+			<description>Mention of a state.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.PHILocation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PHIZip</name>
+			<description>Mention of a zip code.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.PHILocation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PHIOrganization</name>
+			<description>Mention of an organization.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.PHILocation</supertypeName>
 		</typeDescription>
 
 		<typeDescription>
@@ -70,12 +120,43 @@
 			<description>Different kinds of IDs like social security numbers, medical record number or health plan number.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.PHI</supertypeName>
 		</typeDescription>
-
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PHIIDNum</name>
+			<description>Mentions of specific IDs.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.PHIID</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PHIMedicalRecord</name>
+			<description>Mentions of specific medical record numbers/ids.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.PHIID</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PHIDevice</name>
+			<description>Mentions of specific device.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.PHIID</supertypeName>
+		</typeDescription>
+		
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.PHIContact</name>
 			<description>Contact information like phone, fax, email, url or IP.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.PHI</supertypeName>
 		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PHIPhone</name>
+			<description>Mention of a phone number.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.PHIContact</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PHIFax</name>
+			<description>Mention of a fax number.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.PHIContact</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PHIEmail</name>
+			<description>Mention of a email address.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.PHIContact</supertypeName>
+		</typeDescription>
+		
 
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.PHIProfession</name>
