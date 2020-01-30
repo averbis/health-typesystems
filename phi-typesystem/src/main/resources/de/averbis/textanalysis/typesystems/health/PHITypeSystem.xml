@@ -166,7 +166,7 @@
 		
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.PHIOther</name>
-			<description>Mention of a profession.</description>
+			<description>Mention of other PHI.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.PHI</supertypeName>
 		</typeDescription>
 	</types>
