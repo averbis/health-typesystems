@@ -114,6 +114,11 @@
 			<description>Mention of an organization.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.PHILocation</supertypeName>
 		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PHILocationOther</name>
+			<description>Mention of a unspecific location.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.PHILocation</supertypeName>
+		</typeDescription>
 
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.PHIID</name>
@@ -135,6 +140,16 @@
 			<description>Mentions of specific device.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.PHIID</supertypeName>
 		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PHIBioId</name>
+			<description>Mentions of specific id.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.PHIID</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PHIHealthPlan</name>
+			<description>Mentions of a health plan id.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.PHIID</supertypeName>
+		</typeDescription>
 		
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.PHIContact</name>
@@ -153,7 +168,12 @@
 		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.PHIEmail</name>
-			<description>Mention of a email address.</description>
+			<description>Mention of an email address.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.PHIContact</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PHIUrl</name>
+			<description>Mention of a URL.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.PHIContact</supertypeName>
 		</typeDescription>
 		
