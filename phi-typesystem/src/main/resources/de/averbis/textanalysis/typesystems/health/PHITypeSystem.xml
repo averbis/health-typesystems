@@ -116,7 +116,7 @@
 		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.PHILocationOther</name>
-			<description>Mention of a unspecific location.</description>
+			<description>Mention of an unspecific location.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.PHILocation</supertypeName>
 		</typeDescription>
 
@@ -142,7 +142,7 @@
 		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.PHIBioId</name>
-			<description>Mentions of specific id.</description>
+			<description>Mentions of a specific id.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.PHIID</supertypeName>
 		</typeDescription>
 		<typeDescription>
