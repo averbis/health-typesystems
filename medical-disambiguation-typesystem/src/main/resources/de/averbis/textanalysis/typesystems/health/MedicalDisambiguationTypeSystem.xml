@@ -31,6 +31,11 @@
 			<supertypeName>de.averbis.textanalysis.types.health.RemovedAnnotation</supertypeName>
 		</typeDescription>
 		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.RemovedDiagnosisConcept</name>
+			<description>A reference to the diagnosis concept that was removed.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.RemovedAnnotation</supertypeName>
+		</typeDescription>	
+		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.RemovedLaboratoryValue</name>
 			<description>A reference to the laboratory value that was removed.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.RemovedAnnotation</supertypeName>
@@ -44,6 +49,6 @@
 			<name>de.averbis.textanalysis.types.health.RemovedObservation</name>
 			<description>A reference to the observation that was removed.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.RemovedAnnotation</supertypeName>
-		</typeDescription>			
+		</typeDescription>
 	</types>
 </typeSystemDescription>
