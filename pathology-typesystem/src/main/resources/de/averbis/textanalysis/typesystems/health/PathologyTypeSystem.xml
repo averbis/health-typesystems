@@ -9,6 +9,7 @@
 		<import name="de.averbis.textanalysis.typesystems.health.DiagnosisTypeSystem"/>
 		<import name="de.averbis.textanalysis.typesystems.health.OncologyTypeSystem"/>
 		<import name="de.averbis.textanalysis.typesystems.health.TNMTypeSystem"/>
+		<import name="de.averbis.textanalysis.typesystems.health.LaboratoryValueTypeSystem"/>
 	</imports>
 	<types>
 		<typeDescription>
@@ -92,6 +93,11 @@
                     <rangeTypeName>uima.cas.Integer</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
+                    <name>thickness</name>
+                    <description>The thickness of the skin tumor.</description>
+                    <rangeTypeName>uima.cas.Double</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
                     <name>categoryAnnotation</name>
                     <description>Optional annotation representing the category of the document.</description>
                     <rangeTypeName>de.averbis.extraction.types.Category</rangeTypeName>
@@ -155,6 +161,11 @@
                     <name>sentinelLymphnodesAnnotation</name>
                     <description>Optional annotation representing the sentinel lymph nodes.</description>
                     <rangeTypeName>de.averbis.textanalysis.types.health.TNMLymphNodesSentinel</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>thicknessAnnotation</name>
+                    <description>Optional annotation representing the thickness of the skin tumor.</description>
+                    <rangeTypeName>de.averbis.textanalysis.types.health.LaboratoryValue</rangeTypeName>
                 </featureDescription>
             </features>
         </typeDescription>

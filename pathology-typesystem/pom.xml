@@ -43,6 +43,12 @@
 			<version>${project.version}</version>
 		</dependency>
 		
+		<dependency>
+			<groupId>de.averbis.textanalysis</groupId>
+			<artifactId>laboratory-value-typesystem</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		
 	</dependencies>
 	
 	<build>
