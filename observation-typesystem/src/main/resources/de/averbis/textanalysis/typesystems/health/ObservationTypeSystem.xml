@@ -163,6 +163,11 @@
 	        		<description>Date of receipt of sample.</description>
 	        		<rangeTypeName>de.averbis.textanalysis.types.temporal.Date</rangeTypeName>
 	        	</featureDescription>
+	        	<featureDescription>
+	        		<name>belongsTo</name>
+	        		<description>Role of the person engaged in a HLA-typed human primary cells transplantation procedure. Possible values are 'RECIPIENT' or 'DONOR'.</description>
+	        		<rangeTypeName>uima.cas.String</rangeTypeName>
+	        	</featureDescription>
 	    	</features>
 		</typeDescription>
 		<typeDescription>
