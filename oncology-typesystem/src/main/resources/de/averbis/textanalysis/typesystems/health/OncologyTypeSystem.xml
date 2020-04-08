@@ -112,12 +112,12 @@
 			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
       <features>
 				<featureDescription>
-					<name>label</name>
+					<name>kind</name>
 					<description>Label storing the type of indicator, e.g., VERTICAL or SIDE.</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
-					<name>value</name>
+					<name>element</name>
 					<description>The value of the indicator annotation, e.g., BOTTOM or R</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
