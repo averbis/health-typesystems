@@ -57,6 +57,11 @@
 			<supertypeName>de.averbis.extraction.types.Concept</supertypeName>
 		</typeDescription>
 		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.OrganismConcept</name>
+			<description>Organism concepts, e.g. Bacteria.</description>
+			<supertypeName>de.averbis.extraction.types.Concept</supertypeName>
+		</typeDescription>		
+		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.Limit</name>
 			<description>Limit value from text or external source.</description>
 			<supertypeName>de.averbis.textanalysis.types.measurement.Measurement</supertypeName>
