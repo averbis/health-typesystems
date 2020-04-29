@@ -77,6 +77,11 @@
 			<supertypeName>de.averbis.textanalysis.types.health.QualitativeValue</supertypeName>
 		</typeDescription>
 		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.MicroBiologyQualitativeValue</name>
+			<description>Qualitative values for micro biology laboratory concepts, e.g. 'Bacteria'.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.QualitativeValue</supertypeName>
+		</typeDescription>
+		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.Positive</name>
 			<description>Positive result of an observation (no interpretation!).</description>
 			<supertypeName>de.averbis.textanalysis.types.health.BooleanQualitativeValue</supertypeName>
