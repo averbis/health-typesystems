@@ -189,5 +189,23 @@
 			<description>Mention of other PHI.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.PHI</supertypeName>
 		</typeDescription>
+		
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.DeidentifiedDocument</name>
+			<description>A deidentified version of the document.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>kind</name>
+					<description>The kind of method applied in order to deidentify the document.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>deidentifiedText</name>
+					<description>The deidentified version of the document.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
 	</types>
 </typeSystemDescription>
