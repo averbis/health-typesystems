@@ -1,8 +1,10 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>health-typesystems</artifactId>
-    <version>3.0.0-SNAPSHOT</version>
+	<version>3.0.0-SNAPSHOT</version>
 
 	<name>${project.groupId}:${project.artifactId}</name>
 	<description>The UIMA type systems of the Averbis health components</description>
@@ -15,11 +17,11 @@
 	</parent>
 
 	<packaging>pom</packaging>
-	
+
 	<properties>
 		<core-typesystems-version>4.0.0-SNAPSHOT</core-typesystems-version>
 	</properties>
-	
+
 	<licenses>
 		<license>
 			<name>Apache License, Version 2.0</name>
@@ -27,22 +29,22 @@
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
-	
+
 	<developers>
-	    <developer>
+		<developer>
 			<email>info@averbis.com</email>
 			<organization>Averbis</organization>
 			<organizationUrl>https://averbis.com/</organizationUrl>
 		</developer>
 	</developers>
-	
+
 	<scm>
 		<connection>scm:git:git://github.com/averbis/health-typesystems</connection>
 		<developerConnection>scm:git:git@github.com:averbis/health-typesystems.git</developerConnection>
 		<url>https://github.com/averbis/health-typesystems</url>
 		<tag>health-typesystems-2.27.0</tag>
 	</scm>
-	
+
 	<modules>
 		<module>components-health-typesystem</module>
 		<module>tnm-typesystem</module>
@@ -61,5 +63,5 @@
 		<module>pathology-typesystem</module>
 		<module>phi-typesystem</module>
 	</modules>
-	
+
 </project>
