@@ -1,4 +1,6 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<artifactId>oncology-typesystem</artifactId>
@@ -10,9 +12,9 @@
 		<artifactId>health-typesystems</artifactId>
 		<version>3.0.0-SNAPSHOT</version>
 	</parent>
-	
+
 	<dependencies>
-	
+
 		<dependency>
 			<groupId>org.apache.uima</groupId>
 			<artifactId>uimaj-core</artifactId>
@@ -24,33 +26,33 @@
 			<artifactId>components-core-typesystem</artifactId>
 			<version>${core-typesystems-version}</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>de.averbis.textanalysis</groupId>
 			<artifactId>numeric-value-typesystem</artifactId>
 			<version>${core-typesystems-version}</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>de.averbis.textanalysis</groupId>
 			<artifactId>measurement-typesystem</artifactId>
 			<version>${core-typesystems-version}</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>de.averbis.textanalysis</groupId>
 			<artifactId>components-health-typesystem</artifactId>
 			<version>${project.version}</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>de.averbis.textanalysis</groupId>
 			<artifactId>diagnosis-typesystem</artifactId>
 			<version>${project.version}</version>
 		</dependency>
-		
+
 	</dependencies>
-	
+
 	<build>
 		<plugins>
 			<plugin>
@@ -75,12 +77,19 @@
 						</goals>
 						<configuration>
 							<typeSystemIncludes>
-							    <typeSystemInclude>src/main/resources/de/averbis/textanalysis/typesystems/health/OncologyTypeSystem.xml</typeSystemInclude>
+								<typeSystemInclude>src/main/resources/de/averbis/textanalysis/typesystems/health/OncologyTypeSystem.xml</typeSystemInclude>
 							</typeSystemIncludes>
 							<limitToProject>true</limitToProject>
 						</configuration>
 					</execution>
 				</executions>
+				<dependencies>
+					<dependency>
+						<groupId>de.averbis.textanalysis</groupId>
+						<artifactId>diagnosis-typesystem</artifactId>
+						<version>${project.version}</version>
+					</dependency>
+				</dependencies>
 			</plugin>
 		</plugins>
 	</build>
