@@ -17,11 +17,9 @@
 				<featureDescription>
 					<name>negating</name>
 					<description>List of concepts which are negated by current negation.</description>
-                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
-                    <elementType>de.averbis.extraction.types.Concept</elementType>
+					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
+          <elementType>de.averbis.extraction.types.Concept</elementType>
 				</featureDescription>
-				
-				
 			</features>
 		</typeDescription>
 		
@@ -29,12 +27,13 @@
 			<name>de.averbis.textanalysis.types.health.NegationScope</name>
 			<description>The negated scope.</description>
 			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
-		
-		<featureDescription>
+			<features>
+				<featureDescription>
 					<name>negatedBy</name>
 					<description>The medical negation used to negate the scope.</description>
-                    <rangeTypeName>de.averbis.textanalysis.types.health.MedicalNegation</rangeTypeName>
-		</featureDescription>
+					<rangeTypeName>de.averbis.textanalysis.types.health.MedicalNegation</rangeTypeName>
+				</featureDescription>
+			</features>
 		</typeDescription>
 		
 		<typeDescription>
