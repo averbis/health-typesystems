@@ -7,6 +7,7 @@
 	<vendor>Averbis GmbH</vendor>
 	<imports>
 		<import name="de.averbis.textanalysis.typesystems.AverbisTypeSystem" />
+		<import name="de.averbis.textanalysis.typesystems.TextTypeSystem" />
 	</imports>
 	<types>
 		<typeDescription>
@@ -26,14 +27,7 @@
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.NegationScope</name>
 			<description>The negated scope.</description>
-			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
-			<features>
-				<featureDescription>
-					<name>negatedBy</name>
-					<description>The medical negation used to negate the scope.</description>
-					<rangeTypeName>de.averbis.textanalysis.types.health.MedicalNegation</rangeTypeName>
-				</featureDescription>
-			</features>
+			<supertypeName>de.averbis.textanalysis.types.AnnotationScope</supertypeName>
 		</typeDescription>
 		
 		<typeDescription>
