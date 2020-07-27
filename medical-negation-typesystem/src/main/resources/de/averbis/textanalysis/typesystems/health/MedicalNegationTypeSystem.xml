@@ -7,7 +7,7 @@
 	<vendor>Averbis GmbH</vendor>
 	<imports>
 		<import name="de.averbis.textanalysis.typesystems.AverbisTypeSystem" />
-		<import name="de.averbis.textanalysis.typesystems.TextTypeSystem" />
+		<import name="de.averbis.textanalysis.typesystems.GenericRelationTypeSystem" />
 	</imports>
 	<types>
 		<typeDescription>
