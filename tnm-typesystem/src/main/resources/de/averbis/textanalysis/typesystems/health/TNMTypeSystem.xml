@@ -288,6 +288,21 @@
 					<rangeTypeName>de.averbis.textanalysis.types.health.TNMCertainty</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
+					<name>lymphaticInvasion</name>
+					<description>lymphaticInvasion</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.TNMLymphaticInvasion</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>vascularInvasion</name>
+					<description>vascularInvasion</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.TNMVascularInvasion</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>perineuralInvasion</name>
+					<description>perineuralInvasion</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.TNMPerineuralInvasion</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
 					<name>additional</name>
 					<description>additional</description>
 					<rangeTypeName>de.averbis.textanalysis.types.health.TNMAdditional</rangeTypeName>
