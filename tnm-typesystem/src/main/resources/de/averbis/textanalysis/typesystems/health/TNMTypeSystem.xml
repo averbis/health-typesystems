@@ -233,6 +233,21 @@
 			<supertypeName>de.averbis.textanalysis.types.health.AbstractTNMLymphNodes</supertypeName>
 		</typeDescription>
 		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.TNMLymphaticInvasion</name>
+			<description>Information about the lymphatic invasion.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.TNMAdditional</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.TNMVascularInvasion</name>
+			<description>Information about the vascular invasion.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.TNMAdditional</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.TNMPerineuralInvasion</name>
+			<description>Information about the perineural invasion.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.TNMAdditional</supertypeName>
+		</typeDescription>
+		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.TNMDocumentClassification</name>
 			<description>The TNM classification result for a document.</description>
 			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
