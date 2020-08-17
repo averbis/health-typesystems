@@ -98,6 +98,21 @@
                     <rangeTypeName>uima.cas.Double</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
+                    <name>lymphaticInvasion</name>
+                    <description>The invasion of the cancer to the lymphatic system.</description>
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>vascularInvasion</name>
+                    <description>The invasion of the cancer to the vascular system.</description>
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>perineuralInvasion</name>
+                    <description>The invasion of the cancer to the space surrounding a nerve.</description>
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
                     <name>categoryAnnotation</name>
                     <description>Optional annotation representing the category of the document.</description>
                     <rangeTypeName>de.averbis.extraction.types.Category</rangeTypeName>
