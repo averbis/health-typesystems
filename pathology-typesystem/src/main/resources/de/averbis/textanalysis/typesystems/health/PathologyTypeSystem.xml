@@ -183,6 +183,27 @@
 					<description>Optional annotation representing the thickness of the skin tumor.</description>
 					<rangeTypeName>de.averbis.textanalysis.types.health.LaboratoryValue</rangeTypeName>
 				</featureDescription>
+				<featureDescription>
+					<name>lymphaticInvasionAnnotation</name>
+					<description>Optional annotation representing the invasion of the cancer to the lymphatic
+						system.
+					</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.TNMAdditional</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>vascularInvasionAnnotation</name>
+					<description>Optional annotation representing the invasion of the cancer to the vascular
+						system.
+					</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.TNMAdditional</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>perineuralInvasionAnnotation</name>
+					<description>Optional annotation representing the invasion of the cancer to the space
+						surrounding a nerve.
+					</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.TNMAdditional</rangeTypeName>
+				</featureDescription>
 			</features>
 		</typeDescription>
 		<typeDescription>
