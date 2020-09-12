@@ -5,201 +5,238 @@
 	<version>${project.version}</version>
 	<vendor>Averbis GmbH</vendor>
 	<imports>
-		<import name="de.averbis.textanalysis.typesystems.AverbisTypeSystem"/>
-		<import name="de.averbis.textanalysis.typesystems.health.DiagnosisTypeSystem"/>
-		<import name="de.averbis.textanalysis.typesystems.health.OncologyTypeSystem"/>
-		<import name="de.averbis.textanalysis.typesystems.health.TNMTypeSystem"/>
-		<import name="de.averbis.textanalysis.typesystems.health.LaboratoryValueTypeSystem"/>
+		<import name="de.averbis.textanalysis.typesystems.AverbisTypeSystem" />
+		<import name="de.averbis.textanalysis.typesystems.health.DiagnosisTypeSystem" />
+		<import name="de.averbis.textanalysis.typesystems.health.OncologyTypeSystem" />
+		<import name="de.averbis.textanalysis.typesystems.health.TNMTypeSystem" />
+		<import name="de.averbis.textanalysis.typesystems.health.LaboratoryValueTypeSystem" />
 	</imports>
 	<types>
 		<typeDescription>
-            <name>de.averbis.textanalysis.types.health.PathologyDocumentClassification</name>
-            <description>A classification for a single pathology document for specific elements and code like diagnosis.</description>
+			<name>de.averbis.textanalysis.types.health.PathologyDocumentClassification</name>
+			<description>A classification for a single pathology document for specific elements and code like
+				diagnosis.</description>
 			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
-            <features>
-                <featureDescription>
-                    <name>category</name>
-                    <description>The category of the document, e.g., MAMMA.</description>
-                    <rangeTypeName>uima.cas.String</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>diagnosis</name>
-                    <description>The code of the relevant diagnosis.</description>
-                    <rangeTypeName>uima.cas.String</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>topography</name>
-                    <description>The code of the relevant topography.</description>
-                    <rangeTypeName>uima.cas.String</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>morphology</name>
-                    <description>The code of the relevant morphology.</description>
-                    <rangeTypeName>uima.cas.String</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>tumor</name>
-                    <description>The TNM code of the relevant tumor.</description>
-                    <rangeTypeName>uima.cas.String</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>node</name>
-                    <description>The TNM code of the relevant node.</description>
-                    <rangeTypeName>uima.cas.String</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>metastasis</name>
-                    <description>The TNM code of the relevant metastasis.</description>
-                    <rangeTypeName>uima.cas.String</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>grading</name>
-                    <description>The relevant grading.</description>
-                    <rangeTypeName>uima.cas.String</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>location</name>
-                    <description>The relevant location.</description>
-                    <rangeTypeName>uima.cas.String</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>rClass</name>
-                    <description>The relevant R-classification.</description>
-                    <rangeTypeName>uima.cas.String</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>side</name>
-                    <description>The relevant side, e.g., L, R, T.</description>
-                    <rangeTypeName>uima.cas.String</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>lymphnodesAffected</name>
-                    <description>The amount of affected lymph nodes.</description>
-                    <rangeTypeName>uima.cas.Integer</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>lymphnodesTested</name>
-                    <description>The amount of tested lymph nodes.</description>
-                    <rangeTypeName>uima.cas.Integer</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>sentinelLymphnodesAffected</name>
-                    <description>The amount of affected sentinel lymph nodes.</description>
-                    <rangeTypeName>uima.cas.Integer</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>sentinelLymphnodesTested</name>
-                    <description>The amount of tested sentinel lymph nodes.</description>
-                    <rangeTypeName>uima.cas.Integer</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>thickness</name>
-                    <description>The thickness of the skin tumor.</description>
-                    <rangeTypeName>uima.cas.Double</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>categoryAnnotation</name>
-                    <description>Optional annotation representing the category of the document.</description>
-                    <rangeTypeName>de.averbis.extraction.types.Category</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>diagnosisConcept</name>
-                    <description>Optional annotation representing the relevant diagnosis.</description>
-                    <rangeTypeName>de.averbis.textanalysis.types.health.DiagnosisConcept</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>topographyConcept</name>
-                    <description>Optional annotation representing the relevant topography.</description>
-                    <rangeTypeName>de.averbis.textanalysis.types.health.TopographyConcept</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>morphologyConcept</name>
-                    <description>Optional annotation representing the relevant morphology.</description>
-                    <rangeTypeName>de.averbis.textanalysis.types.health.MorphologyConcept</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>tumorAnnotation</name>
-                    <description>Optional annotation representing the relevant tumor.</description>
-                    <rangeTypeName>de.averbis.textanalysis.types.health.TNMTumour</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>nodeAnnotation</name>
-                    <description>Optional annotation representing the relevant node.</description>
-                    <rangeTypeName>de.averbis.textanalysis.types.health.TNMNode</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>metastasisAnnotation</name>
-                    <description>Optional annotation representing the relevant metastasis.</description>
-                    <rangeTypeName>de.averbis.textanalysis.types.health.TNMMetastasis</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>gradingAnnotation</name>
-                    <description>Optional annotation representing the relevant grading.</description>
-                    <rangeTypeName>de.averbis.textanalysis.types.health.TNMGrading</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>locationAnnotation</name>
-                    <description>Optional annotation representing the relevant location.</description>
-                    <rangeTypeName>de.averbis.textanalysis.types.health.TNMLocation</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>rClassAnnotation</name>
-                    <description>Optional annotation representing the relevant R-classification.</description>
-                    <rangeTypeName>de.averbis.textanalysis.types.health.TNMRClass</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>sideAnnotation</name>
-                    <description>Optional annotation representing the relevant side.</description>
-                    <rangeTypeName>de.averbis.textanalysis.types.health.LocationSide</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>lymphnodesAnnotation</name>
-                    <description>Optional annotation representing the lymph nodes.</description>
-                    <rangeTypeName>de.averbis.textanalysis.types.health.TNMLymphNodes</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>sentinelLymphnodesAnnotation</name>
-                    <description>Optional annotation representing the sentinel lymph nodes.</description>
-                    <rangeTypeName>de.averbis.textanalysis.types.health.TNMLymphNodesSentinel</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>thicknessAnnotation</name>
-                    <description>Optional annotation representing the thickness of the skin tumor.</description>
-                    <rangeTypeName>de.averbis.textanalysis.types.health.LaboratoryValue</rangeTypeName>
-                </featureDescription>
-            </features>
-        </typeDescription>
+			<features>
+				<featureDescription>
+					<name>category</name>
+					<description>The category of the document, e.g., MAMMA.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>diagnosis</name>
+					<description>The code of the relevant diagnosis.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>topography</name>
+					<description>The code of the relevant topography.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>morphology</name>
+					<description>The code of the relevant morphology.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>tumor</name>
+					<description>The TNM code of the relevant tumor.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>node</name>
+					<description>The TNM code of the relevant node.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>metastasis</name>
+					<description>The TNM code of the relevant metastasis.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>grading</name>
+					<description>The relevant grading.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>location</name>
+					<description>The relevant location.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>rClass</name>
+					<description>The relevant R-classification.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>side</name>
+					<description>The relevant side, e.g., L, R, T.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>lymphnodesAffected</name>
+					<description>The amount of affected lymph nodes.</description>
+					<rangeTypeName>uima.cas.Integer</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>lymphnodesTested</name>
+					<description>The amount of tested lymph nodes.</description>
+					<rangeTypeName>uima.cas.Integer</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>sentinelLymphnodesAffected</name>
+					<description>The amount of affected sentinel lymph nodes.</description>
+					<rangeTypeName>uima.cas.Integer</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>sentinelLymphnodesTested</name>
+					<description>The amount of tested sentinel lymph nodes.</description>
+					<rangeTypeName>uima.cas.Integer</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>thickness</name>
+					<description>The thickness of the skin tumor.</description>
+					<rangeTypeName>uima.cas.Double</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>lymphaticInvasion</name>
+					<description>The invasion of the cancer to the lymphatic system.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>vascularInvasion</name>
+					<description>The invasion of the cancer to the vascular system.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>perineuralInvasion</name>
+					<description>The invasion of the cancer to the space surrounding a nerve.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>categoryAnnotation</name>
+					<description>Optional annotation representing the category of the document.</description>
+					<rangeTypeName>de.averbis.extraction.types.Category</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>diagnosisConcept</name>
+					<description>Optional annotation representing the relevant diagnosis.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.DiagnosisConcept</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>topographyConcept</name>
+					<description>Optional annotation representing the relevant topography.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.TopographyConcept</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>morphologyConcept</name>
+					<description>Optional annotation representing the relevant morphology.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.MorphologyConcept</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>tumorAnnotation</name>
+					<description>Optional annotation representing the relevant tumor.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.TNMTumour</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>nodeAnnotation</name>
+					<description>Optional annotation representing the relevant node.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.TNMNode</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>metastasisAnnotation</name>
+					<description>Optional annotation representing the relevant metastasis.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.TNMMetastasis</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>gradingAnnotation</name>
+					<description>Optional annotation representing the relevant grading.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.TNMGrading</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>locationAnnotation</name>
+					<description>Optional annotation representing the relevant location.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.TNMLocation</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>rClassAnnotation</name>
+					<description>Optional annotation representing the relevant R-classification.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.TNMRClass</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>sideAnnotation</name>
+					<description>Optional annotation representing the relevant side.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.LocationSide</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>lymphnodesAnnotation</name>
+					<description>Optional annotation representing the lymph nodes.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.TNMLymphNodes</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>sentinelLymphnodesAnnotation</name>
+					<description>Optional annotation representing the sentinel lymph nodes.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.TNMLymphNodesSentinel</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>thicknessAnnotation</name>
+					<description>Optional annotation representing the thickness of the skin tumor.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.LaboratoryValue</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>lymphaticInvasionAnnotation</name>
+					<description>Optional annotation representing the invasion of the cancer to the lymphatic
+						system.
+					</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.TNMAdditional</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>vascularInvasionAnnotation</name>
+					<description>Optional annotation representing the invasion of the cancer to the vascular
+						system.
+					</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.TNMAdditional</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>perineuralInvasionAnnotation</name>
+					<description>Optional annotation representing the invasion of the cancer to the space
+						surrounding a nerve.
+					</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.TNMAdditional</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
 		<typeDescription>
-            <name>de.averbis.textanalysis.types.health.TopographyClassification</name>
-            <description>A classification for topography annotations.</description>
+			<name>de.averbis.textanalysis.types.health.TopographyClassification</name>
+			<description>A classification for topography annotations.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.ConceptClassification</supertypeName>
-        </typeDescription>
+		</typeDescription>
 		<typeDescription>
-            <name>de.averbis.textanalysis.types.health.MorphologyClassification</name>
-            <description>A classification for morphology annotations.</description>
+			<name>de.averbis.textanalysis.types.health.MorphologyClassification</name>
+			<description>A classification for morphology annotations.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.ConceptClassification</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.averbis.textanalysis.types.health.ConceptClassification</name>
-            <description>A classification for concept annotations.</description>
-			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
-            <features>
-                <featureDescription>
-                    <name>label</name>
-                    <description>The category of the annotation, e.g., final.</description>
-                    <rangeTypeName>uima.cas.String</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>concept</name>
-                    <description>The category of the annotation, e.g., final.</description>
-                    <rangeTypeName>de.averbis.extraction.types.Concept</rangeTypeName>
-                </featureDescription>
-            </features>
-        </typeDescription>
+		</typeDescription>
 		<typeDescription>
-            <name>de.averbis.textanalysis.types.health.BiopsyIndicator</name>
-            <description>Indicators that document contains biopsy report.</description>
+			<name>de.averbis.textanalysis.types.health.ConceptClassification</name>
+			<description>A classification for concept annotations.</description>
 			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
-        </typeDescription>
+			<features>
+				<featureDescription>
+					<name>label</name>
+					<description>The category of the annotation, e.g., final.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>concept</name>
+					<description>The category of the annotation, e.g., final.</description>
+					<rangeTypeName>de.averbis.extraction.types.Concept</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.BiopsyIndicator</name>
+			<description>Indicators that document contains biopsy report.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+		</typeDescription>
 	</types>
 </typeSystemDescription>
