@@ -25,6 +25,12 @@
 			<version>${core-typesystems-version}</version>
 		</dependency>
 
+		<dependency>
+			<groupId>de.averbis.textanalysis</groupId>
+			<artifactId>temporal-typesystem</artifactId>
+			<version>${core-typesystems-version}</version>
+		</dependency>
+
 	</dependencies>
 	
 	<build>

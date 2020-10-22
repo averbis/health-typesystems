@@ -6,6 +6,7 @@
 	<vendor>Averbis GmbH</vendor>
 	<imports>
 		<import name="de.averbis.textanalysis.typesystems.AverbisTypeSystem" />
+		<import name="de.averbis.textanalysis.typesystems.TemporalTypeSystem"/>
 	</imports>
 	<types>
 		<typeDescription>
@@ -49,5 +50,19 @@
 		        </featureDescription>
 		    </features>
 		</typeDescription>
+		
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.ResultDate</name>
+			<description>The date of the result/findings.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>date</name>
+					<description>Date annotation holding the normalized value.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.temporal.Date</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+		
 	</types>
 </typeSystemDescription>

@@ -10,6 +10,7 @@
 		<import name="de.averbis.textanalysis.typesystems.health.OncologyTypeSystem" />
 		<import name="de.averbis.textanalysis.typesystems.health.TNMTypeSystem" />
 		<import name="de.averbis.textanalysis.typesystems.health.LaboratoryValueTypeSystem" />
+		<import name="de.averbis.textanalysis.typesystems.health.EHRInformationTypeSystem" />
 	</imports>
 	<types>
 		<typeDescription>
@@ -114,6 +115,11 @@
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
+					<name>resultDate</name>
+					<description>The date of the result/findings.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
 					<name>categoryAnnotation</name>
 					<description>Optional annotation representing the category of the document.</description>
 					<rangeTypeName>de.averbis.extraction.types.Category</rangeTypeName>
@@ -203,6 +209,11 @@
 						surrounding a nerve.
 					</description>
 					<rangeTypeName>de.averbis.textanalysis.types.health.TNMAdditional</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>resultDateAnnotation</name>
+					<description>Optional annotation representing the date of the findings/result.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.ResultDate</rangeTypeName>
 				</featureDescription>
 			</features>
 		</typeDescription>

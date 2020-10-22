@@ -49,6 +49,12 @@
 			<version>${project.version}</version>
 		</dependency>
 		
+		<dependency>
+			<groupId>de.averbis.textanalysis</groupId>
+			<artifactId>ehr-information-typesystem</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		
 	</dependencies>
 	
 	<build>
