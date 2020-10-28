@@ -33,6 +33,7 @@
 	          <name>additionalSpans</name>
 	          <description>Optional annotation not in the initial span, which can influence the coding.</description>
 	          <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+	          <multipleReferencesAllowed>true</multipleReferencesAllowed>
 	        </featureDescription>
 	      </features>
 		</typeDescription>
@@ -45,11 +46,13 @@
 	          <name>additionalSpans</name>
 	          <description>Optional annotation not in the initial span, which can influence the coding.</description>
 	          <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+	          <multipleReferencesAllowed>true</multipleReferencesAllowed>
 	        </featureDescription>
   	        <featureDescription>
 	          <name>fragments</name>
 	          <description>List of annotations in span excluding the undesired indicators (e.g. LateralityIndicator) .</description>
 	          <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+	          <multipleReferencesAllowed>true</multipleReferencesAllowed>
 	        </featureDescription>
 	      </features>
 		</typeDescription>
