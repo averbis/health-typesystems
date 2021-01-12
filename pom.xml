@@ -60,6 +60,7 @@
 		<module>medical-disambiguation-typesystem</module>
 		<module>pathology-typesystem</module>
 		<module>phi-typesystem</module>
+		<module>anatomy-typesystem</module>
 	</modules>
 	
 </project>
