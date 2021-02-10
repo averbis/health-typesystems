@@ -64,7 +64,7 @@
 		  <supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
 		  <features>
 		        <featureDescription>
-					<name>conceptId</name>
+					<name>conceptID</name>
 					<description>The id of the coding candidate.</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 		        </featureDescription>
