@@ -61,6 +61,7 @@
 		<module>medical-disambiguation-typesystem</module>
 		<module>pathology-typesystem</module>
 		<module>phi-typesystem</module>
+		<module>simplified-health-typesystem</module>
 	</modules>
 
 </project>
