@@ -45,9 +45,9 @@
 					<rangeTypeName>de.averbis.textanalysis.types.health.QualitativeValue</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
-		            <name>belongsTo</name>
-		            <description>Laboratory value belongs to patient or other person. Possible values are 'RECIPIENT', 'DONOR' or 'FAMILY'.</description>
-		            <rangeTypeName>uima.cas.String</rangeTypeName>
+					<name>belongsTo</name>
+					<description>Laboratory value belongs to patient or other person. Possible values are 'RECIPIENT', 'DONOR' or 'FAMILY'.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 			</features>
 		</typeDescription>
@@ -77,7 +77,7 @@
 					<name>externalSource</name>
 					<description>Information about limit value from external source.</description>
 					<rangeTypeName>uima.cas.Boolean</rangeTypeName>
-				</featureDescription>			
+				</featureDescription>
 			</features>
 		</typeDescription>
 		<typeDescription>
@@ -124,7 +124,7 @@
 					<name>role</name>
 					<description>The role of a person.</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
-				</featureDescription>			
+				</featureDescription>
 			</features>
 		</typeDescription>
 	</types>
