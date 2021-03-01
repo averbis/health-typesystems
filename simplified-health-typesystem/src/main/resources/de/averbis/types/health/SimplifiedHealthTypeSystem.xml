@@ -218,6 +218,11 @@
 			<supertypeName>de.averbis.types.health.ExternalCoreAnnotation</supertypeName>
 			<features>
 				<featureDescription>
+					<name>keyword</name>
+					<description></description>
+					<rangeTypeName>de.averbis.types.health.ClinicalSectionKeyword</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
 					<name>label</name>
 					<description>The label of the section, e.g. "LaboratorySection", "MedicationSection", "AnamnesisSection"</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
