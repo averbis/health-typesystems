@@ -842,7 +842,15 @@
 			<name>de.averbis.types.health.Morphology</name>
 			<description />
 			<supertypeName>de.averbis.types.health.Concept</supertypeName>
-			<features />
+			<features>
+				<featureDescription>
+					<name>confidence</name>
+					<description>For approaches using machine learning, the confidence is calculated that the respective annotation has been correctly generated.
+					Possible value range: 0-1.
+					</description>
+					<rangeTypeName>uima.cas.Double</rangeTypeName>
+				</featureDescription>
+			</features>
 		</typeDescription>
 
 		<typeDescription>
@@ -1333,6 +1341,15 @@
 			<name>de.averbis.types.health.Topography</name>
 			<description />
 			<supertypeName>de.averbis.types.health.Concept</supertypeName>
+			<features>
+				<featureDescription>
+					<name>confidence</name>
+					<description>For approaches using machine learning, the confidence is calculated that the respective annotation has been correctly generated.
+					Possible value range: 0-1.
+					</description>
+					<rangeTypeName>uima.cas.Double</rangeTypeName>
+				</featureDescription>
+			</features>
 		</typeDescription>
 		
 		<typeDescription>
