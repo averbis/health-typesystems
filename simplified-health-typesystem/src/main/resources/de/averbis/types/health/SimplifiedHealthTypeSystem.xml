@@ -88,6 +88,34 @@
 			</features>
 		</typeDescription>
 
+		<typeDescription>
+			<name>de.averbis.types.health.Relation</name>
+			<description />
+			<supertypeName>de.averbis.types.health.ExternalCoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>subject</name>
+					<description>An annotation representing the subject of the relation.</description>
+					<rangeTypeName>de.averbis.types.health.ExternalCoreAnnotation</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>predicate</name>
+					<description>An annotation representing the predicate of the relation.</description>
+					<rangeTypeName>de.averbis.types.health.ExternalCoreAnnotation</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>object</name>
+					<description>An annotation representing the object of the relation.</description>
+					<rangeTypeName>de.averbis.types.health.ExternalCoreAnnotation</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>value</name>
+					<description>Type of the relation..</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+
 		<!-- Time Related Annotations  -->
 
 		<typeDescription>
