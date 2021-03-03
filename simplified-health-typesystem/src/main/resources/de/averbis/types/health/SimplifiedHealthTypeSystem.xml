@@ -90,7 +90,7 @@
 
 		<typeDescription>
 			<name>de.averbis.types.health.Relation</name>
-			<description />
+			<description/>
 			<supertypeName>de.averbis.types.health.ExternalCoreAnnotation</supertypeName>
 			<features>
 				<featureDescription>
@@ -110,7 +110,7 @@
 				</featureDescription>
 				<featureDescription>
 					<name>value</name>
-					<description>Type of the relation..</description>
+					<description>Type of the relation.</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 			</features>
