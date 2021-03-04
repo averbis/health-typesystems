@@ -62,6 +62,7 @@
 		<module>pathology-typesystem</module>
 		<module>phi-typesystem</module>
 		<module>simplified-health-typesystem</module>
+		<module>anatomy-typesystem</module>
 	</modules>
 
 </project>
