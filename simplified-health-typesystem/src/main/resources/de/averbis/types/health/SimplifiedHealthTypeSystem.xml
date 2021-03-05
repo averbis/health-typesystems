@@ -405,11 +405,6 @@
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
-					<name>negatedBy</name>
-					<description>Specifies the negation word, if one exists.</description>
-					<rangeTypeName>uima.cas.String</rangeTypeName>
-				</featureDescription>
-				<featureDescription>
 					<name>onsetDate</name>
 					<description>The onset date of the diagnosis, if given in the text. Format: YYYY-MM-DD: Year-Month-Day with leading zeros (e.g. 2020-02-17) Please note:
 					The onsetDate is only annotated if the pear component "Disease Onset Date" is integrated in the text analysis pipeline used. The preconfigured pipelines
