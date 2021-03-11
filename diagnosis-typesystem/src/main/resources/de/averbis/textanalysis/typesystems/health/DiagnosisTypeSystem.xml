@@ -120,11 +120,6 @@
 					<description>The actual concept of the diagnosis.</description>
 					<rangeTypeName>de.averbis.textanalysis.types.health.DiagnosisConcept</rangeTypeName>
 		        </featureDescription>
-		        <featureDescription>
-		        	<name>laterality</name>
-		        	<description>!!DEPRECATED!! Replaced by feature 'side'.</description>
-		        	<rangeTypeName>uima.cas.String</rangeTypeName>
-		        </featureDescription>
 		        	<featureDescription>
 		        	<name>side</name>
 		        	<description>The laterality of the actual diagnosis.</description>
@@ -136,11 +131,6 @@
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 		        </featureDescription>
 		        <featureDescription>
-					<name>belongsToPatient</name>
-					<description>!!DEPRECATED!! Replaced by feature 'belongsTo'.</description>
-					<rangeTypeName>uima.cas.Boolean</rangeTypeName>
-		        </featureDescription>
-		        <featureDescription>
 					<name>onsetDate</name>
 					<description>The onset date of the diagnosis.</description>
 					<rangeTypeName>de.averbis.textanalysis.types.temporal.Date</rangeTypeName>
@@ -149,11 +139,6 @@
 					<name>kind</name>
 					<description>The kind of the diagnosis. Possible values include 'main' or 'secondary'.</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
-		        </featureDescription>
-		        <featureDescription>
-					<name>mainDiagnosis</name>
-					<description>!!DEPRECATED!! Replaced by feature 'kind'.</description>
-					<rangeTypeName>uima.cas.Boolean</rangeTypeName>
 		        </featureDescription>
 		        <featureDescription>
 					<name>symptom</name>
