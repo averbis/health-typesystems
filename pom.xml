@@ -18,7 +18,7 @@
 
 	<properties>
 		<uima-version>3.1.1</uima-version>
-		<core-typesystems-version>4.0.0-alpha-2</core-typesystems-version>
+		<core-typesystems-version>4.0.0-alpha-3</core-typesystems-version>
 	</properties>
 
 	<licenses>
