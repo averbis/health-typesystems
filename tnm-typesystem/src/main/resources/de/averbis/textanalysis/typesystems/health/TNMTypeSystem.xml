@@ -113,18 +113,6 @@
 			<supertypeName>de.averbis.textanalysis.types.health.TNMEntity</supertypeName>
 		</typeDescription>
 		<typeDescription>
-			<name>de.averbis.textanalysis.types.health.TNMGradingChar</name>
-			<description>This type is deprecated! Please use TNMGrading instead!
-
-				Grading mention in running text, e.g. "low grade", which means "G1".
-				Low grade = Well-differentiated = Grade 1;
-				Intermediate grade = Moderately differentiated = Grade 2;
-				High grade = Poorly differentiated = Grade 3;
-				Undifferentiated = Anaplastic = Grade 4
-			</description>
-			<supertypeName>de.averbis.textanalysis.types.health.TNMGrading</supertypeName>
-		</typeDescription>
-		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.TNMLocation</name>
 			<description>Further specification of the metastasis: Pulmonary (PUL), Bone marrow (MAR), Osseous
 				(OSS), Pleura (PLE), Hepatic (HEP),
