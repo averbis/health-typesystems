@@ -87,7 +87,7 @@
 					<name>belongsTo</name>
 					<description>Coding candidate belongs to patient or other person (family anamnesis). Possible values include 'patient' or 'family'.</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
-		        </featureDescription>		        
+		        </featureDescription>
 		        <featureDescription>
 					<name>clinicalStatus</name>
 					<description>Clinical status of the coding candidate.</description>
@@ -107,9 +107,9 @@
 					<name>kind</name>
 					<description>The kind of the CodingCandidate, i.e. 'ICD' or 'OPS'.</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
-		        </featureDescription>		        	        
+		        </featureDescription>
 		      </features>
-		  </typeDescription>    	
+		  </typeDescription>
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.Diagnosis</name>
 			<description>The actual diagnosis containing the concept and additional information.</description>
@@ -120,7 +120,7 @@
 					<description>The actual concept of the diagnosis.</description>
 					<rangeTypeName>de.averbis.textanalysis.types.health.DiagnosisConcept</rangeTypeName>
 		        </featureDescription>
-		        	<featureDescription>
+				<featureDescription>
 		        	<name>side</name>
 		        	<description>The laterality of the actual diagnosis.</description>
 		        	<rangeTypeName>de.averbis.textanalysis.types.health.Laterality</rangeTypeName>
@@ -226,11 +226,6 @@
 			<description>Stage of the GvHD, i.e. 1, 2, 3, 4.</description>
 			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
 			<features>
-<!-- 		        <featureDescription> -->
-<!-- 		        	<name>normalizedValue</name> -->
-<!-- 		        	<description>Stage of GvHD in integer categories (acute GvHD), i.e. 1,2,3,4.</description> -->
-<!-- 		        	<rangeTypeName>uima.cas.Integer</rangeTypeName> -->
-<!-- 		        </featureDescription> -->
    		        <featureDescription>
 		        	<name>normalized</name>
 		        	<description>Stage of GvHD in integer categories, i.e. 1, 2, 3, 4.</description>
