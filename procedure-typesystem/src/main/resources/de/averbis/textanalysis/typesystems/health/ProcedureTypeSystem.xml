@@ -37,6 +37,33 @@
 			</features>
 		</typeDescription>
 		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.ProcedureCandidate</name>
+			<description>A procedure candidate for a OPS coding.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>conceptID</name>
+					<description>The id of the procedure candidate.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>dictCanon</name>
+					<description>An optional preferred term corresponding to the given id.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>approach</name>
+					<description>The approach that generated this candidate.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>matchedTerm</name>
+					<description>Additional information about the match.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.ProcedureStatus</name>
 			<description>Annotation type for procedure status, i.e. HISTORY, PLANNED, NEGATED.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.Status</supertypeName>
