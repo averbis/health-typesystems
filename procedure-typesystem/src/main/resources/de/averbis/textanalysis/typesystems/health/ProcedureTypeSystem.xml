@@ -37,11 +37,6 @@
 			</features>
 		</typeDescription>
 		<typeDescription>
-			<name>de.averbis.textanalysis.types.health.ProcedureCandidate</name>
-			<description>A procedure candidate for a OPS coding.</description>
-			<supertypeName>de.averbis.textanalysis.types.health.Candidate</supertypeName>
-		</typeDescription>
-		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.ProcedureStatus</name>
 			<description>Annotation type for procedure status, i.e. HISTORY, PLANNED, NEGATED.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.Status</supertypeName>
