@@ -24,6 +24,7 @@
 			<description>Special induced Concept type for diagnoses.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.DiagnosisConcept</supertypeName>
 		</typeDescription>
+		<!-- DEPRECATE -->
 		<typeDescription>
 		  <name>de.averbis.textanalysis.types.health.CodingCandidateSpan</name>
 		  <description>A text span that might contain a CodingCandidate.</description>
@@ -53,11 +54,13 @@
 	        </featureDescription>
 	      </features>
 		</typeDescription>
+		<!-- DEPRECATED -->
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.CodingCandidateConcept</name>
 			<description>Concept type for coding candidates.</description>
 			<supertypeName>de.averbis.extraction.types.Concept</supertypeName>
 		</typeDescription>
+		<!-- DEPRECATED -->
 		<typeDescription>
 		  <name>de.averbis.textanalysis.types.health.CodingCandidate</name>
 		  <description>A candidate for a DRG coding.</description>
@@ -110,6 +113,28 @@
 		        </featureDescription>
 		      </features>
 		  </typeDescription>
+		<typeDescription>
+		  <name>de.averbis.textanalysis.types.health.DiagnosisCandidate</name>
+		  <description>A diagnosis candidate for a DRG coding.</description>
+		  <supertypeName>de.averbis.textanalysis.types.health.Candidate</supertypeName>
+		  <features>
+				<featureDescription>
+					<name>belongsTo</name>
+					<description>Diagnosis candidate belongs to patient or other person (family anamnesis). Possible values include 'patient' or 'family'.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>clinicalStatus</name>
+					<description>Clinical status of the diagnosis candidate.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.Status</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>verificationStatus</name>
+					<description>Verification status of the diagnosis candidate.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.Status</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.Diagnosis</name>
 			<description>The actual diagnosis containing the concept and additional information.</description>

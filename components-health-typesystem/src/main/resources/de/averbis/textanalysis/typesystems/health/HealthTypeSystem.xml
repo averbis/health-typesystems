@@ -95,5 +95,32 @@
 			<description>Indicator for a diagnosis in the family.</description>
 			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
 		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.Candidate</name>
+			<description>Supertype for candidate annotations of a diagnosis, procedure etc.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>conceptID</name>
+					<description>The id of the candidate.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>dictCanon</name>
+					<description>An optional preferred term corresponding to the given id.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>matchedTerm</name>
+					<description>Additional information about the match.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>approach</name>
+					<description>The approach that generated this candidate.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
 	</types>
 </typeSystemDescription>
