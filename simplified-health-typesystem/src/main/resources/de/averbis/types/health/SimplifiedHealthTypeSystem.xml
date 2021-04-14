@@ -430,6 +430,50 @@
 		</typeDescription>
 
 		<typeDescription>
+			<name>de.averbis.types.health.DiagnosisCandidate</name>
+			<description>A candidate for a DRG coding.</description>
+			<supertypeName>de.averbis.types.health.ExternalCoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>approach</name>
+					<description>The approach that generated this candidate.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>belongsTo</name>
+					<description>Diagnosis candidate belongs to patient or other person (family anamnesis). Possible values include 'patient' or 'family'.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>clinicalStatus</name>
+					<description>Clinical status of the coding candidate.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>conceptID</name>
+					<description>The id of the diagnosis candidate.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>confidence</name>
+					<description>For approaches using machine learning, the confidence is calculated that the respective annotation has been correctly generated.
+					Possible value range: 0-1.</description>
+					<rangeTypeName>uima.cas.Double</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>dictCanon</name>
+					<description>An optional preferred term corresponding to the given id.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>verificationStatus</name>
+					<description>Verification status of the diagnosis candidate.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+
+		<typeDescription>
 			<name>de.averbis.types.health.DoseForm</name>
 			<description>The type of dose form.</description>
 			<supertypeName>de.averbis.types.health.Concept</supertypeName>
@@ -1122,7 +1166,32 @@
 				</featureDescription>
 			</features>
 		</typeDescription>
-		
+
+
+		<typeDescription>
+			<name>de.averbis.types.health.ProcedureCandidate</name>
+			<description>A candidate for an OPS coding.</description>
+			<supertypeName>de.averbis.types.health.ExternalCoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>approach</name>
+					<description>The approach that generated this candidate.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>conceptID</name>
+					<description>The id of the procedure candidate.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>dictCanon</name>
+					<description>An optional preferred term corresponding to the given id.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+
+
 		<typeDescription>
 			<name>de.averbis.types.health.ProgesteroneReceptor</name>
 			<description />
