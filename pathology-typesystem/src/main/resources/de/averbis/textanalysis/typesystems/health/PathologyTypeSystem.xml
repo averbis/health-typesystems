@@ -120,6 +120,11 @@
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
+					<name>clarkLevel</name>
+					<description>Level of the anatomical invasion of the melanoma in the skin.</description>
+					<rangeTypeName>uima.cas.Integer</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
 					<name>categoryAnnotation</name>
 					<description>Optional annotation representing the category of the document.</description>
 					<rangeTypeName>de.averbis.extraction.types.Category</rangeTypeName>
@@ -215,6 +220,11 @@
 					<description>Optional annotation representing the date of the findings/result.</description>
 					<rangeTypeName>de.averbis.textanalysis.types.health.ResultDate</rangeTypeName>
 				</featureDescription>
+				<featureDescription>
+					<name>ClarkLevelAnnotation</name>
+					<description>Optional annotation representing the level of anatomical invasion of the melanoma in the skin.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.ClarkLevel</rangeTypeName>
+				</featureDescription>
 			</features>
 		</typeDescription>
 		<typeDescription>
@@ -248,6 +258,18 @@
 			<name>de.averbis.textanalysis.types.health.BiopsyIndicator</name>
 			<description>Indicators that document contains biopsy report.</description>
 			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.ClarkLevel</name>
+			<description>Level of anatomical invasion of the melanoma in the skin.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>value</name>
+					<description>The integer value of the clark level.</description>
+					<rangeTypeName>uima.cas.Integer</rangeTypeName>
+				</featureDescription>
+			</features>
 		</typeDescription>
 	</types>
 </typeSystemDescription>
