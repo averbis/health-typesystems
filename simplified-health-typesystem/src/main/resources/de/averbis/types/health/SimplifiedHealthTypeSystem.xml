@@ -1188,6 +1188,12 @@
 					<description>An optional preferred term corresponding to the given id.</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
+				<featureDescription>
+					<name>confidence</name>
+					<description>For approaches using machine learning, the confidence is calculated that the respective annotation has been correctly generated.
+					Possible value range: 0-1.</description>
+					<rangeTypeName>uima.cas.Double</rangeTypeName>
+				</featureDescription>
 			</features>
 		</typeDescription>
 
