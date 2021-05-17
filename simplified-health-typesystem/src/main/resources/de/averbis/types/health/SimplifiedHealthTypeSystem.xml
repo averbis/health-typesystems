@@ -1105,6 +1105,11 @@
 					<description>The date of the result/findings.</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
+				<featureDescription>
+					<name>gleasonScore</name>
+					<description>The Gleason score value.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
 			</features>
 		</typeDescription>
 		
