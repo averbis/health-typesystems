@@ -125,6 +125,12 @@
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
+					<name>scores</name>
+					<description>List of different scores, e.g. GleasonScore.</description>
+					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
+					<elementType>de.averbis.extraction.types.CoreAnnotation</elementType>
+				</featureDescription>
+				<featureDescription>
 					<name>categoryAnnotation</name>
 					<description>Optional annotation representing the category of the document.</description>
 					<rangeTypeName>de.averbis.extraction.types.Category</rangeTypeName>
