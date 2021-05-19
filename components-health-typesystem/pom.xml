@@ -24,6 +24,11 @@
 			<artifactId>components-core-typesystem</artifactId>
 			<version>${core-typesystems-version}</version>
 		</dependency>
+		<dependency>
+			<groupId>de.averbis.textanalysis</groupId>
+			<artifactId>numeric-value-typesystem</artifactId>
+			<version>${core-typesystems-version}</version>
+		</dependency>
 
 	</dependencies>
 	
