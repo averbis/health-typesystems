@@ -120,11 +120,6 @@
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
-					<name>gleasonScore</name>
-					<description>The Gleason score value.</description>
-					<rangeTypeName>uima.cas.String</rangeTypeName>
-				</featureDescription>
-				<featureDescription>
 					<name>scores</name>
 					<description>List of different scores, e.g. GleasonScore.</description>
 					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
@@ -225,11 +220,6 @@
 					<name>resultDateAnnotation</name>
 					<description>Optional annotation representing the date of the findings/result.</description>
 					<rangeTypeName>de.averbis.textanalysis.types.health.ResultDate</rangeTypeName>
-				</featureDescription>
-				<featureDescription>
-					<name>gleasonScoreAnnotation</name>
-					<description>Optional annotation describing how much the cancer from a biopsy looks like healthy tissue (lower score) or abnormal tissue (higher score).</description>
-					<rangeTypeName>de.averbis.textanalysis.types.health.GleasonScore</rangeTypeName>
 				</featureDescription>
 			</features>
 		</typeDescription>

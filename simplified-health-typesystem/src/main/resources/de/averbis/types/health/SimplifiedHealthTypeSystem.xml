@@ -1106,11 +1106,6 @@
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
-					<name>gleasonScore</name>
-					<description>The Gleason score value.</description>
-					<rangeTypeName>uima.cas.String</rangeTypeName>
-				</featureDescription>
-				<featureDescription>
 					<name>scores</name>
 					<description>List of different scores, e.g. Gleason Score.</description>
 					<rangeTypeName>de.averbis.types.health.PathologyScore</rangeTypeName>
