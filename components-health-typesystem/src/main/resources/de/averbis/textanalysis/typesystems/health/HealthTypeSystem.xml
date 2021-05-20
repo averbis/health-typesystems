@@ -6,6 +6,7 @@
 	<vendor>Averbis GmbH</vendor>
 	<imports>
 		<import name="de.averbis.textanalysis.typesystems.AverbisTypeSystem"/>
+		<import name="de.averbis.textanalysis.typesystems.NumericValueTypeSystem"/>
 	</imports>
 	<types>
 		<typeDescription>
@@ -122,5 +123,18 @@
 				</featureDescription>
 			</features>
 		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.ExtendedNumericValue</name>
+			<description></description>
+			<supertypeName>de.averbis.textanalysis.types.numericvalue.NumericValue</supertypeName>
+			<features>
+				<featureDescription>
+					<name>extendedStringValue</name>
+					<description></description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+		
 	</types>
 </typeSystemDescription>

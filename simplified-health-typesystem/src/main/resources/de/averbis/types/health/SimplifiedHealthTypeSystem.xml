@@ -1105,9 +1105,26 @@
 					<description>The date of the result/findings.</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
+				<featureDescription>
+					<name>scores</name>
+					<description>List of different scores, e.g. Gleason Score.</description>
+					<rangeTypeName>de.averbis.types.health.PathologyScore</rangeTypeName>
+				</featureDescription>
 			</features>
 		</typeDescription>
 		
+		<typeDescription>
+			<name>de.averbis.types.health.PathologyScore</name>
+				<description />
+				<supertypeName>de.averbis.types.health.ExternalCoreAnnotation</supertypeName>
+				<features>
+					<featureDescription>
+						<name>gleasonScore</name>
+						<description>Highest GleasonScore.</description>
+						<rangeTypeName>uima.cas.String</rangeTypeName>
+					</featureDescription>
+				</features>
+		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.types.health.PatientInformation</name>
 			<description />
