@@ -165,6 +165,12 @@
 		<!-- Health Annotations (alphabetically)  -->
 		
 		<typeDescription>
+			<name>de.averbis.types.health.Anatomy</name>
+			<description>Contains information about anatomy.</description>
+			<supertypeName>de.averbis.types.health.Concept</supertypeName>
+		</typeDescription>
+		
+		<typeDescription>
 			<name>de.averbis.types.health.BiologicallyDerivedProduct</name>
 			<description>Contains information about the biological product of CD34-positive stem cells.</description>
 			<supertypeName>de.averbis.types.health.Concept</supertypeName>
