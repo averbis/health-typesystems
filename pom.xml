@@ -18,7 +18,7 @@
 
 	<properties>
 		<uima-version>3.1.1</uima-version>
-		<core-typesystems-version>4.0.0-alpha-2</core-typesystems-version>
+		<core-typesystems-version>4.0.0</core-typesystems-version>
 	</properties>
 
 	<licenses>
@@ -41,7 +41,7 @@
 		<connection>scm:git:git://github.com/averbis/health-typesystems</connection>
 		<developerConnection>scm:git:git@github.com:averbis/health-typesystems.git</developerConnection>
 		<url>https://github.com/averbis/health-typesystems</url>
-		<tag>health-typesystems-2.27.0</tag>
+		<tag>HEAD</tag>
 	</scm>
 
 	<modules>
