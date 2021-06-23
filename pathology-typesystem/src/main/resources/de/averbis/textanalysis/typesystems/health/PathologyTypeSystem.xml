@@ -148,7 +148,7 @@
 				<featureDescription>
 					<name>tumorAnnotation</name>
 					<description>Optional annotation representing the relevant tumor.</description>
-					<rangeTypeName>de.averbis.textanalysis.types.health.TNMTumour</rangeTypeName>
+					<rangeTypeName>de.averbis.textanalysis.types.health.TNMTumor</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>nodeAnnotation</name>
