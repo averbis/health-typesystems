@@ -45,6 +45,7 @@
 					<description>The prefix modifiers of the element.</description>
 					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
 					<elementType>de.averbis.textanalysis.types.health.TNMModifier</elementType>
+					<multipleReferencesAllowed>true</multipleReferencesAllowed>
 				</featureDescription>
 				<featureDescription>
 					<name>postModifier</name>
@@ -155,41 +156,49 @@
 					<name>tumour</name>
 					<description>The tumour annotations.</description>
 					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
+					<multipleReferencesAllowed>true</multipleReferencesAllowed>
 				</featureDescription>
 				<featureDescription>
 					<name>node</name>
 					<description>The node annotations.</description>
 					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
+					<multipleReferencesAllowed>true</multipleReferencesAllowed>
 				</featureDescription>
 				<featureDescription>
 					<name>metastasis</name>
 					<description>The metastasis annotations.</description>
 					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
+					<multipleReferencesAllowed>true</multipleReferencesAllowed>
 				</featureDescription>
 				<featureDescription>
 					<name>grading</name>
 					<description>The grading annotations</description>
 					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
+					<multipleReferencesAllowed>true</multipleReferencesAllowed>
 				</featureDescription>
 				<featureDescription>
 					<name>location</name>
 					<description>The location annotations</description>
 					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
+					<multipleReferencesAllowed>true</multipleReferencesAllowed>
 				</featureDescription>
 				<featureDescription>
 					<name>rclass</name>
 					<description>The R class annotations</description>
 					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
+					<multipleReferencesAllowed>true</multipleReferencesAllowed>
 				</featureDescription>
 				<featureDescription>
 					<name>certainty</name>
 					<description>The certainty annotations</description>
 					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
+					<multipleReferencesAllowed>true</multipleReferencesAllowed>
 				</featureDescription>
 				<featureDescription>
 					<name>additional</name>
 					<description>The additional annotations</description>
 					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
+					<multipleReferencesAllowed>true</multipleReferencesAllowed>
 				</featureDescription>
 			</features>
 		</typeDescription>

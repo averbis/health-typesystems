@@ -124,6 +124,7 @@
 					<description>List of different scores, e.g. GleasonScore.</description>
 					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
 					<elementType>de.averbis.extraction.types.CoreAnnotation</elementType>
+					<multipleReferencesAllowed>true</multipleReferencesAllowed>
 				</featureDescription>
 				<featureDescription>
 					<name>categoryAnnotation</name>

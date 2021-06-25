@@ -845,6 +845,7 @@
 					<description />
 					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
 					<elementType>de.averbis.types.health.Drug</elementType>
+					<multipleReferencesAllowed>true</multipleReferencesAllowed>
 				</featureDescription>
 				<featureDescription>
 					<name>rateQuantity</name>
@@ -862,6 +863,7 @@
 					<description>Additional information on clinical drug, e.g. semantic clinical drug (RxNorm TermType).</description>
 					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
 					<elementType>de.averbis.types.health.TTY</elementType>
+					<multipleReferencesAllowed>true</multipleReferencesAllowed>
 				</featureDescription>
 			</features>
 		</typeDescription>
