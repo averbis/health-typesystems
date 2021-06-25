@@ -368,11 +368,6 @@
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
-					<name>side</name>
-					<description>The laterality of the diagnosis. Possible values (default is underlined): null | RIGHT | LEFT | BOTH</description>
-					<rangeTypeName>uima.cas.String</rangeTypeName>
-				</featureDescription>
-				<featureDescription>
 					<name>laterality</name>
 					<description>The laterality of the diagnosis. Possible values (default is underlined): null | RIGHT | LEFT | BOTH</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
@@ -914,7 +909,7 @@
 			<description />
 			<supertypeName>de.averbis.types.health.Concept</supertypeName>
 			<featureDescription>
-				<name>side</name>
+				<name>laterality</name>
 				<description>The laterality of the diagnosis.
 				Possible values: null | RIGHT | LEFT | BOTH</description>
 				<rangeTypeName>uima.cas.String</rangeTypeName>
@@ -1126,7 +1121,7 @@
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
-					<name>side</name>
+					<name>laterality</name>
 					<description>The laterality of the procedure.
 					Possible values: null | RIGHT | LEFT | BOTH</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>

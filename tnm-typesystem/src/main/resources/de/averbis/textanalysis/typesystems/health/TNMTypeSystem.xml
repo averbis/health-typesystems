@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
 	<name>de.averbis.textanalysis.typesystems.health.TNMTypeSystem</name>
-	<description>The type system for the TNM Classification of Malignant Tumours: A cancer staging
+	<description>The type system for the TNM Classification of Malignant Tumors: A cancer staging
 		notation system that describes the stage of a cancer which originates from a solid tumor with
 		alphanumeric codes.</description>
 	<version>${project.version}</version>
@@ -29,7 +29,7 @@
 			<features>
 				<featureDescription>
 					<name>label</name>
-					<description>Label of the entity describing the type of the entity, e.g., TUMOUR or GRADING.
+					<description>Label of the entity describing the type of the entity, e.g., TUMOR or GRADING.
 					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
@@ -54,11 +54,11 @@
 			</features>
 		</typeDescription>
 		<typeDescription>
-			<name>de.averbis.textanalysis.types.health.TNMTumour</name>
-			<description>T: size or direct extent of the primary tumour. Examples: Tx: tumour cannot be
+			<name>de.averbis.textanalysis.types.health.TNMTumor</name>
+			<description>T: size or direct extent of the primary tumor. Examples: Tx: tumor cannot be
 				evaluated.
-				Tis: carcinoma in situ. T0: no signs of tumour. T1, T2, T3, T4: size and/or extension of the primary
-				tumour.
+				Tis: carcinoma in situ. T0: no signs of tumor. T1, T2, T3, T4: size and/or extension of the primary
+				tumor.
 			</description>
 			<supertypeName>de.averbis.textanalysis.types.health.TNMElement</supertypeName>
 		</typeDescription>
@@ -97,8 +97,8 @@
 		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.TNMPostModifier</name>
-			<description>Postmodifier of an element: a, b, c. Among others subclassification of tumour size,
-				e.g. T1a: tumour under 0.1cm</description>
+			<description>Postmodifier of an element: a, b, c. Among others subclassification of tumor size,
+				e.g. T1a: tumor under 0.1cm</description>
 			<supertypeName>de.averbis.textanalysis.types.health.TNMBasic</supertypeName>
 		</typeDescription>
 		<typeDescription>
@@ -122,9 +122,9 @@
 		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.TNMRClass</name>
-			<description>Residual Tumour (R) Classification. Rx: Presence of residual tumour cannot be
-				assessed. R0: No residual tumour. R1: Microscopic residual tumour. R2: Macroscopic residual
-				tumour</description>
+			<description>Residual Tumor (R) Classification. Rx: Presence of residual tumor cannot be
+				assessed. R0: No residual tumor. R1: Microscopic residual tumor. R2: Macroscopic residual
+				tumor</description>
 			<supertypeName>de.averbis.textanalysis.types.health.TNMEntity</supertypeName>
 		</typeDescription>
 		<typeDescription>
@@ -132,7 +132,7 @@
 			<description>The C-factor, or certainty factor, reflects the validity of classification according
 				to the diagnostic methods employed. Its use is optional. The C-factor definitions are:
 				C1: Evidence from standard diagnostic means (e.g., inspection, palpation, and standard radiography,
-				intraluminal endoscopy for tumours of certain organs). C2: Evidence obtained by special
+				intraluminal endoscopy for tumors of certain organs). C2: Evidence obtained by special
 				diagnostic means (e.g., radiographic imaging in special projections, tomography, computerized
 				tomography [CT], ultrasonography, lymphography, angiography, scintigraphy, magnetic resonance
 				imaging [MRI], endoscopy, biopsy, and cytology). C3: Evidence from surgical exploration,
@@ -152,8 +152,8 @@
 			<supertypeName>de.averbis.textanalysis.types.health.TNMBasic</supertypeName>
 			<features>
 				<featureDescription>
-					<name>tumour</name>
-					<description>The tumour annotations.</description>
+					<name>tumor</name>
+					<description>The tumor annotations.</description>
 					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
@@ -177,7 +177,7 @@
 					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
-					<name>rclass</name>
+					<name>rClass</name>
 					<description>The R class annotations</description>
 					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
 				</featureDescription>
@@ -241,9 +241,9 @@
 			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
 			<features>
 				<featureDescription>
-					<name>tumour</name>
-					<description>tumour</description>
-					<rangeTypeName>de.averbis.textanalysis.types.health.TNMTumour</rangeTypeName>
+					<name>tumor</name>
+					<description>tumor</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.TNMTumor</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>node</name>
@@ -266,8 +266,8 @@
 					<rangeTypeName>de.averbis.textanalysis.types.health.TNMLocation</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
-					<name>rclass</name>
-					<description>rclass</description>
+					<name>rClass</name>
+					<description>rClass</description>
 					<rangeTypeName>de.averbis.textanalysis.types.health.TNMRClass</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
