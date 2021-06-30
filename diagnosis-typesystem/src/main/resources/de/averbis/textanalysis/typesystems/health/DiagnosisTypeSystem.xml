@@ -76,7 +76,7 @@
 					<rangeTypeName>de.averbis.textanalysis.types.health.DiagnosisConcept</rangeTypeName>
 		        </featureDescription>
 				<featureDescription>
-		        	<name>side</name>
+		        	<name>laterality</name>
 		        	<description>The laterality of the actual diagnosis.</description>
 		        	<rangeTypeName>de.averbis.textanalysis.types.health.Laterality</rangeTypeName>
 		        </featureDescription>
@@ -96,11 +96,6 @@
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 		        </featureDescription>
 		        <featureDescription>
-					<name>symptom</name>
-					<description>Reference to symptom nearby.</description>
-					<rangeTypeName>de.averbis.textanalysis.types.health.SymptomConcept</rangeTypeName>
-		        </featureDescription>
-		        <featureDescription>
 					<name>clinicalStatus</name>
 					<description>Clinical status of the actual diagnosis.</description>
 					<rangeTypeName>de.averbis.textanalysis.types.health.Status</rangeTypeName>
@@ -117,11 +112,6 @@
 		        </featureDescription>
 	      	</features>
     	</typeDescription>
-		<typeDescription>
-			<name>de.averbis.textanalysis.types.health.SymptomConcept</name>
-			<description>Concept type for symptoms.</description>
-			<supertypeName>de.averbis.extraction.types.Concept</supertypeName>
-		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.DiagnosisStatus</name>
 			<description>Clinical status (active, resolved) or verification status (assured, negated, unknown, ...) of a diagnosis.</description>
