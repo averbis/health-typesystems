@@ -92,9 +92,36 @@
 			</features>
 		</typeDescription>
 		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PersonGroupIndicator</name>
+			<description>Indicator for the mentioning of a person.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>value</name>
+					<description>Description of the person group, e.g. "FAMILY" or "OTHER"</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PatientGroupIndicator</name>
+			<description>Indicator for a mentioning of a person in the patient's context.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.PersonGroupIndicator</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PatientIndicator</name>
+			<description>Indicator for a mentioning of the patient.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.PatientGroupIndicator</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PatientContactIndicator</name>
+			<description>Indicator for a mentioning of a person not related to the patient.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.PatientGroupIndicator</supertypeName>
+		</typeDescription>
+		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.FamilyIndicator</name>
 			<description>Indicator for a diagnosis in the family.</description>
-			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<supertypeName>de.averbis.textanalysis.types.health.PatientGroupIndicator</supertypeName>
 		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.Candidate</name>
