@@ -815,6 +815,7 @@
 					<name>administrations</name>
 					<description>The routes of administration of this medication.</description>
 					<rangeTypeName>uima.cas.StringArray</rangeTypeName>
+					<multipleReferencesAllowed>true</multipleReferencesAllowed>
 				</featureDescription>
 				<featureDescription>
 					<name>date</name>
@@ -1237,6 +1238,7 @@
 					<name>descriptions</name>
 					<description>Description text, if available.</description>
 					<rangeTypeName>uima.cas.StringArray</rangeTypeName>
+					<multipleReferencesAllowed>true</multipleReferencesAllowed>
 				</featureDescription>
 				<featureDescription>
 					<name>diagnosis</name>
