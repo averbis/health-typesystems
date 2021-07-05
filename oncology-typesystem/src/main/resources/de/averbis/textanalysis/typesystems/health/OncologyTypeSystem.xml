@@ -258,7 +258,8 @@
           		<name>descriptions</name>
           		<description>Additional descriptions of the specimen.</description>
           		<rangeTypeName>uima.cas.FSArray</rangeTypeName>
-        	<elementType>de.averbis.textanalysis.types.health.Specimen</elementType>
+		        	<elementType>de.averbis.textanalysis.types.health.Specimen</elementType>
+							<multipleReferencesAllowed>true</multipleReferencesAllowed>
         </featureDescription>
       	</features>
 	</typeDescription>

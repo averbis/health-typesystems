@@ -815,6 +815,7 @@
 					<name>administrations</name>
 					<description>The routes of administration of this medication.</description>
 					<rangeTypeName>uima.cas.StringArray</rangeTypeName>
+					<multipleReferencesAllowed>true</multipleReferencesAllowed>
 				</featureDescription>
 				<featureDescription>
 					<name>date</name>
@@ -840,6 +841,7 @@
 					<description />
 					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
 					<elementType>de.averbis.types.health.Drug</elementType>
+					<multipleReferencesAllowed>true</multipleReferencesAllowed>
 				</featureDescription>
 				<featureDescription>
 					<name>rateQuantity</name>
@@ -857,6 +859,7 @@
 					<description>Additional information on clinical drug, e.g. semantic clinical drug (RxNorm TermType).</description>
 					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
 					<elementType>de.averbis.types.health.TTY</elementType>
+					<multipleReferencesAllowed>true</multipleReferencesAllowed>
 				</featureDescription>
 			</features>
 		</typeDescription>
@@ -1235,6 +1238,7 @@
 					<name>descriptions</name>
 					<description>Description text, if available.</description>
 					<rangeTypeName>uima.cas.StringArray</rangeTypeName>
+					<multipleReferencesAllowed>true</multipleReferencesAllowed>
 				</featureDescription>
 				<featureDescription>
 					<name>diagnosis</name>

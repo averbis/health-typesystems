@@ -19,7 +19,8 @@
 					<name>negating</name>
 					<description>List of concepts which are negated by current negation.</description>
 					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
-          <elementType>de.averbis.extraction.types.Concept</elementType>
+					<elementType>de.averbis.extraction.types.Concept</elementType>
+					<multipleReferencesAllowed>true</multipleReferencesAllowed>
 				</featureDescription>
 			</features>
 		</typeDescription>
