@@ -334,7 +334,7 @@
 		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.MedicationStatus</name>
-			<description>Status of the medication. Available values: ADMISSION, INPATIENT, DISCHARGE, NEGATED, CONSIDERED, INTENDED, FAMILY.</description>
+			<description>Status of the medication. Available values: null, ADMISSION, ALLERGY, INPATIENT, DISCHARGE, NEGATED, CONSIDERED, INTENDED, FAMILY, CONDITIONING_TREATMENT, UNKNOWN.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.Status</supertypeName>
 		</typeDescription>
 		<typeDescription>
