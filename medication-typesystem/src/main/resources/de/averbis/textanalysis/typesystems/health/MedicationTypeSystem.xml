@@ -60,6 +60,11 @@
 					<elementType>de.averbis.textanalysis.types.health.TTY</elementType>
 					<multipleReferencesAllowed>true</multipleReferencesAllowed>
 				</featureDescription>
+				<featureDescription>
+					<name>atc</name>
+					<description>The ATC Code of the medication.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
 			</features>
 		</typeDescription>
 		<typeDescription>
