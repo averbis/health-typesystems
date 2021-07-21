@@ -851,7 +851,7 @@
 				<featureDescription>
 					<name>status</name>
 					<description>Status of the medication.
-					Possible values: null | ADMISSION | ALLERGY | INPATIENT | DISCHARGE | NEGATED | CONSIDERED | INTENDED | FAMILY |CONDITIONING_TREATMENT</description>
+					Possible values: null | ADMISSION | ALLERGY | INPATIENT | DISCHARGE | NEGATED | CONSIDERED | INTENDED | FAMILY | CONDITIONING_TREATMENT | UNKNOWN </description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
