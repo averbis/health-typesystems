@@ -818,6 +818,11 @@
 					<multipleReferencesAllowed>true</multipleReferencesAllowed>
 				</featureDescription>
 				<featureDescription>
+					<name>atc</name>
+					<description>The ATC Code of the medication.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
 					<name>date</name>
 					<description>Temporal information (time, date or date interval) about the medication.
 					kind: Possible values: null, TIME, DATE, DATEINTERVAL
