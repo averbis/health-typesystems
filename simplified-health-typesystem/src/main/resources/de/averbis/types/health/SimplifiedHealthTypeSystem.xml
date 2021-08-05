@@ -823,6 +823,11 @@
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
+					<name>brandName</name>
+					<description>The brand name of the medication.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
 					<name>date</name>
 					<description>Temporal information (time, date or date interval) about the medication.
 					kind: Possible values: null, TIME, DATE, DATEINTERVAL
