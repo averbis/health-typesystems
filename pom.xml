@@ -17,9 +17,9 @@
 	<packaging>pom</packaging>
 
 	<properties>
-		<uima-version>3.1.1</uima-version>
+		<uima-version>3.2.0</uima-version>
 		<ruta-typesystems-version>3.1.0</ruta-typesystems-version>
-		<core-typesystems-version>4.0.0</core-typesystems-version>
+		<core-typesystems-version>4.1.0</core-typesystems-version>
 	</properties>
 
 	<licenses>
