@@ -241,7 +241,7 @@
 			<supertypeName>de.averbis.textanalysis.types.health.AbstractObservation</supertypeName>
 			<features>
 	        	<featureDescription>
-	        		<name>side</name>
+	        		<name>laterality</name>
 	        		<description>Laterality of the ophthalmological term.</description>
 	        		<rangeTypeName>de.averbis.textanalysis.types.health.Laterality</rangeTypeName>
 	        	</featureDescription>

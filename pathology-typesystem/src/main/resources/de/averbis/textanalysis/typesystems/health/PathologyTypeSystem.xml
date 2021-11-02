@@ -125,6 +125,13 @@
 					<rangeTypeName>uima.cas.Integer</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
+					<name>scores</name>
+					<description>List of different scores, e.g. GleasonScore.</description>
+					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
+					<elementType>de.averbis.extraction.types.CoreAnnotation</elementType>
+					<multipleReferencesAllowed>true</multipleReferencesAllowed>
+				</featureDescription>
+				<featureDescription>
 					<name>categoryAnnotation</name>
 					<description>Optional annotation representing the category of the document.</description>
 					<rangeTypeName>de.averbis.extraction.types.Category</rangeTypeName>
@@ -147,7 +154,7 @@
 				<featureDescription>
 					<name>tumorAnnotation</name>
 					<description>Optional annotation representing the relevant tumor.</description>
-					<rangeTypeName>de.averbis.textanalysis.types.health.TNMTumour</rangeTypeName>
+					<rangeTypeName>de.averbis.textanalysis.types.health.TNMTumor</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>nodeAnnotation</name>

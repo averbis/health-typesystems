@@ -2,7 +2,7 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>health-typesystems</artifactId>
-	<version>3.0.0-SNAPSHOT</version>
+	<version>3.3.0-SNAPSHOT</version>
 
 	<name>${project.groupId}:${project.artifactId}</name>
 	<description>The UIMA type systems of the Averbis health components</description>
@@ -11,14 +11,15 @@
 	<parent>
 		<groupId>de.averbis.textanalysis</groupId>
 		<artifactId>parent-pom-typesystems</artifactId>
-		<version>3.22.0</version>
+		<version>4.0.1</version>
 	</parent>
 
 	<packaging>pom</packaging>
 
 	<properties>
-		<uima-version>3.1.1</uima-version>
-		<core-typesystems-version>4.0.0-alpha-2</core-typesystems-version>
+		<uima-version>3.2.0</uima-version>
+		<ruta-typesystems-version>3.1.0</ruta-typesystems-version>
+		<core-typesystems-version>4.1.0</core-typesystems-version>
 	</properties>
 
 	<licenses>
@@ -41,7 +42,7 @@
 		<connection>scm:git:git://github.com/averbis/health-typesystems</connection>
 		<developerConnection>scm:git:git@github.com:averbis/health-typesystems.git</developerConnection>
 		<url>https://github.com/averbis/health-typesystems</url>
-		<tag>health-typesystems-2.27.0</tag>
+		<tag>HEAD</tag>
 	</scm>
 
 	<modules>
@@ -63,6 +64,7 @@
 		<module>phi-typesystem</module>
 		<module>simplified-health-typesystem</module>
 		<module>anatomy-typesystem</module>
+		<module>internal-typesystem</module>
 	</modules>
 
 </project>

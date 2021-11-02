@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+	<name>de.averbis.textanalysis.typesystems.health.InternalTypeSystem</name>
+	<description/>
+	<version>${project.version}</version>
+	<vendor>Averbis GmbH</vendor>
+	<imports>
+
+		<!-- Ruta -->
+		<import name="org.apache.uima.ruta.engine.BasicTypeSystem"/>
+		<import name="org.apache.uima.ruta.engine.HtmlTypeSystem"/>
+		<import name="org.apache.uima.ruta.engine.PlainTextTypeSystem"/>
+
+		<!-- Core -->
+		<import name="de.averbis.textanalysis.typesystems.AverbisTypeSystem"/>
+		<import name="de.averbis.textanalysis.typesystems.EvaluationTypeSystem"/>
+		<import name="de.averbis.textanalysis.typesystems.MeasurementTypeSystem"/>
+		<import name="de.averbis.textanalysis.typesystems.NamedEntityTypeSystem"/>
+		<import name="de.averbis.textanalysis.typesystems.NeuralTypeSystem"/>
+		<import name="de.averbis.textanalysis.typesystems.NumericValueTypeSystem"/>
+		<import name="de.averbis.textanalysis.typesystems.TemporalTypeSystem"/>
+		<import name="de.averbis.textanalysis.typesystems.TextTypeSystem"/>
+
+		<!-- Internal Health -->
+		<import name="de.averbis.textanalysis.typesystems.health.AnatomyTypeSystem"/>
+		<import name="de.averbis.textanalysis.typesystems.health.ClinicalSectionTypeSystem"/>
+		<import name="de.averbis.textanalysis.typesystems.health.HealthTypeSystem"/>
+		<import name="de.averbis.textanalysis.typesystems.health.DiagnosisTypeSystem"/>
+		<import name="de.averbis.textanalysis.typesystems.health.EHRInformationTypeSystem"/>
+		<import name="de.averbis.textanalysis.typesystems.health.LaboratoryValueTypeSystem"/>
+		<import name="de.averbis.textanalysis.typesystems.health.MedicalDisambiguationTypeSystem"/>
+		<import name="de.averbis.textanalysis.typesystems.health.MedicalNegationTypeSystem"/>
+		<import name="de.averbis.textanalysis.typesystems.health.MedicationTypeSystem"/>
+		<import name="de.averbis.textanalysis.typesystems.health.ObservationTypeSystem"/>
+		<import name="de.averbis.textanalysis.typesystems.health.OncologyTypeSystem"/>
+		<import name="de.averbis.textanalysis.typesystems.health.PathologyTypeSystem"/>
+		<import name="de.averbis.textanalysis.typesystems.health.PatientInformationTypeSystem"/>
+		<import name="de.averbis.textanalysis.typesystems.health.PHITypeSystem"/>
+		<import name="de.averbis.textanalysis.typesystems.health.ProcedureTypeSystem"/>
+		<import name="de.averbis.textanalysis.typesystems.health.TherapyTypeSystem"/>
+		<import name="de.averbis.textanalysis.typesystems.health.TNMTypeSystem"/>
+
+	</imports>
+</typeSystemDescription>

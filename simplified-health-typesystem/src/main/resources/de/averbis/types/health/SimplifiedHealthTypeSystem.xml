@@ -165,6 +165,12 @@
 		<!-- Health Annotations (alphabetically)  -->
 		
 		<typeDescription>
+			<name>de.averbis.types.health.Anatomy</name>
+			<description>Contains information about anatomy.</description>
+			<supertypeName>de.averbis.types.health.Concept</supertypeName>
+		</typeDescription>
+		
+		<typeDescription>
 			<name>de.averbis.types.health.BiologicallyDerivedProduct</name>
 			<description>Contains information about the biological product of CD34-positive stem cells.</description>
 			<supertypeName>de.averbis.types.health.Concept</supertypeName>
@@ -258,56 +264,6 @@
 			</features>
 		</typeDescription>
 		
-		<typeDescription>
-			<name>de.averbis.types.health.CodingCandidate</name>
-			<description>A candidate for a DRG coding.</description>
-			<supertypeName>de.averbis.types.health.ExternalCoreAnnotation</supertypeName>
-			<features>
-				<featureDescription>
-					<name>approach</name>
-					<description>The approach that generated this candidate.</description>
-					<rangeTypeName>uima.cas.String</rangeTypeName>
-				</featureDescription>
-				<featureDescription>
-					<name>belongsTo</name>
-					<description>Coding candidate belongs to patient or other person (family anamnesis). Possible values include 'patient' or 'family'.</description>
-					<rangeTypeName>uima.cas.String</rangeTypeName>
-				</featureDescription>
-				<featureDescription>
-					<name>clinicalStatus</name>
-					<description>Clinical status of the coding candidate.</description>
-					<rangeTypeName>uima.cas.String</rangeTypeName>
-				</featureDescription>
-				<featureDescription>
-					<name>conceptID</name>
-					<description>The id of the coding candidate.</description>
-					<rangeTypeName>uima.cas.String</rangeTypeName>
-				</featureDescription>
-				<featureDescription>
-					<name>confidence</name>
-					<description>For approaches using machine learning, the confidence is calculated that the respective annotation has been correctly generated.
-					Possible value range: 0-1 Note: Annotations generated with non-machine learning approaches such as terminology mappings (approach = "DictionaryLookup")
-					are reflected with a confidence value of 0.</description>
-					<rangeTypeName>uima.cas.Double</rangeTypeName>
-				</featureDescription>
-				<featureDescription>
-					<name>dictCanon</name>
-					<description>An optional preferred term corresponding to the given id.</description>
-					<rangeTypeName>uima.cas.String</rangeTypeName>
-				</featureDescription>
-				<featureDescription>
-					<name>kind</name>
-					<description>The kind of the CodingCandidate, i.e. 'ICD' or 'OPS'.</description>
-					<rangeTypeName>uima.cas.String</rangeTypeName>
-				</featureDescription>
-				<featureDescription>
-					<name>verificationStatus</name>
-					<description>Verification status of the coding candidate.</description>
-					<rangeTypeName>uima.cas.String</rangeTypeName>
-				</featureDescription>
-			</features>
-		</typeDescription>
-
 		<typeDescription>
 			<name>de.averbis.types.health.DayTimeDoseFrequency</name>
 			<description>Details of dose frequency for a specific time of day.</description>
@@ -409,11 +365,6 @@
 					<description>The onset date of the diagnosis, if given in the text. Format: YYYY-MM-DD: Year-Month-Day with leading zeros (e.g. 2020-02-17) Please note:
 					The onsetDate is only annotated if the pear component "Disease Onset Date" is integrated in the text analysis pipeline used. The preconfigured pipelines
 					do not contain this component, thus the value of the onset feature is represented as null.</description>
-					<rangeTypeName>uima.cas.String</rangeTypeName>
-				</featureDescription>
-				<featureDescription>
-					<name>side</name>
-					<description>The laterality of the diagnosis. Possible values (default is underlined): null | RIGHT | LEFT | BOTH</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
@@ -864,6 +815,17 @@
 					<name>administrations</name>
 					<description>The routes of administration of this medication.</description>
 					<rangeTypeName>uima.cas.StringArray</rangeTypeName>
+					<multipleReferencesAllowed>true</multipleReferencesAllowed>
+				</featureDescription>
+				<featureDescription>
+					<name>atc</name>
+					<description>The ATC Code of the medication.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>brandName</name>
+					<description>The brand name of the medication.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>date</name>
@@ -889,6 +851,7 @@
 					<description />
 					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
 					<elementType>de.averbis.types.health.Drug</elementType>
+					<multipleReferencesAllowed>true</multipleReferencesAllowed>
 				</featureDescription>
 				<featureDescription>
 					<name>rateQuantity</name>
@@ -898,7 +861,7 @@
 				<featureDescription>
 					<name>status</name>
 					<description>Status of the medication.
-					Possible values: null | ADMISSION | ALLERGY | INPATIENT | DISCHARGE | NEGATED | CONSIDERED | INTENDED | FAMILY |CONDITIONING_TREATMENT</description>
+					Possible values: null | ADMISSION | ALLERGY | INPATIENT | DISCHARGE | NEGATED | CONSIDERED | INTENDED | FAMILY | CONDITIONING_TREATMENT | UNKNOWN </description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
@@ -906,6 +869,7 @@
 					<description>Additional information on clinical drug, e.g. semantic clinical drug (RxNorm TermType).</description>
 					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
 					<elementType>de.averbis.types.health.TTY</elementType>
+					<multipleReferencesAllowed>true</multipleReferencesAllowed>
 				</featureDescription>
 			</features>
 		</typeDescription>
@@ -958,7 +922,7 @@
 			<description />
 			<supertypeName>de.averbis.types.health.Concept</supertypeName>
 			<featureDescription>
-				<name>side</name>
+				<name>laterality</name>
 				<description>The laterality of the diagnosis.
 				Possible values: null | RIGHT | LEFT | BOTH</description>
 				<rangeTypeName>uima.cas.String</rangeTypeName>
@@ -1110,9 +1074,26 @@
 					<description>Clark Level.</description>
 					<rangeTypeName>uima.cas.Integer</rangeTypeName>
 				</featureDescription>
+				<featureDescription>
+					<name>scores</name>
+					<description>List of different scores, e.g. Gleason Score.</description>
+					<rangeTypeName>de.averbis.types.health.PathologyScore</rangeTypeName>
+				</featureDescription>
 			</features>
 		</typeDescription>
 		
+		<typeDescription>
+			<name>de.averbis.types.health.PathologyScore</name>
+				<description />
+				<supertypeName>de.averbis.types.health.ExternalCoreAnnotation</supertypeName>
+				<features>
+					<featureDescription>
+						<name>gleasonScore</name>
+						<description>Highest GleasonScore.</description>
+						<rangeTypeName>uima.cas.String</rangeTypeName>
+					</featureDescription>
+				</features>
+		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.types.health.PatientInformation</name>
 			<description />
@@ -1158,7 +1139,7 @@
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
-					<name>side</name>
+					<name>laterality</name>
 					<description>The laterality of the procedure.
 					Possible values: null | RIGHT | LEFT | BOTH</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
@@ -1192,6 +1173,12 @@
 					<name>dictCanon</name>
 					<description>An optional preferred term corresponding to the given id.</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>confidence</name>
+					<description>For approaches using machine learning, the confidence is calculated that the respective annotation has been correctly generated.
+					Possible value range: 0-1.</description>
+					<rangeTypeName>uima.cas.Double</rangeTypeName>
 				</featureDescription>
 			</features>
 		</typeDescription>
@@ -1266,6 +1253,7 @@
 					<name>descriptions</name>
 					<description>Description text, if available.</description>
 					<rangeTypeName>uima.cas.StringArray</rangeTypeName>
+					<multipleReferencesAllowed>true</multipleReferencesAllowed>
 				</featureDescription>
 				<featureDescription>
 					<name>diagnosis</name>

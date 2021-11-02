@@ -8,7 +8,7 @@
 	<parent>
 		<groupId>de.averbis.textanalysis</groupId>
 		<artifactId>health-typesystems</artifactId>
-		<version>3.0.0-SNAPSHOT</version>
+		<version>3.3.0-SNAPSHOT</version>
 	</parent>
 	
 	<dependencies>
@@ -22,6 +22,11 @@
 		<dependency>
 			<groupId>de.averbis.textanalysis</groupId>
 			<artifactId>components-core-typesystem</artifactId>
+			<version>${core-typesystems-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>de.averbis.textanalysis</groupId>
+			<artifactId>numeric-value-typesystem</artifactId>
 			<version>${core-typesystems-version}</version>
 		</dependency>
 

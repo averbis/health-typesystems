@@ -39,12 +39,14 @@
 					<description>The routes of administration of this medication.</description>
 					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
 					<elementType>de.averbis.textanalysis.types.health.Administration</elementType>
+					<multipleReferencesAllowed>true</multipleReferencesAllowed>
 				</featureDescription>
 				<featureDescription>
 					<name>additionalAmounts</name>
 					<description>Additional mentions of dose amounts, e.g., 2 doses.</description>
 					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
 					<elementType>de.averbis.textanalysis.types.health.AdditionalDoseAmount</elementType>
+					<multipleReferencesAllowed>true</multipleReferencesAllowed>
 				</featureDescription>
 				<featureDescription>
 					<name>status</name>
@@ -56,6 +58,12 @@
 					<description>Additional information on clinical drug, e.g. semantic clinical drug (RxNorm Term Type).</description>
 					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
 					<elementType>de.averbis.textanalysis.types.health.TTY</elementType>
+					<multipleReferencesAllowed>true</multipleReferencesAllowed>
+				</featureDescription>
+				<featureDescription>
+					<name>atc</name>
+					<description>The ATC Code of the medication.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 			</features>
 		</typeDescription>
@@ -98,6 +106,7 @@
 					<description>List of all drugs contained in the actual multi drug</description>
 					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
 					<elementType>de.averbis.textanalysis.types.health.Drug</elementType>
+					<multipleReferencesAllowed>true</multipleReferencesAllowed>
 				</featureDescription>
 				<featureDescription>
 					<name>concept</name>
@@ -330,7 +339,7 @@
 		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.MedicationStatus</name>
-			<description>Status of the medication. Available values: ADMISSION, INPATIENT, DISCHARGE, NEGATED, CONSIDERED, INTENDED, FAMILY.</description>
+			<description>Status of the medication. Available values: null, ADMISSION, ALLERGY, INPATIENT, DISCHARGE, NEGATED, CONSIDERED, INTENDED, FAMILY, CONDITIONING_TREATMENT, UNKNOWN.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.Status</supertypeName>
 		</typeDescription>
 		<typeDescription>
