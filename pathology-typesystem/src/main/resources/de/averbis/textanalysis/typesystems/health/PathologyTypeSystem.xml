@@ -120,6 +120,11 @@
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
+					<name>reportDate</name>
+					<description>The date of the reporting.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
 					<name>scores</name>
 					<description>List of different scores, e.g. GleasonScore.</description>
 					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
@@ -221,6 +226,11 @@
 					<name>resultDateAnnotation</name>
 					<description>Optional annotation representing the date of the findings/result.</description>
 					<rangeTypeName>de.averbis.textanalysis.types.health.ResultDate</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>reportDateAnnotation</name>
+					<description>Optional annotation representing the date of the reporting.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.ReportDate</rangeTypeName>
 				</featureDescription>
 			</features>
 		</typeDescription>
