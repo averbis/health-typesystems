@@ -347,6 +347,29 @@
 			<supertypeName>de.averbis.textanalysis.types.health.ProcedureSection</supertypeName>
 		</typeDescription>
 		
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.ProcedureSummarySection</name>
+			<description>This section defines a short summary of the underwent procedures.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.ProcedureSection</supertypeName>
+		</typeDescription>
+		
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.ProcedureProtocolSection</name>
+			<description>This section defines a detailed protocol of the underwent procedures.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.ProcedureSection</supertypeName>
+		</typeDescription>
+		
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.ProcedurePostSection</name>
+			<description>This section defines indications to be considered in aftermath of a procedure.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.ProcedureSection</supertypeName>
+		</typeDescription>
+		
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.ProcedureAnamnesisSection</name>
+			<description>This section defines the patient's medical history before a procedure.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.ProcedureSection</supertypeName>
+		</typeDescription>
 
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.EpicrisisSection</name>
