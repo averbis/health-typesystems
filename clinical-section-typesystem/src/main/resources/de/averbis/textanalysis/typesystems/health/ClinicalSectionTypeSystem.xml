@@ -164,14 +164,19 @@
 			<name>de.averbis.textanalysis.types.health.AdmissionMedicationSection</name>
 			<description>Admission can refer to hospital admission, long-term care admission, or home health admission.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.MedicationSection</supertypeName>
-		</typeDescription>		
+		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.DischargeMedicationSection</name>
 			<description>Hospital discharge medications defines the medications that the patient is intended to take (or stop) after 
 		 					discharge. This may also include a patient's prescription history and indicate the source of the medication 
 		 					list, for example, from a pharmacy system versus from the patient.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.MedicationSection</supertypeName>
-		</typeDescription>		
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.InpatientMedicationSection</name>
+			<description>Hospital inpatient medications define the medications given during hospitalization.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.MedicationSection</supertypeName>
+		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.MedicationRecommendationSection</name>
 			<description>Recommendation for medication after discharge.</description>
