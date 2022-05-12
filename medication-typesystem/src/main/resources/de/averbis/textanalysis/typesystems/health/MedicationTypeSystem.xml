@@ -50,8 +50,13 @@
 				</featureDescription>
 				<featureDescription>
 					<name>status</name>
-					<description>Status of the medication, e.g. ADMISSION, DISCHARGE. For all available value see MedicationStatus.</description>
+					<description>Status of the medication, e.g. NEGATED, CONSIDERED. For all available value see MedicationStatus.</description>
 					<rangeTypeName>de.averbis.textanalysis.types.health.MedicationStatus</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>category</name>
+					<description>Category of the medication, e.g. ADMISSION, DISCHARGE. For all available value see MedicationCategory.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.MedicationCategory</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>termTypes</name>
@@ -339,12 +344,17 @@
 		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.MedicationStatus</name>
-			<description>Status of the medication. Available values: null, ADMISSION, ALLERGY, INPATIENT, DISCHARGE, NEGATED, CONSIDERED, INTENDED, INACTIVE, FAMILY, CONDITIONING_TREATMENT, UNKNOWN.</description>
+			<description>Status of the medication. Available values: null, NEGATED, CONSIDERED, INTENDED, INACTIVE, UNKNOWN.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.Status</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.MedicationCategory</name>
+			<description>Category of the medication. Available values: null, ADMISSION, ALLERGY, INPATIENT, DISCHARGE, FAMILY, CONDITIONING_TREATMENT.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.Status</supertypeName>
 		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.MedicationStatusIndicator</name>
-			<description>Indicator for a status of a medication. Interpretation could be e.g. NEGATED, CONSIDERED, ADMISSION, DISCHARGE. For all available value see MedicationStatus.</description>
+			<description>Indicator for a status of a medication. Interpretation could be e.g. NEGATED, CONSIDERED. For all available value see MedicationStatus.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.StatusIndicator</supertypeName>
 		</typeDescription>
 	</types>
