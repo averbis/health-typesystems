@@ -141,7 +141,23 @@
 			<name>de.averbis.types.health.Date</name>
 			<description />
 			<supertypeName>de.averbis.types.health.Timex3</supertypeName>
-			<features />
+			<features>
+				<featureDescription>
+					<name>day</name>
+					<description />
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>month</name>
+					<description />
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>year</name>
+					<description />
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>				
+			</features>
 		</typeDescription>
 
 		<typeDescription>
