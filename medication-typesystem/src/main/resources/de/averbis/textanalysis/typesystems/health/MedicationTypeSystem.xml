@@ -20,6 +20,12 @@
 					<rangeTypeName>de.averbis.textanalysis.types.health.AbstractDrug</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
+					<name>dosage</name>
+					<description>Encapsulating Strength, AdditionalAmount, DoseFrequency in a single feature.</description>
+					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
+					<elementType>de.averbis.extraction.types.CoreAnnotation</elementType>
+				</featureDescription>
+				<featureDescription>
 					<name>doseForm</name>
 					<description>Dose form of the actual medication.</description>
 					<rangeTypeName>de.averbis.textanalysis.types.health.DoseFormConcept</rangeTypeName>
@@ -67,8 +73,14 @@
 				</featureDescription>
 				<featureDescription>
 					<name>atc</name>
-					<description>The ATC Code of the medication.</description>
+					<description>!! DEPRECATED !! Please use the feature 'atcCodes'. The ATC Code of the medication.</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>atcCodes</name>
+					<description>The ATC Codes of the medication.</description>
+					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
+					<elementType>de.averbis.textanalysis.types.health.ATCCodeConcept</elementType>
 				</featureDescription>
 			</features>
 		</typeDescription>
@@ -136,7 +148,12 @@
 					<rangeTypeName>de.averbis.textanalysis.types.measurement.Measurement</rangeTypeName>
 				</featureDescription>
 			</features>
-		</typeDescription>		
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.ATCCodeConcept</name>
+			<description>Concept type for atc codes.</description>
+			<supertypeName>de.averbis.extraction.types.Concept</supertypeName>
+		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.IngredientConcept</name>
 			<description>Concept type for ingredients.</description>
