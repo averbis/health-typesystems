@@ -23,7 +23,8 @@
 					<name>dosage</name>
 					<description>Encapsulating Strength, AdditionalAmount, DoseFrequency in a single feature.</description>
 					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
-					<elementType>de.averbis.extraction.types.CoreAnnotation</elementType>
+					<elementType>de.averbis.textanalysis.types.health.Dosage</elementType>
+					<multipleReferencesAllowed>true</multipleReferencesAllowed>
 				</featureDescription>
 				<featureDescription>
 					<name>doseForm</name>
@@ -81,9 +82,15 @@
 					<description>The ATC Codes of the medication.</description>
 					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
 					<elementType>de.averbis.textanalysis.types.health.ATCCodeConcept</elementType>
+					<multipleReferencesAllowed>true</multipleReferencesAllowed>
 				</featureDescription>
 			</features>
 		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.Dosage</name>
+			<description>Wrapper for different kinds of dosage information.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+		</typeDescription>		
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.AbstractDrug</name>
 			<description>Supertype of the drugs.</description>
