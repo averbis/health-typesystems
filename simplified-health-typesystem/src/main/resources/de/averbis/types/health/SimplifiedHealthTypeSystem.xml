@@ -179,7 +179,7 @@
 		</typeDescription>
 
 		<!-- Health Annotations (alphabetically)  -->
-		
+	
 		<typeDescription>
 			<name>de.averbis.types.health.Anatomy</name>
 			<description>Contains information about anatomy.</description>
@@ -439,14 +439,18 @@
 				</featureDescription>
 			</features>
 		</typeDescription>
-
 		<typeDescription>
 			<name>de.averbis.types.health.DoseForm</name>
 			<description>The type of dose form.</description>
 			<supertypeName>de.averbis.types.health.Concept</supertypeName>
 			<features />
 		</typeDescription>
-
+		<typeDescription>
+			<name>de.averbis.types.health.Dosage</name>
+			<description>Different kinds of dosage information.</description>
+			<supertypeName>de.averbis.types.health.ExternalCoreAnnotation</supertypeName>
+			<features />
+		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.types.health.DoseFrequency</name>
 			<description>The taking interval and amount of doses.</description>
@@ -835,9 +839,16 @@
 				</featureDescription>
 				<featureDescription>
 					<name>atc</name>
-					<description>The ATC Code of the medication.</description>
+					<description>!! DEPRECATED !! Please use the feature 'atcCodes'. The ATC Code of the medication.</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
+				<featureDescription>
+					<name>atcCodes</name>
+					<description>The ATC Codes of the medication.</description>
+					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
+					<elementType>de.averbis.types.health.Concept</elementType>
+					<multipleReferencesAllowed>true</multipleReferencesAllowed>
+				</featureDescription>				
 				<featureDescription>
 					<name>brandName</name>
 					<description>The brand name of the medication.</description>
@@ -849,6 +860,13 @@
 					kind: Possible values: null, TIME, DATE, DATEINTERVAL
 					value: value of the temporal information</description>
 					<rangeTypeName>de.averbis.types.health.Timex3</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>dosage</name>
+					<description>Dosage information about the medication.</description>
+					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
+					<elementType>de.averbis.types.health.Dosage</elementType>
+					<multipleReferencesAllowed>true</multipleReferencesAllowed>
 				</featureDescription>
 				<featureDescription>
 					<name>doseForm</name>
