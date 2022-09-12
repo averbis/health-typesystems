@@ -846,7 +846,7 @@
 					<name>atcCodes</name>
 					<description>The ATC Codes of the medication.</description>
 					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
-					<elementType>de.averbis.types.health.Concept</elementType>
+					<elementType>de.averbis.types.health.ATCCode</elementType>
 					<multipleReferencesAllowed>true</multipleReferencesAllowed>
 				</featureDescription>				
 				<featureDescription>
@@ -912,6 +912,12 @@
 					<multipleReferencesAllowed>true</multipleReferencesAllowed>
 				</featureDescription>
 			</features>
+		</typeDescription>
+
+		<typeDescription>
+			<name>de.averbis.types.health.ATCCode</name>
+			<description />
+			<supertypeName>de.averbis.types.health.Concept</supertypeName>
 		</typeDescription>
 
 		<typeDescription>
