@@ -447,7 +447,7 @@
 		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.types.health.Dosage</name>
-			<description>Different kinds of dosage information.</description>
+			<description>Dosage information.</description>
 			<supertypeName>de.averbis.types.health.ExternalCoreAnnotation</supertypeName>
 			<features />
 		</typeDescription>
@@ -863,7 +863,7 @@
 				</featureDescription>
 				<featureDescription>
 					<name>dosage</name>
-					<description>Dosage information about the medication.</description>
+					<description>Dosage information of the actual medication.</description>
 					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
 					<elementType>de.averbis.types.health.Dosage</elementType>
 					<multipleReferencesAllowed>true</multipleReferencesAllowed>

@@ -21,7 +21,7 @@
 				</featureDescription>
 				<featureDescription>
 					<name>dosage</name>
-					<description>Encapsulating Strength, AdditionalAmount, DoseFrequency in a single feature.</description>
+					<description>Dosage information of the actual medication.</description>
 					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
 					<elementType>de.averbis.textanalysis.types.health.Dosage</elementType>
 					<multipleReferencesAllowed>true</multipleReferencesAllowed>
@@ -88,7 +88,7 @@
 		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.Dosage</name>
-			<description>Wrapper for different kinds of dosage information.</description>
+			<description>Dosage information.</description>
 			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
 		</typeDescription>		
 		<typeDescription>
