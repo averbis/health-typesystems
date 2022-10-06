@@ -86,6 +86,11 @@
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
+					<name>subject</name>
+					<description>The subject of the diagnosis indicating which group of person is referred to. This feature represents a complex variant of the feature belongsTo.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.DiagnosisSubject</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
 					<name>onsetDate</name>
 					<description>The onset date of the diagnosis.</description>
 					<rangeTypeName>de.averbis.textanalysis.types.temporal.Date</rangeTypeName>
@@ -115,6 +120,11 @@
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.DiagnosisStatus</name>
 			<description>Clinical status (active, resolved, chronic) or verification status (assured, negated, unknown, ...) of a diagnosis.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.Status</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.DiagnosisSubject</name>
+			<description>The subject of the diagnosis specifying the person or group in the feature interpretation.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.Status</supertypeName>
 		</typeDescription>
 		<typeDescription>
