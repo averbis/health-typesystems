@@ -20,6 +20,13 @@
 					<rangeTypeName>de.averbis.textanalysis.types.health.AbstractDrug</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
+					<name>dosage</name>
+					<description>Dosage information of the actual medication.</description>
+					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
+					<elementType>de.averbis.textanalysis.types.health.Dosage</elementType>
+					<multipleReferencesAllowed>true</multipleReferencesAllowed>
+				</featureDescription>
+				<featureDescription>
 					<name>doseForm</name>
 					<description>Dose form of the actual medication.</description>
 					<rangeTypeName>de.averbis.textanalysis.types.health.DoseFormConcept</rangeTypeName>
@@ -50,8 +57,13 @@
 				</featureDescription>
 				<featureDescription>
 					<name>status</name>
-					<description>Status of the medication, e.g. ADMISSION, DISCHARGE. For all available value see MedicationStatus.</description>
+					<description>Status of the medication, e.g. NEGATED, CONSIDERED. For all available value see MedicationStatus.</description>
 					<rangeTypeName>de.averbis.textanalysis.types.health.MedicationStatus</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>category</name>
+					<description>Category of the medication, e.g. ADMISSION, DISCHARGE. For all available value see MedicationCategory.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.MedicationCategory</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>termTypes</name>
@@ -62,11 +74,23 @@
 				</featureDescription>
 				<featureDescription>
 					<name>atc</name>
-					<description>The ATC Code of the medication.</description>
+					<description>!! DEPRECATED !! Please use the feature 'atcCodes'. The ATC Code of the medication.</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>atcCodes</name>
+					<description>The ATC Codes of the medication.</description>
+					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
+					<elementType>de.averbis.textanalysis.types.health.ATCCodeConcept</elementType>
+					<multipleReferencesAllowed>true</multipleReferencesAllowed>
 				</featureDescription>
 			</features>
 		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.Dosage</name>
+			<description>Dosage information.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+		</typeDescription>		
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.AbstractDrug</name>
 			<description>Supertype of the drugs.</description>
@@ -131,7 +155,12 @@
 					<rangeTypeName>de.averbis.textanalysis.types.measurement.Measurement</rangeTypeName>
 				</featureDescription>
 			</features>
-		</typeDescription>		
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.ATCCodeConcept</name>
+			<description>Concept type for atc codes.</description>
+			<supertypeName>de.averbis.extraction.types.Concept</supertypeName>
+		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.IngredientConcept</name>
 			<description>Concept type for ingredients.</description>
@@ -339,12 +368,17 @@
 		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.MedicationStatus</name>
-			<description>Status of the medication. Available values: null, ADMISSION, ALLERGY, INPATIENT, DISCHARGE, NEGATED, CONSIDERED, INTENDED, FAMILY, CONDITIONING_TREATMENT, UNKNOWN.</description>
+			<description>Status of the medication. Available values: null, NEGATED, CONSIDERED, INTENDED, INACTIVE, UNKNOWN.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.Status</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.MedicationCategory</name>
+			<description>Category of the medication. Available values: null, ADMISSION, ALLERGY, INPATIENT, DISCHARGE, FAMILY, CONDITIONING_TREATMENT.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.Status</supertypeName>
 		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.MedicationStatusIndicator</name>
-			<description>Indicator for a status of a medication. Interpretation could be e.g. NEGATED, CONSIDERED, ADMISSION, DISCHARGE. For all available value see MedicationStatus.</description>
+			<description>Indicator for a status of a medication. Interpretation could be e.g. NEGATED, CONSIDERED. For all available value see MedicationStatus.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.StatusIndicator</supertypeName>
 		</typeDescription>
 	</types>

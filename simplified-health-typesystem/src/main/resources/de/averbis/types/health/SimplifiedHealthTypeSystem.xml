@@ -141,7 +141,23 @@
 			<name>de.averbis.types.health.Date</name>
 			<description />
 			<supertypeName>de.averbis.types.health.Timex3</supertypeName>
-			<features />
+			<features>
+				<featureDescription>
+					<name>day</name>
+					<description />
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>month</name>
+					<description />
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>year</name>
+					<description />
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>				
+			</features>
 		</typeDescription>
 
 		<typeDescription>
@@ -163,7 +179,7 @@
 		</typeDescription>
 
 		<!-- Health Annotations (alphabetically)  -->
-		
+	
 		<typeDescription>
 			<name>de.averbis.types.health.Anatomy</name>
 			<description>Contains information about anatomy.</description>
@@ -423,14 +439,18 @@
 				</featureDescription>
 			</features>
 		</typeDescription>
-
 		<typeDescription>
 			<name>de.averbis.types.health.DoseForm</name>
 			<description>The type of dose form.</description>
 			<supertypeName>de.averbis.types.health.Concept</supertypeName>
 			<features />
 		</typeDescription>
-
+		<typeDescription>
+			<name>de.averbis.types.health.Dosage</name>
+			<description>Dosage information.</description>
+			<supertypeName>de.averbis.types.health.ExternalCoreAnnotation</supertypeName>
+			<features />
+		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.types.health.DoseFrequency</name>
 			<description>The taking interval and amount of doses.</description>
@@ -845,9 +865,16 @@
 				</featureDescription>
 				<featureDescription>
 					<name>atc</name>
-					<description>The ATC Code of the medication.</description>
+					<description>!! DEPRECATED !! Please use the feature 'atcCodes'. The ATC Code of the medication.</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
+				<featureDescription>
+					<name>atcCodes</name>
+					<description>The ATC Codes of the medication.</description>
+					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
+					<elementType>de.averbis.types.health.ATCCode</elementType>
+					<multipleReferencesAllowed>true</multipleReferencesAllowed>
+				</featureDescription>				
 				<featureDescription>
 					<name>brandName</name>
 					<description>The brand name of the medication.</description>
@@ -859,6 +886,13 @@
 					kind: Possible values: null, TIME, DATE, DATEINTERVAL
 					value: value of the temporal information</description>
 					<rangeTypeName>de.averbis.types.health.Timex3</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>dosage</name>
+					<description>Dosage information of the actual medication.</description>
+					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
+					<elementType>de.averbis.types.health.Dosage</elementType>
+					<multipleReferencesAllowed>true</multipleReferencesAllowed>
 				</featureDescription>
 				<featureDescription>
 					<name>doseForm</name>
@@ -887,7 +921,13 @@
 				<featureDescription>
 					<name>status</name>
 					<description>Status of the medication.
-					Possible values: null | ADMISSION | ALLERGY | INPATIENT | DISCHARGE | NEGATED | CONSIDERED | INTENDED | FAMILY | CONDITIONING_TREATMENT | UNKNOWN </description>
+					Possible values: null | NEGATED | CONSIDERED | INACTIVE | INTENDED | UNKNOWN </description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>category</name>
+					<description>Category of the medication.
+					Possible values: null | ADMISSION | ALLERGY | INPATIENT | DISCHARGE | FAMILY | CONDITIONING_TREATMENT </description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
@@ -898,6 +938,12 @@
 					<multipleReferencesAllowed>true</multipleReferencesAllowed>
 				</featureDescription>
 			</features>
+		</typeDescription>
+
+		<typeDescription>
+			<name>de.averbis.types.health.ATCCode</name>
+			<description />
+			<supertypeName>de.averbis.types.health.Concept</supertypeName>
 		</typeDescription>
 
 		<typeDescription>
