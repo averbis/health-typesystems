@@ -538,6 +538,32 @@
 		</typeDescription>
 		
 		<typeDescription>
+			<name>de.averbis.types.health.ClarkLevel</name>
+			<description />
+			<supertypeName>de.averbis.types.health.ExternalCoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>level</name>
+					<description>The value of the clark level.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+		
+		<typeDescription>
+			<name>de.averbis.types.health.BreslowScore</name>
+			<description />
+			<supertypeName>de.averbis.types.health.ExternalCoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>score</name>
+					<description>The value of the breslow score.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+		
+		<typeDescription>
 			<name>de.averbis.types.health.GvHD</name>
 			<description />
 			<supertypeName>de.averbis.types.health.Diagnosis</supertypeName>
@@ -1070,18 +1096,8 @@
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
-					<name>clarkLevel</name>
-					<description>Clark Level.</description>
-					<rangeTypeName>uima.cas.Integer</rangeTypeName>
-				</featureDescription>
-				<featureDescription>
-					<name>breslowThickness</name>
-					<description>Breslow Thickness.</description>
-					<rangeTypeName>uima.cas.String</rangeTypeName>
-				</featureDescription>
-				<featureDescription>
 					<name>scores</name>
-					<description>List of different scores, e.g. Gleason Score.</description>
+					<description>List of different scores, e.g. Gleason Score, ClarkLevel.</description>
 					<rangeTypeName>de.averbis.types.health.PathologyScore</rangeTypeName>
 				</featureDescription>
 			</features>
@@ -1095,6 +1111,16 @@
 					<featureDescription>
 						<name>gleasonScore</name>
 						<description>Highest GleasonScore.</description>
+						<rangeTypeName>uima.cas.String</rangeTypeName>
+					</featureDescription>
+					<featureDescription>
+						<name>clarkLevel</name>
+						<description>Highest ClarkLevel.</description>
+						<rangeTypeName>uima.cas.String</rangeTypeName>
+					</featureDescription>
+					<featureDescription>
+						<name>breslowScore</name>
+						<description>Highest BreslowScore.</description>
 						<rangeTypeName>uima.cas.String</rangeTypeName>
 					</featureDescription>
 				</features>
