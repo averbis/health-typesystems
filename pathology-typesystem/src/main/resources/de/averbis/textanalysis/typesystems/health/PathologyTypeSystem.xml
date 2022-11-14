@@ -76,23 +76,43 @@
 				</featureDescription>
 				<featureDescription>
 					<name>lymphnodesAffected</name>
-					<description>The amount of affected lymph nodes.</description>
+					<description>!! DEPRECATED !! Please use the feature 'lnAffected'. The amount of affected lymph nodes.</description>
 					<rangeTypeName>uima.cas.Integer</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>lymphnodesTested</name>
-					<description>The amount of tested lymph nodes.</description>
+					<description>!! DEPRECATED !! Please use the feature 'lnTested'. The amount of tested lymph nodes.</description>
 					<rangeTypeName>uima.cas.Integer</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>sentinelLymphnodesAffected</name>
-					<description>The amount of affected sentinel lymph nodes.</description>
+					<description>!! DEPRECATED !! Please use the feature 'slnAffected'. The amount of affected sentinel lymph nodes.</description>
 					<rangeTypeName>uima.cas.Integer</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>sentinelLymphnodesTested</name>
-					<description>The amount of tested sentinel lymph nodes.</description>
+					<description>!! DEPRECATED !! Please use the feature 'slnTested'. The amount of tested sentinel lymph nodes.</description>
 					<rangeTypeName>uima.cas.Integer</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>lnAffected</name>
+					<description>The amount of affected lymph nodes.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>lnTested</name>
+					<description>The amount of tested lymph nodes.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>slnAffected</name>
+					<description>The amount of affected sentinel lymph nodes.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>slnTested</name>
+					<description>The amount of tested sentinel lymph nodes.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>thickness</name>
@@ -276,7 +296,7 @@
 				<featureDescription>
 					<name>score</name>
 					<description>The value of the breslow score.</description>
-					<rangeTypeName>uima.cas.Double</rangeTypeName>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 			</features>
 		</typeDescription>
