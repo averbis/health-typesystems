@@ -1,60 +1,53 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>pathology-typesystem</artifactId>
-	<name>${project.artifactId}</name>
-	<description>Type system for pathology documents.</description>
-
 	<parent>
 		<groupId>de.averbis.textanalysis</groupId>
 		<artifactId>health-typesystems</artifactId>
 		<version>3.10.0-SNAPSHOT</version>
 	</parent>
+
+	<artifactId>pathology-typesystem</artifactId>
+	<packaging>bundle</packaging>
+
+	<description>Type system for pathology documents.</description>
 	
 	<dependencies>
-	
 		<dependency>
 			<groupId>org.apache.uima</groupId>
 			<artifactId>uimaj-core</artifactId>
 			<version>${uima-version}</version>
 		</dependency>
-
 		<dependency>
 			<groupId>de.averbis.textanalysis</groupId>
 			<artifactId>components-core-typesystem</artifactId>
 			<version>${core-typesystems-version}</version>
 		</dependency>
-
 		<dependency>
 			<groupId>de.averbis.textanalysis</groupId>
 			<artifactId>diagnosis-typesystem</artifactId>
 			<version>${project.version}</version>
 		</dependency>
-		
 		<dependency>
 			<groupId>de.averbis.textanalysis</groupId>
 			<artifactId>laboratory-value-typesystem</artifactId>
 			<version>${project.version}</version>
 		</dependency>
-
 		<dependency>
 			<groupId>de.averbis.textanalysis</groupId>
 			<artifactId>oncology-typesystem</artifactId>
 			<version>${project.version}</version>
 		</dependency>
-		
 		<dependency>
 			<groupId>de.averbis.textanalysis</groupId>
 			<artifactId>tnm-typesystem</artifactId>
 			<version>${project.version}</version>
 		</dependency>
-		
 		<dependency>
 			<groupId>de.averbis.textanalysis</groupId>
 			<artifactId>ehr-information-typesystem</artifactId>
 			<version>${project.version}</version>
 		</dependency>
-		
 	</dependencies>
 	
 	<build>

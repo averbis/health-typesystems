@@ -1,25 +1,23 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>health-typesystems</artifactId>
-	<version>3.10.0-SNAPSHOT</version>
-
-	<name>${project.groupId}:${project.artifactId}</name>
-	<description>The UIMA type systems of the Averbis health components</description>
-	<url>https://github.com/averbis/health-typesystems</url>
 
 	<parent>
 		<groupId>de.averbis.textanalysis</groupId>
 		<artifactId>parent-pom-typesystems</artifactId>
-		<version>4.0.1</version>
+		<version>4.1.0-SNAPSHOT</version>
 	</parent>
 
+	<artifactId>health-typesystems</artifactId>
+	<version>3.10.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
+	<description>The UIMA type systems of the Averbis health components</description>
+	<url>https://github.com/averbis/health-typesystems</url>
+
 	<properties>
-		<uima-version>3.2.0</uima-version>
-		<ruta-typesystems-version>3.1.0</ruta-typesystems-version>
-		<core-typesystems-version>4.2.0</core-typesystems-version>
+		<uima-version>3.4.0-SNAPSHOT</uima-version>
+		<core-typesystems-version>4.4.0-SNAPSHOT</core-typesystems-version>
+		<ruta-typesystems-version>3.3.0-SNAPSHOT</ruta-typesystems-version>
 	</properties>
 
 	<licenses>
@@ -44,6 +42,52 @@
 		<url>https://github.com/averbis/health-typesystems</url>
 		<tag>HEAD</tag>
 	</scm>
+
+	<repositories>
+		<repository>
+			<id>github</id>
+			<url>https://maven.pkg.github.com/averbis/parent-pom-typesystems</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>github</id>
+			<url>https://maven.pkg.github.com/averbis/core-typesystems</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>apache-snapshots</id>
+			<url>https://repository.apache.org/content/repositories/snapshots</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>apache-snapshots</id>
+			<url>https://repository.apache.org/content/repositories/snapshots</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
 
 	<distributionManagement>
 		<repository>
@@ -78,5 +122,4 @@
 		<module>anatomy-typesystem</module>
 		<module>internal-typesystem</module>
 	</modules>
-
 </project>

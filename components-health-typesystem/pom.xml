@@ -1,24 +1,23 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>components-health-typesystem</artifactId>
-	<name>${project.artifactId}</name>
-	<description>The type system of the health components</description>
-
 	<parent>
 		<groupId>de.averbis.textanalysis</groupId>
 		<artifactId>health-typesystems</artifactId>
 		<version>3.10.0-SNAPSHOT</version>
 	</parent>
+
+	<artifactId>components-health-typesystem</artifactId>
+	<packaging>bundle</packaging>
+
+	<description>The type system of the health components</description>
 	
 	<dependencies>
-	
 		<dependency>
 			<groupId>org.apache.uima</groupId>
 			<artifactId>uimaj-core</artifactId>
 			<version>${uima-version}</version>
 		</dependency>
-
 		<dependency>
 			<groupId>de.averbis.textanalysis</groupId>
 			<artifactId>components-core-typesystem</artifactId>
@@ -29,7 +28,6 @@
 			<artifactId>numeric-value-typesystem</artifactId>
 			<version>${core-typesystems-version}</version>
 		</dependency>
-
 	</dependencies>
 	
 	<build>
