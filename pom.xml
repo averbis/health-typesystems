@@ -45,7 +45,7 @@
 
 	<repositories>
 		<repository>
-			<id>github</id>
+			<id>github-parent-pom-typesystems</id>
 			<url>https://maven.pkg.github.com/averbis/parent-pom-typesystems</url>
 			<releases>
 				<enabled>false</enabled>
@@ -55,7 +55,7 @@
 			</snapshots>
 		</repository>
 		<repository>
-			<id>github</id>
+			<id>github-core-typesystems</id>
 			<url>https://maven.pkg.github.com/averbis/core-typesystems</url>
 			<releases>
 				<enabled>false</enabled>
