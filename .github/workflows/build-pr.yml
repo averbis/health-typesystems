@@ -18,13 +18,16 @@ jobs:
     - name: maven-settings-xml-action
       uses: whelk-io/maven-settings-xml-action@v20
       with:
-        servers:
-        - id: github-parent-pom-typesystems
-          username: "${env.GITHUB_ACTOR}"
-          password: "${env.GITHUB_TOKEN}"
-        - id: github-core-typesystems
-          username: "${env.GITHUB_ACTOR}"
-          password: "${env.GITHUB_TOKEN}"
+        servers: >
+          [{ 
+            "id": "github-parent-pom-typesystems",
+            "username": "${env.GITHUB_ACTOR}",
+            "password": "${env.GITHUB_TOKEN}"
+          },{
+            "id": "github-core-typesystems",
+            "username": "${env.GITHUB_ACTOR}",
+            "password": "${env.GITHUB_TOKEN}"
+          }]
     - run: mvn -B install --no-transfer-progress --file pom.xml
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
