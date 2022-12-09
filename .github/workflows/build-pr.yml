@@ -18,6 +18,7 @@ jobs:
     - name: maven-settings-xml-action
       uses: whelk-io/maven-settings-xml-action@v20
       with:
+        servers:
         - id: github-parent-pom-typesystems
           username: "${env.GITHUB_ACTOR}"
           password: "${env.GITHUB_TOKEN}"
