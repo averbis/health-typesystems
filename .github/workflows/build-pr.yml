@@ -21,12 +21,12 @@ jobs:
         servers: >
           [{ 
             "id": "github-parent-pom-typesystems",
-            "username": "",
-            "password": "${{ secrets.GITHUB_TOKEN }}"
+            "username": "${env.GITHUB_ACTOR}",
+            "password": "${env.GITHUB_TOKEN}"
           },{
             "id": "github-core-typesystems",
-            "username": "",
-            "password": "${{ secrets.GITHUB_TOKEN }}"
+            "username": "${env.GITHUB_ACTOR}",
+            "password": "${env.GITHUB_TOKEN}"
           }]
     - run: mvn -B install --no-transfer-progress --file pom.xml
       env:
