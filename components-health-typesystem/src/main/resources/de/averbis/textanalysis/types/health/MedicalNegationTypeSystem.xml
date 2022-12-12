@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+	<name>de.averbis.textanalysis.types.health.MedicalNegationTypeSystem
+	</name>
+	<description>A type system containing types for modeling indicators for negations of concepts in medical domains.</description>
+	<version>${project.version}</version>
+	<vendor>Averbis GmbH</vendor>
+	<imports>
+		<import name="de.averbis.textanalysis.typesystems.AverbisTypeSystem" />
+		<import name="de.averbis.textanalysis.typesystems.GenericRelationTypeSystem" />
+	</imports>
+	<types>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.MedicalNegation</name>
+			<description>Annotations of medical negations.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>negating</name>
+					<description>List of concepts which are negated by current negation.</description>
+					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
+					<elementType>de.averbis.extraction.types.Concept</elementType>
+					<multipleReferencesAllowed>true</multipleReferencesAllowed>
+				</featureDescription>
+			</features>
+		</typeDescription>
+		
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.NegationScope</name>
+			<description>The negated scope.</description>
+			<supertypeName>de.averbis.textanalysis.types.AnnotationScope</supertypeName>
+		</typeDescription>
+		
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.MedicalPreNegation</name>
+			<description>Medical negation which negates subsequent concepts.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.MedicalNegation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.MedicalPostNegation</name>
+			<description>Medical negation which negates precedent concepts.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.MedicalNegation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.MedicalPrePostNegation</name>
+			<description>Medical negation which negates surrounding concepts.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.MedicalNegation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.MedicalSegmentNegation</name>
+			<description>Medical negation which negates self-negating concepts (e.g. tumorfrei).</description>
+			<supertypeName>de.averbis.textanalysis.types.health.MedicalNegation</supertypeName>
+		</typeDescription>
+	</types>
+</typeSystemDescription>

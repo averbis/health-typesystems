@@ -5,25 +5,6 @@
 	<version>${project.version}</version>
 	<vendor>Averbis GmbH</vendor>
 	<imports>
-		<import name="de.averbis.textanalysis.typesystems.AverbisTypeSystem"/>
+		<import name="de.averbis.textanalysis.types.health.AnatomyTypeSystem"/>
 	</imports>
-	<types>
-		<typeDescription>
-			<name>de.averbis.textanalysis.types.health.AnatomyConcept</name>
-			<description>Concept type for anatomy keywords.</description>
-			<supertypeName>de.averbis.extraction.types.Concept</supertypeName>
-		</typeDescription>
-		<typeDescription>
-			<name>de.averbis.textanalysis.types.health.Anatomy</name>
-			<description>The actual Anatomy containing the concept.</description>
-			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
-			<features>
-				<featureDescription>
-					<name>concept</name>
-					<description>The actual concept of the anatomy.</description>
-					<rangeTypeName>de.averbis.extraction.types.Concept</rangeTypeName>
-				</featureDescription>
-			</features>
-		</typeDescription>
-	</types>
 </typeSystemDescription>

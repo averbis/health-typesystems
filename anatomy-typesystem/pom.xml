@@ -12,50 +12,18 @@
 
 	<description>Type system for anatomies</description>
 	
-	<dependencies>	
-		<dependency>
-			<groupId>org.apache.uima</groupId>
-			<artifactId>uimaj-core</artifactId>
-			<version>${uima-version}</version>
-		</dependency>
+	<dependencies>
 		<dependency>
 			<groupId>de.averbis.textanalysis</groupId>
-			<artifactId>components-core-typesystem</artifactId>
-			<version>${core-typesystems-version}</version>
+			<artifactId>components-health-typesystem</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<!-- TESTS -->
+		<dependency>
+			<groupId>org.apache.uima</groupId>
+			<artifactId>uimafit-core</artifactId>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
-	
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>xml-maven-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-resources-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-assembly-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.uima</groupId>
-				<artifactId>jcasgen-maven-plugin</artifactId>
-				<executions>
-					<execution>
-						<goals>
-							<goal>generate</goal>
-						</goals>
-						<configuration>
-							<typeSystemIncludes>
-								<typeSystemInclude>src/main/resources/de/averbis/textanalysis/typesystems/health/AnatomyTypeSystem.xml</typeSystemInclude>
-							</typeSystemIncludes>
-							<limitToProject>true</limitToProject>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
 </project>

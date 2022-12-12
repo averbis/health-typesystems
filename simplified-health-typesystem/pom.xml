@@ -14,52 +14,16 @@
 	
 	<dependencies>
 		<dependency>
+			<groupId>de.averbis.textanalysis</groupId>
+			<artifactId>components-health-typesystem</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		
+		<!-- TESTS -->
+		<dependency>
 			<groupId>org.apache.uima</groupId>
-			<artifactId>uimaj-core</artifactId>
-			<version>${uima-version}</version>
+			<artifactId>uimafit-core</artifactId>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
-	
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>xml-maven-plugin</artifactId>
-				<configuration>
-					<forceCreation>true</forceCreation>
-					<transformationSets>
-						<transformationSet>
-							<!-- we have to reconfigure this plugin because the namespace is different -->
-							<dir>${basedir}/src/main/resources/de/averbis/types/health</dir>
-						</transformationSet>
-					</transformationSets>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-resources-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-assembly-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.uima</groupId>
-				<artifactId>jcasgen-maven-plugin</artifactId>
-				<executions>
-					<execution>
-						<goals>
-							<goal>generate</goal>
-						</goals>
-						<configuration>
-							<typeSystemIncludes>
-								<typeSystemInclude>src/main/resources/de/averbis/types/health/SimplifiedHealthTypeSystem.xml</typeSystemInclude>
-							</typeSystemIncludes>
-							<limitToProject>true</limitToProject>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
 </project>

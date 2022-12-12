@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+	<name>de.averbis.textanalysis.types.health.MedicalDisambiguationTypeSystem</name>
+	<description>This type system contains types for disambiguation.</description>
+	<version>${project.version}</version>
+	<vendor>Averbis GmbH</vendor>
+	<imports>
+		<import name="de.averbis.textanalysis.types.health.HealthTypeSystem"/>
+	</imports>
+	<types>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.IgnorePhrase</name>
+			<description>Ignore type for all kinds of medical annotations.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+		</typeDescription>		
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.RemovedAnnotation</name>
+			<description>A reference to the annotation that was removed.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<features>
+		        <featureDescription>
+		          <name>removed</name>
+		          <description>Annotation that has been removed.</description>
+		          <rangeTypeName>uima.tcas.Annotation</rangeTypeName>
+		        </featureDescription>
+	        </features>
+		</typeDescription>		
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.RemovedDiagnosis</name>
+			<description>A reference to the diagnosis that was removed.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.RemovedAnnotation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.RemovedDiagnosisConcept</name>
+			<description>A reference to the diagnosis concept that was removed.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.RemovedAnnotation</supertypeName>
+		</typeDescription>	
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.RemovedLaboratoryValue</name>
+			<description>A reference to the laboratory value that was removed.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.RemovedAnnotation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.RemovedMedication</name>
+			<description>A reference to the medication that was removed.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.RemovedAnnotation</supertypeName>
+		</typeDescription>	
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.RemovedObservation</name>
+			<description>A reference to the observation that was removed.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.RemovedAnnotation</supertypeName>
+		</typeDescription>
+	</types>
+</typeSystemDescription>

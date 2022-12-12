@@ -13,170 +13,17 @@
 	<description>Type system for all internal health types plus all core types and ruta types</description>
 	
 	<dependencies>
-		<!-- Ruta -->
+		<dependency>
+			<groupId>de.averbis.textanalysis</groupId>
+			<artifactId>components-health-typesystem</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		
+		<!-- TESTS -->
 		<dependency>
 			<groupId>org.apache.uima</groupId>
-			<artifactId>ruta-typesystem</artifactId>
-			<version>${ruta-typesystems-version}</version>
+			<artifactId>uimafit-core</artifactId>
+			<scope>test</scope>
 		</dependency>
-
-		<!-- Core -->
-		<dependency>
-			<groupId>de.averbis.textanalysis</groupId>
-			<artifactId>components-core-typesystem</artifactId>
-			<version>${core-typesystems-version}</version>
-		</dependency>
-		<dependency>
-			<groupId>de.averbis.textanalysis</groupId>
-			<artifactId>evaluation-typesystem</artifactId>
-			<version>${core-typesystems-version}</version>
-		</dependency>
-		<dependency>
-			<groupId>de.averbis.textanalysis</groupId>
-			<artifactId>measurement-typesystem</artifactId>
-			<version>${core-typesystems-version}</version>
-		</dependency>
-		<dependency>
-			<groupId>de.averbis.textanalysis</groupId>
-			<artifactId>named-entity-typesystem</artifactId>
-			<version>${core-typesystems-version}</version>
-		</dependency>
-		<dependency>
-			<groupId>de.averbis.textanalysis</groupId>
-			<artifactId>neural-typesystem</artifactId>
-			<version>${core-typesystems-version}</version>
-		</dependency>
-		<dependency>
-			<groupId>de.averbis.textanalysis</groupId>
-			<artifactId>numeric-value-typesystem</artifactId>
-			<version>${core-typesystems-version}</version>
-		</dependency>
-		<dependency>
-			<groupId>de.averbis.textanalysis</groupId>
-			<artifactId>temporal-typesystem</artifactId>
-			<version>${core-typesystems-version}</version>
-		</dependency>
-		<dependency>
-			<groupId>de.averbis.textanalysis</groupId>
-			<artifactId>text-typesystem</artifactId>
-			<version>${core-typesystems-version}</version>
-		</dependency>
-
-		<!-- Internal Health -->
-		<dependency>
-			<groupId>de.averbis.textanalysis</groupId>
-			<artifactId>anatomy-typesystem</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>de.averbis.textanalysis</groupId>
-			<artifactId>clinical-section-typesystem</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>de.averbis.textanalysis</groupId>
-			<artifactId>diagnosis-typesystem</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>de.averbis.textanalysis</groupId>
-			<artifactId>ehr-information-typesystem</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>de.averbis.textanalysis</groupId>
-			<artifactId>laboratory-value-typesystem</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>de.averbis.textanalysis</groupId>
-			<artifactId>medical-disambiguation-typesystem</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>de.averbis.textanalysis</groupId>
-			<artifactId>medical-negation-typesystem</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>de.averbis.textanalysis</groupId>
-			<artifactId>medication-typesystem</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>de.averbis.textanalysis</groupId>
-			<artifactId>observation-typesystem</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>de.averbis.textanalysis</groupId>
-			<artifactId>oncology-typesystem</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>de.averbis.textanalysis</groupId>
-			<artifactId>pathology-typesystem</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>de.averbis.textanalysis</groupId>
-			<artifactId>patient-information-typesystem</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>de.averbis.textanalysis</groupId>
-			<artifactId>phi-typesystem</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>de.averbis.textanalysis</groupId>
-			<artifactId>procedure-typesystem</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>de.averbis.textanalysis</groupId>
-			<artifactId>therapy-typesystem</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>de.averbis.textanalysis</groupId>
-			<artifactId>tnm-typesystem</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-
 	</dependencies>
-	
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>xml-maven-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-resources-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-assembly-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.uima</groupId>
-				<artifactId>jcasgen-maven-plugin</artifactId>
-				<executions>
-					<execution>
-						<goals>
-							<goal>generate</goal>
-						</goals>
-						<configuration>
-							<typeSystemIncludes>
-								<typeSystemInclude>src/main/resources/de/averbis/textanalysis/typesystems/health/InternalTypeSystem.xml</typeSystemInclude>
-							</typeSystemIncludes>
-							<limitToProject>true</limitToProject>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
 </project>
