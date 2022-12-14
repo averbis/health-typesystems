@@ -1,66 +1,29 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>simplified-health-typesystem</artifactId>
-	<name>${project.artifactId}</name>
-	<description>Type system for simplified health annotations</description>
-
 	<parent>
 		<groupId>de.averbis.textanalysis</groupId>
 		<artifactId>health-typesystems</artifactId>
 		<version>3.10.0-SNAPSHOT</version>
 	</parent>
+
+	<artifactId>simplified-health-typesystem</artifactId>
+	<packaging>bundle</packaging>
+
+	<description>Type system for simplified health annotations</description>
 	
 	<dependencies>
-	
+		<dependency>
+			<groupId>de.averbis.textanalysis</groupId>
+			<artifactId>components-health-typesystem</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		
+		<!-- TESTS -->
 		<dependency>
 			<groupId>org.apache.uima</groupId>
-			<artifactId>uimaj-core</artifactId>
-			<version>${uima-version}</version>
+			<artifactId>uimafit-core</artifactId>
+			<scope>test</scope>
 		</dependency>
-
 	</dependencies>
-	
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>xml-maven-plugin</artifactId>
-				<configuration>
-					<forceCreation>true</forceCreation>
-					<transformationSets>
-						<transformationSet>
-							<!-- we have to reconfigure this plugin because the namespace is different -->
-							<dir>${basedir}/src/main/resources/de/averbis/types/health</dir>
-						</transformationSet>
-					</transformationSets>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-resources-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-assembly-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.uima</groupId>
-				<artifactId>jcasgen-maven-plugin</artifactId>
-				<executions>
-					<execution>
-						<goals>
-							<goal>generate</goal>
-						</goals>
-						<configuration>
-							<typeSystemIncludes>
-								<typeSystemInclude>src/main/resources/de/averbis/types/health/SimplifiedHealthTypeSystem.xml</typeSystemInclude>
-							</typeSystemIncludes>
-							<limitToProject>true</limitToProject>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
 </project>

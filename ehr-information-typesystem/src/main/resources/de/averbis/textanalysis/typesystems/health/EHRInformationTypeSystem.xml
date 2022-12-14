@@ -5,64 +5,6 @@
 	<version>${project.version}</version>
 	<vendor>Averbis GmbH</vendor>
 	<imports>
-		<import name="de.averbis.textanalysis.typesystems.AverbisTypeSystem" />
-		<import name="de.averbis.textanalysis.typesystems.TemporalTypeSystem"/>
+		<import name="de.averbis.textanalysis.types.health.EHRInformationTypeSystem" />
 	</imports>
-	<types>
-		<typeDescription>
-			<name>de.averbis.textanalysis.types.health.SpecialistDepartmentConcept</name>
-			<description>Concept type for specialist department.</description>
-			<supertypeName>de.averbis.extraction.types.Concept</supertypeName>
-		</typeDescription>
-
-		<typeDescription>
-			<name>de.averbis.textanalysis.types.health.SpecialistDepartment</name>
-			<description>Specialist department with additional information e.g. about department type.</description>
-			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
-			<features>
-				<featureDescription>
-					<name>concept</name>
-					<description>The actual concept of the specialist department.</description>
-					<rangeTypeName>de.averbis.textanalysis.types.health.SpecialistDepartmentConcept</rangeTypeName>
-		        </featureDescription>
-				<featureDescription>
-					<name>departmentType</name>
-					<description>Type of the department, e.g. sender.</description>
-					<rangeTypeName>uima.cas.String</rangeTypeName>
-		        </featureDescription>
-		    </features>
-		</typeDescription>
-		
-		<typeDescription>
-			<name>de.averbis.textanalysis.types.health.Organization</name>
-			<description>Organization name annotation which stores (optionally) its type and correspondence (e.g. sender, receiver).</description>
-			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
-			<features>
-				<featureDescription>
-					<name>organizationType</name>
-					<description>The kind/type of organization (e.g. rehabilitation).</description>
-					<rangeTypeName>uima.cas.String</rangeTypeName>
-		        </featureDescription>
-				<featureDescription>
-					<name>correspondence</name>
-					<description>The correspondence type (e.g. sender, receiver).</description>
-					<rangeTypeName>uima.cas.String</rangeTypeName>
-		        </featureDescription>
-		    </features>
-		</typeDescription>
-		
-		<typeDescription>
-			<name>de.averbis.textanalysis.types.health.ResultDate</name>
-			<description>The date of the result/findings.</description>
-			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
-			<features>
-				<featureDescription>
-					<name>date</name>
-					<description>Date annotation holding the normalized value.</description>
-					<rangeTypeName>de.averbis.textanalysis.types.temporal.Date</rangeTypeName>
-				</featureDescription>
-			</features>
-		</typeDescription>
-		
-	</types>
 </typeSystemDescription>

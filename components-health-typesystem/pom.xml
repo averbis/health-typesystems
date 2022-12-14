@@ -1,24 +1,32 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>components-health-typesystem</artifactId>
-	<name>${project.artifactId}</name>
-	<description>The type system of the health components</description>
-
 	<parent>
 		<groupId>de.averbis.textanalysis</groupId>
 		<artifactId>health-typesystems</artifactId>
 		<version>3.10.0-SNAPSHOT</version>
 	</parent>
+
+	<artifactId>components-health-typesystem</artifactId>
+	<packaging>bundle</packaging>
+
+	<description>The type system of the health components</description>
 	
 	<dependencies>
-	
 		<dependency>
 			<groupId>org.apache.uima</groupId>
 			<artifactId>uimaj-core</artifactId>
 			<version>${uima-version}</version>
 		</dependency>
+		
+		<!-- Ruta -->
+		<dependency>
+			<groupId>org.apache.uima</groupId>
+			<artifactId>ruta-typesystem</artifactId>
+			<version>${ruta-typesystems-version}</version>
+		</dependency>
 
+		<!-- Core -->
 		<dependency>
 			<groupId>de.averbis.textanalysis</groupId>
 			<artifactId>components-core-typesystem</artifactId>
@@ -26,43 +34,45 @@
 		</dependency>
 		<dependency>
 			<groupId>de.averbis.textanalysis</groupId>
+			<artifactId>evaluation-typesystem</artifactId>
+			<version>${core-typesystems-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>de.averbis.textanalysis</groupId>
+			<artifactId>measurement-typesystem</artifactId>
+			<version>${core-typesystems-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>de.averbis.textanalysis</groupId>
+			<artifactId>named-entity-typesystem</artifactId>
+			<version>${core-typesystems-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>de.averbis.textanalysis</groupId>
+			<artifactId>neural-typesystem</artifactId>
+			<version>${core-typesystems-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>de.averbis.textanalysis</groupId>
 			<artifactId>numeric-value-typesystem</artifactId>
 			<version>${core-typesystems-version}</version>
 		</dependency>
+		<dependency>
+			<groupId>de.averbis.textanalysis</groupId>
+			<artifactId>temporal-typesystem</artifactId>
+			<version>${core-typesystems-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>de.averbis.textanalysis</groupId>
+			<artifactId>text-typesystem</artifactId>
+			<version>${core-typesystems-version}</version>
+		</dependency>
 
+		<!-- TESTS -->
+		<dependency>
+			<groupId>org.apache.uima</groupId>
+			<artifactId>uimafit-core</artifactId>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
-	
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>xml-maven-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-resources-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-assembly-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.uima</groupId>
-				<artifactId>jcasgen-maven-plugin</artifactId>
-				<executions>
-					<execution>
-						<goals>
-							<goal>generate</goal>
-						</goals>
-						<configuration>
-							<typeSystemIncludes>
-							    <typeSystemInclude>src/main/resources/de/averbis/textanalysis/typesystems/health/HealthTypeSystem.xml</typeSystemInclude>
-							</typeSystemIncludes>
-							<limitToProject>true</limitToProject>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
 </project>
