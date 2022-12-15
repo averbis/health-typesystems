@@ -5,8 +5,8 @@
 	<version>${project.version}</version>
 	<vendor>Averbis GmbH</vendor>
 	<imports>
-		<import name="de.averbis.textanalysis.typesystems.AverbisTypeSystem" />
-		<import name="de.averbis.textanalysis.typesystems.TemporalTypeSystem"/>
+		<import name="de.averbis.extraction.types.AverbisTypeSystem" />
+		<import name="de.averbis.textanalysis.types.temporal.TemporalTypeSystem" />
 	</imports>
 	<types>
 		<typeDescription>

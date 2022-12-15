@@ -6,7 +6,7 @@
 	<vendor>Averbis GmbH</vendor>
 	<imports>
 		<import name="de.averbis.textanalysis.types.health.HealthTypeSystem"/>
-		<import name="de.averbis.textanalysis.typesystems.MeasurementTypeSystem"/>
+		<import name="de.averbis.textanalysis.types.measurement.MeasurementTypeSystem"/>
 	</imports>
 	<types>
 		<typeDescription>

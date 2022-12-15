@@ -12,14 +12,14 @@
 		<import name="org.apache.uima.ruta.engine.PlainTextTypeSystem"/>
 
 		<!-- Core -->
-		<import name="de.averbis.textanalysis.typesystems.AverbisTypeSystem"/>
-		<import name="de.averbis.textanalysis.typesystems.EvaluationTypeSystem"/>
-		<import name="de.averbis.textanalysis.typesystems.MeasurementTypeSystem"/>
-		<import name="de.averbis.textanalysis.typesystems.NamedEntityTypeSystem"/>
-		<import name="de.averbis.textanalysis.typesystems.NeuralTypeSystem"/>
-		<import name="de.averbis.textanalysis.typesystems.NumericValueTypeSystem"/>
-		<import name="de.averbis.textanalysis.typesystems.TemporalTypeSystem"/>
-		<import name="de.averbis.textanalysis.typesystems.TextTypeSystem"/>
+		<import name="de.averbis.extraction.types.AverbisTypeSystem"/>
+		<import name="de.averbis.textanalysis.types.evaluation.EvaluationTypeSystem"/>
+		<import name="de.averbis.textanalysis.types.measurement.MeasurementTypeSystem"/>
+		<import name="de.averbis.textanalysis.types.NamedEntityTypeSystem"/>
+		<import name="de.averbis.textanalysis.types.NeuralTypeSystem"/>
+		<import name="de.averbis.textanalysis.types.numericvalue.NumericValueTypeSystem"/>
+		<import name="de.averbis.textanalysis.types.temporal.TemporalTypeSystem" />
+		<import name="de.averbis.textanalysis.types.text.TextTypeSystem"/>
 
 		<!-- Internal Health -->
 		<import name="de.averbis.textanalysis.types.health.AnatomyTypeSystem"/>

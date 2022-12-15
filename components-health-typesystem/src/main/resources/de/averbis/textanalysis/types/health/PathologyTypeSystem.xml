@@ -5,7 +5,7 @@
 	<version>${project.version}</version>
 	<vendor>Averbis GmbH</vendor>
 	<imports>
-		<import name="de.averbis.textanalysis.typesystems.AverbisTypeSystem" />
+		<import name="de.averbis.extraction.types.AverbisTypeSystem" />
 		<import name="de.averbis.textanalysis.types.health.DiagnosisTypeSystem" />
 		<import name="de.averbis.textanalysis.types.health.OncologyTypeSystem" />
 		<import name="de.averbis.textanalysis.types.health.TNMTypeSystem" />
