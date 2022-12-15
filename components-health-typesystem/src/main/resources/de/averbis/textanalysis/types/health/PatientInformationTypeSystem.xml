@@ -5,10 +5,11 @@
 	<version>${project.version}</version>
 	<vendor>Averbis GmbH</vendor>
 	<imports>
-		<import name="de.averbis.textanalysis.typesystems.AverbisTypeSystem" />
-		<import name="de.averbis.textanalysis.typesystems.TemporalTypeSystem"/>
-		<import name="de.averbis.textanalysis.typesystems.MeasurementTypeSystem"/>
-		<import name="de.averbis.textanalysis.typesystems.NamedEntityTypeSystem"/>
+		<import name="de.averbis.extraction.types.AverbisTypeSystem" />
+		<import name="de.averbis.textanalysis.types.temporal.TemporalTypeSystem" />
+		<import name="de.averbis.textanalysis.types.measurement.MeasurementTypeSystem"/>
+		<import name="de.averbis.textanalysis.types.NeuralTypeSystem"/>
+		<import name="de.averbis.textanalysis.types.NamedEntityTypeSystem"/>
 	</imports>
 	<types>
 		<typeDescription>

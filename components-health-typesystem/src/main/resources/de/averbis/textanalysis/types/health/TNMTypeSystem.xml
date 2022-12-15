@@ -7,7 +7,7 @@
 	<version>${project.version}</version>
 	<vendor>Averbis GmbH</vendor>
 	<imports>
-		<import name="de.averbis.textanalysis.typesystems.AverbisInternalTypeSystem" />
+		<import name="de.averbis.extraction.types.AverbisInternalTypeSystem" />
 	</imports>
 	<types>
 		<typeDescription>
