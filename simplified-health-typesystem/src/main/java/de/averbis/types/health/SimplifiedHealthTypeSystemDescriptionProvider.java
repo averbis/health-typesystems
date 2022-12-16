@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.averbis.textanalysis.types.health;
+package de.averbis.types.health;
 
 import static org.apache.uima.util.TypeSystemUtil.loadTypeSystemDescriptionsFromClasspath;
 
@@ -26,31 +26,14 @@ import org.apache.uima.resource.metadata.TypeSystemDescription;
 import org.apache.uima.spi.JCasClassProvider;
 import org.apache.uima.spi.TypeSystemDescriptionProvider;
 
-public class HealthTypeSystemDescriptionProvider
+public class SimplifiedHealthTypeSystemDescriptionProvider
 		implements TypeSystemDescriptionProvider, JCasClassProvider {
 
 	@Override
 	public List<TypeSystemDescription> listTypeSystemDescriptions() {
 
 		return loadTypeSystemDescriptionsFromClasspath(getClass(), //
-				"AnatomyTypeSystem.xml", //
-				"ClinicalSectionTypeSystem.xml", //
-				"DiagnosisTypeSystem.xml", //
-				"EHRInformationTypeSystem.xml", //
-				"HealthTypeSystem.xml", //
-				"InternalTypeSystem.xml", //
-				"LaboratoryValueTypeSystem.xml", //
-				"MedicalDisambiguationTypeSystem.xml", //
-				"MedicalNegationTypeSystem.xml", //
-				"MedicationTypeSystem.xml", //
-				"ObservationTypeSystem.xml", //
-				"OncologyTypeSystem.xml", //
-				"PathologyTypeSystem.xml", //
-				"PatientInformationTypeSystem.xml", //
-				"PHITypeSystem.xml", //
-				"ProcedureTypeSystem.xml", //
-				"TherapyTypeSystem.xml", //
-				"TNMTypeSystem.xml");
+				"SimplifiedHealthTypeSystem.xml");
 	}
 
 
