@@ -19,8 +19,8 @@
 	<properties>
 		<uima-version>3.4.0-SNAPSHOT</uima-version>
 		<uimafit-version>3.4.0-SNAPSHOT</uimafit-version>
+		<ruta-version>3.3.0-SNAPSHOT</ruta-version>
 		<core-typesystems-version>4.4.0-SNAPSHOT</core-typesystems-version>
-		<ruta-typesystems-version>3.3.0-SNAPSHOT</ruta-typesystems-version>
 		<junit-jupiter-version>5.9.1</junit-jupiter-version>
 		<assertj-version>3.23.1</assertj-version>
 		<slf4j-version>1.7.36</slf4j-version>

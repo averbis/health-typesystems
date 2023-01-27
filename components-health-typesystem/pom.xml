@@ -22,8 +22,8 @@
 		<!-- Ruta -->
 		<dependency>
 			<groupId>org.apache.uima</groupId>
-			<artifactId>ruta-typesystem</artifactId>
-			<version>${ruta-typesystems-version}</version>
+			<artifactId>ruta-core</artifactId>
+			<version>${ruta-version}</version>
 		</dependency>
 
 		<!-- Core -->
