@@ -17,12 +17,12 @@
 	<url>https://github.com/averbis/health-typesystems</url>
 
 	<properties>
-		<uima-version>3.4.0-SNAPSHOT</uima-version>
-		<uimafit-version>3.4.0-SNAPSHOT</uimafit-version>
-		<core-typesystems-version>4.4.0-SNAPSHOT</core-typesystems-version>
-		<ruta-typesystems-version>3.3.0-SNAPSHOT</ruta-typesystems-version>
-		<junit-jupiter-version>5.9.1</junit-jupiter-version>
-		<assertj-version>3.23.1</assertj-version>
+		<uima-version>3.4.0</uima-version>
+		<uimafit-version>3.4.0</uimafit-version>
+		<ruta-version>3.3.0-SNAPSHOT</ruta-version>
+		<core-typesystems-version>4.4.0</core-typesystems-version>
+		<junit-jupiter-version>5.9.2</junit-jupiter-version>
+		<assertj-version>3.24.2</assertj-version>
 		<slf4j-version>1.7.36</slf4j-version>
 	</properties>
 
