@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>de.averbis.textanalysis</groupId>
 		<artifactId>parent-pom-typesystems</artifactId>
-		<version>4.1.0-SNAPSHOT</version>
+		<version>4.1.0</version>
 	</parent>
 
 	<artifactId>health-typesystems</artifactId>
@@ -17,9 +17,9 @@
 	<url>https://github.com/averbis/health-typesystems</url>
 
 	<properties>
-		<uima-version>3.4.0</uima-version>
+		<uima-version>3.4.1</uima-version>
 		<uimafit-version>3.4.0</uimafit-version>
-		<ruta-version>3.3.0-SNAPSHOT</ruta-version>
+		<ruta-version>3.3.0</ruta-version>
 		<core-typesystems-version>4.4.0</core-typesystems-version>
 		<junit-jupiter-version>5.9.2</junit-jupiter-version>
 		<assertj-version>3.24.2</assertj-version>
@@ -48,52 +48,6 @@
 		<url>https://github.com/averbis/health-typesystems</url>
 		<tag>HEAD</tag>
 	</scm>
-
-	<repositories>
-		<repository>
-			<id>github-parent-pom-typesystems</id>
-			<url>https://maven.pkg.github.com/averbis/parent-pom-typesystems</url>
-			<releases>
-				<enabled>false</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
-		<repository>
-			<id>github-core-typesystems</id>
-			<url>https://maven.pkg.github.com/averbis/core-typesystems</url>
-			<releases>
-				<enabled>false</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
-		<repository>
-			<id>apache-snapshots</id>
-			<url>https://repository.apache.org/content/repositories/snapshots</url>
-			<releases>
-				<enabled>false</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
-	</repositories>
-
-	<pluginRepositories>
-		<pluginRepository>
-			<id>apache-snapshots</id>
-			<url>https://repository.apache.org/content/repositories/snapshots</url>
-			<releases>
-				<enabled>false</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</pluginRepository>
-	</pluginRepositories>
 
 	<distributionManagement>
 		<repository>
