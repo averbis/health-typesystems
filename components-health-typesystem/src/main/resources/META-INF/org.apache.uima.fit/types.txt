@@ -3,7 +3,6 @@ classpath*:de/averbis/textanalysis/types/health/ClinicalSectionTypeSystem.xml
 classpath*:de/averbis/textanalysis/types/health/DiagnosisTypeSystem.xml
 classpath*:de/averbis/textanalysis/types/health/EHRInformationTypeSystem.xml
 classpath*:de/averbis/textanalysis/types/health/HealthTypeSystem.xml
-classpath*:de/averbis/textanalysis/types/health/InternalTypeSystem.xml
 classpath*:de/averbis/textanalysis/types/health/LaboratoryValueTypeSystem.xml
 classpath*:de/averbis/textanalysis/types/health/MedicalDisambiguationTypeSystem.xml
 classpath*:de/averbis/textanalysis/types/health/MedicalNegationTypeSystem.xml

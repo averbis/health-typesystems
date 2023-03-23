@@ -38,7 +38,7 @@ public class HealthTypeSystemDescriptionProvider
 				"DiagnosisTypeSystem.xml", //
 				"EHRInformationTypeSystem.xml", //
 				"HealthTypeSystem.xml", //
-				"InternalTypeSystem.xml", //
+				// "InternalTypeSystem.xml", // Excluded because it is an aggregation
 				"LaboratoryValueTypeSystem.xml", //
 				"MedicalDisambiguationTypeSystem.xml", //
 				"MedicalNegationTypeSystem.xml", //
