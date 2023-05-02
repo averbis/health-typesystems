@@ -62,6 +62,11 @@
 			<artifactId>text-typesystem</artifactId>
 			<version>${core-typesystems-version}</version>
 		</dependency>
+		<dependency>
+			<groupId>de.averbis.textanalysis</groupId>
+			<artifactId>search-typesystem</artifactId>
+			<version>${core-typesystems-version}</version>
+		</dependency>
 
 		<!-- TESTS -->
 		<dependency>
