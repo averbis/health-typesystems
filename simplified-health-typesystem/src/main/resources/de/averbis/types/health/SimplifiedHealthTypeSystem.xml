@@ -1189,6 +1189,11 @@
 						<description>Highest BreslowScore.</description>
 						<rangeTypeName>uima.cas.String</rangeTypeName>
 					</featureDescription>
+					<featureDescription>
+						<name>psaValue</name>
+						<description>Highest PSA Value.</description>
+						<rangeTypeName>uima.cas.String</rangeTypeName>
+					</featureDescription>
 				</features>
 		</typeDescription>
 		<typeDescription>
