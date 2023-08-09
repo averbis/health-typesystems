@@ -1191,7 +1191,7 @@
 					</featureDescription>
 					<featureDescription>
 						<name>psaValue</name>
-						<description>Highest PSA Value (default unit ng/ml).</description>
+						<description>Highest PSA Value.</description>
 						<rangeTypeName>uima.cas.String</rangeTypeName>
 					</featureDescription>
 				</features>
