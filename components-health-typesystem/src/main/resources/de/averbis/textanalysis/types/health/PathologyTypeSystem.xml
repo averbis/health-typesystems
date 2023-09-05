@@ -136,7 +136,12 @@
 				</featureDescription>
 				<featureDescription>
 					<name>resultDate</name>
-					<description>The date of the result/findings.</description>
+					<description>The date of the latest result/findings.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>diagnosisDate</name>
+					<description>The date of the earliest diagnosis result.</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
@@ -239,7 +244,12 @@
 				</featureDescription>
 				<featureDescription>
 					<name>resultDateAnnotation</name>
-					<description>Optional annotation representing the date of the findings/result.</description>
+					<description>Optional annotation representing the date of the latest findings/result.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.ResultDate</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>diagnosisDateAnnotation</name>
+					<description>Optional annotation representing the date of the earliest diagnosis result.</description>
 					<rangeTypeName>de.averbis.textanalysis.types.health.ResultDate</rangeTypeName>
 				</featureDescription>
 			</features>
