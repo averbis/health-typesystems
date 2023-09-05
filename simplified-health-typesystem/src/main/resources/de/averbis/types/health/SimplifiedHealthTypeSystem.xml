@@ -1158,7 +1158,12 @@
 				</featureDescription>
 				<featureDescription>
 					<name>resultDate</name>
-					<description>The date of the result/findings.</description>
+					<description>The date of the latest result/findings.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>diagnosisDate</name>
+					<description>The date of the earliest diagnosis result.</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
