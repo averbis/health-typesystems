@@ -16,37 +16,40 @@
 
 		<typeDescription>
 			<name>de.averbis.types.health.Concept</name>
-			<description />
+			<description>Base annotation for terminology based annotations.</description>
 			<supertypeName>de.averbis.types.health.ExternalCoreAnnotation</supertypeName>
 			<features>
 				<featureDescription>
 					<name>conceptID</name>
-					<description />
+					<description>Unique identifier for the concept with respect to the source terminology.
+					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>dictCanon</name>
-					<description />
+					<description>Preferred term of the concept with respect to the source terminology..
+					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>matchedTerm</name>
-					<description />
+					<description>The term that was matched to this concept.</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>negatedBy</name>
-					<description />
+					<description>Indicates whether the concept is negated.</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>source</name>
-					<description />
+					<description>The source from which this concept was extracted, e.g. SNOMED or ICD10.
+					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>uniqueID</name>
-					<description />
+					<description>Unique identifier for this concept.</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 			</features>
@@ -77,7 +80,7 @@
 			<features>
 				<featureDescription>
 					<name>label</name>
-					<description>The type of the entity. E.g., PERSON, LOCATION etc.</description>
+					<description>The type of the entity, e.g. PERSON, LOCATION etc.</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
@@ -120,18 +123,19 @@
 
 		<typeDescription>
 			<name>de.averbis.types.health.Timex3</name>
-			<description />
-			<supertypeName>de.averbis.types.health.ExternalCoreAnnotation
-			</supertypeName>
+			<description>Annotation type for representing temporal expressions (Timex3).</description>
+			<supertypeName>de.averbis.types.health.ExternalCoreAnnotation</supertypeName>
 			<features>
 				<featureDescription>
 					<name>kind</name>
-					<description />
+					<description>The type or kind of temporal expression (e.g. DATE, TIME, DURATION).
+					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>value</name>
-					<description />
+					<description>The actual value of the temporal expression (e.g. the date or time).
+					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 			</features>
@@ -182,7 +186,7 @@
 
 		<typeDescription>
 			<name>de.averbis.types.health.Anatomy</name>
-			<description>Contains information about anatomy.</description>
+			<description>Contains information about anatomy, based on SNOMED-CT subtree.</description>
 			<supertypeName>de.averbis.types.health.Concept</supertypeName>
 		</typeDescription>
 
@@ -201,9 +205,6 @@
 				<featureDescription>
 					<name>time</name>
 					<description>Temporal information (time, date or date interval) about the transplantation.
-						kind: Possible values (default is underlined): null, TIME, DATE,
-						DATEINTERVAL value: value of
-						the temporal information
 					</description>
 					<rangeTypeName>de.averbis.types.health.Timex3</rangeTypeName>
 				</featureDescription>
@@ -229,9 +230,7 @@
 				<featureDescription>
 					<name>interpretation</name>
 					<description>Interpretation of fact depending on reference values or interpretation in text
-						(also possible without fact). Possible values (default is
-						underlined): null | normal | abnormal
-						| high | low
+						(also possible without fact). Possible values: null | normal | abnormal | high | low
 					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
@@ -251,7 +250,7 @@
 				<featureDescription>
 					<name>kind</name>
 					<description>The kind of the actual chimerism.
-						Possible values (default is underlined): null | COMPLETE | MIXED
+						Possible values: null | COMPLETE | MIXED
 					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
@@ -283,7 +282,8 @@
 				<featureDescription>
 					<name>label</name>
 					<description>The label of the section, e.g. "LaboratorySection", "MedicationSection",
-						"AnamnesisSection"</description>
+						"AnamnesisSection"
+					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 			</features>
@@ -325,7 +325,8 @@
 				<featureDescription>
 					<name>kind</name>
 					<description>The kind of method applied in order to deidentify the document (i.e. crossout or
-						tag).</description>
+						tag).
+					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
@@ -338,16 +339,19 @@
 
 		<typeDescription>
 			<name>de.averbis.types.health.Department</name>
-			<description>Information about the department typeof the document.</description>
+			<description>Information about the department type of the document.</description>
 			<supertypeName>de.averbis.types.health.Concept</supertypeName>
 			<features>
 				<featureDescription>
 					<name>departmentType</name>
 					<description>Additional information about the department type.
-						Currently limited to the information, if the department is the sending department of a clinical note.
-						Note: there may be more than one sending department, e.g. "Division of Hematology and
+						Currently limited to the
+						information, if the department is the sending department of a clinical note.
+						Note: there may be
+						more than one sending department, e.g. "Division of Hematology and
 						Oncology".
-						Possible values (default is underlined): null | sender
+						Possible values:
+						null | sender
 					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
@@ -356,7 +360,9 @@
 
 		<typeDescription>
 			<name>de.averbis.types.health.Diagnosis</name>
-			<description>Main type for diagnoses.</description>
+			<description>The annotation captures information related to a medical diagnosis, including its
+				code, name, temporal aspects, status and relevant contextual details in the provided text.
+			</description>
 			<supertypeName>de.averbis.types.health.Concept</supertypeName>
 			<features>
 				<featureDescription>
@@ -370,53 +376,57 @@
 				<featureDescription>
 					<name>belongsTo</name>
 					<description>Indicates, whether the diagnosis belongs to a donor or recipient (e.g. in case of
-						transplantations) or to a family member. Possible values
-						(default is underlined): null | DONOR | FAMILY | RECIPIENT
+						transplantations) or to a family member. Possible values: null | DONOR | FAMILY | RECIPIENT
 					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>clinicalStatus</name>
-					<description>Clinical status of the actual diagnosis. Possible values (default is underlined):
-						null | ACTIVE | RESOLVED</description>
+					<description>Clinical status of the actual diagnosis. Possible values: null | ACTIVE | RESOLVED
+					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>confidence</name>
 					<description>For approaches using machine learning, the confidence is calculated that the
 						respective annotation has been correctly generated. Possible
-						value range: 0-1 Note: Annotations generated with non-machine learning approaches such as
-						terminology mappings (approach = "DictionaryLookup") are
+						value range: 0-1 Note: Annotations
+						generated with non-machine learning approaches such as
+						terminology mappings (approach =
+						"DictionaryLookup") are
 						reflected with a confidence value of 0.
 					</description>
 					<rangeTypeName>uima.cas.Double</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>kind</name>
-					<description>The kind of the diagnosis. Possible values (default is underlined): null | main |
-						secondary</description>
+					<description>The kind of the diagnosis. Possible values: null | main | secondary</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>onsetDate</name>
 					<description>The onset date of the diagnosis, if given in the text. Format: YYYY-MM-DD:
 						Year-Month-Day with leading zeros (e.g. 2020-02-17) Please note:
-						The onsetDate is only annotated if the pear component "Disease Onset Date" is integrated in the
-						text analysis pipeline used. The preconfigured pipelines
-						do not contain this component, thus the value of the onset feature is represented as null.
+						The onsetDate is only
+						annotated if the pear component "Disease Onset Date" is integrated in the
+						text analysis
+						pipeline used. The preconfigured pipelines
+						do not contain this component, thus the value of the
+						onset feature is represented as null.
 					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>laterality</name>
-					<description>The laterality of the diagnosis. Possible values (default is underlined): null |
-						RIGHT | LEFT | BOTH</description>
+					<description>The laterality of the diagnosis. Possible values: null | RIGHT | LEFT | BOTH
+					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>verificationStatus</name>
-					<description>Verification status of the actual diagnosis. Possible values (default is
-						underlined): null | NEGATED | ASSURED | SUSPECTED | DIFFERENTIAL</description>
+					<description>Verification status of the actual diagnosis. Possible values: null | NEGATED |
+						ASSURED | SUSPECTED | DIFFERENTIAL
+					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 			</features>
@@ -435,7 +445,8 @@
 				<featureDescription>
 					<name>belongsTo</name>
 					<description>Diagnosis candidate belongs to patient or other person (family anamnesis).
-						Possible values include 'patient' or 'family'.</description>
+						Possible values include 'patient' or 'family'.
+					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
@@ -540,7 +551,8 @@
 				<featureDescription>
 					<name>stage</name>
 					<description>Stage of the he ECOG (Eastern Cooperative Oncology Group) Performance Status
-						(numeric scale).</description>
+						(numeric scale).
+					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 			</features>
@@ -558,8 +570,8 @@
 				</featureDescription>
 				<featureDescription>
 					<name>status</name>
-					<description>The status of the Estrogen expression. Possible values (default is underlined):
-						-,+,++,+++</description>
+					<description>The status of the Estrogen expression. Possible values: - | + | ++ | +++
+					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 			</features>
@@ -621,8 +633,7 @@
 			<features>
 				<featureDescription>
 					<name>continuanceStatus</name>
-					<description>GvHD status. Possible values (default is underlined): null | ACUTE | CHRONIC
-					</description>
+					<description>GvHD status. Possible values: null | ACUTE | CHRONIC</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
@@ -632,21 +643,22 @@
 				</featureDescription>
 				<featureDescription>
 					<name>grade</name>
-					<description>Grade of the GvHD diagnosis. Possible values (default is underlined): null I | II
-						| III | IV</description>
+					<description>Grade of the GvHD diagnosis. Possible values: null I | II | III | IV</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>organ</name>
-					<description>Organ diagnosed with GvHD. Possible values (default is underlined):
-						null | SKIN | LIVER | INTESTINAL | EYE | LUNG | CONNECTIVE TISSUE | MUCOSA | VAGINAL
+					<description>Organ diagnosed with GvHD. Possible values:
+						null | SKIN | LIVER | INTESTINAL | EYE
+						| LUNG | CONNECTIVE TISSUE | MUCOSA | VAGINAL
 					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>stage</name>
-					<description>Stage of the GvHD diagnosis. Possible values (default is underlined): null | 1 | 2
-						| 3 | 4 | LIMITED | EXTENDED</description>
+					<description>Stage of the GvHD diagnosis. Possible values: null | 1 | 2 | 3 | 4 | LIMITED |
+						EXTENDED
+					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 			</features>
@@ -665,8 +677,7 @@
 				</featureDescription>
 				<featureDescription>
 					<name>status</name>
-					<description>The status of the HER2 expression. Possible values (default is underlined):
-						-,+,++,+++</description>
+					<description>The status of the HER2 expression. Possible values: - | + | ++ | +++</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 			</features>
@@ -705,7 +716,8 @@
 				<featureDescription>
 					<name>belongsTo</name>
 					<description>Role of the person engaged in a HLA-typed human primary cells transplantation
-						procedure. Possible values are 'RECIPIENT' or 'DONOR'.</description>
+						procedure. Possible values are 'RECIPIENT' or 'DONOR'.
+					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 			</features>
@@ -792,8 +804,7 @@
 				</featureDescription>
 				<featureDescription>
 					<name>kind</name>
-					<description>The irradiation dose kind. Possible values (default is underlined): null |
-						FRACTIONAL</description>
+					<description>The irradiation dose kind. Possible values: null | FRACTIONAL</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 			</features>
@@ -815,7 +826,8 @@
 					<name>belongsTo</name>
 					<description>Indicates, whether the laboratory value belongs to a donor or recipient (e.g. in
 						case of transplantations) or to a family member. Possible
-						values (default is underlined): null | DONOR | FAMILY | RECIPIENT
+						values: null | DONOR | FAMILY |
+						RECIPIENT
 					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
@@ -832,8 +844,7 @@
 				<featureDescription>
 					<name>interpretation</name>
 					<description>Interpretation of fact depending on reference values or interpretation in text
-						(also possible without fact). Possible values (default is
-						underlined): null | normal | abnormal | high | low
+						(also possible without fact). Possible values: null | normal | abnormal | high | low
 					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
@@ -862,7 +873,7 @@
 
 		<typeDescription>
 			<name>de.averbis.types.health.Measurement</name>
-			<description />
+			<description>Annotation related to the quantification of data.</description>
 			<supertypeName>de.averbis.types.health.ExternalCoreAnnotation</supertypeName>
 			<features>
 				<featureDescription>
@@ -884,7 +895,8 @@
 					<name>normalizedValue</name>
 					<description>Normalized value of the measurement. This value is the result of the
 						transformation of the numeric value according to the transformation of
-						the unit to its standard unit.
+						the unit to its standard
+						unit.
 					</description>
 					<rangeTypeName>uima.cas.Double</rangeTypeName>
 				</featureDescription>
@@ -898,7 +910,10 @@
 
 		<typeDescription>
 			<name>de.averbis.types.health.Medication</name>
-			<description />
+			<description>Describes medications, which are a combination of the active ingredient or
+				preparation, a strength, a dose frequency, the dose form, the route of administration and date
+				intervals or a single date.
+			</description>
 			<supertypeName>de.averbis.types.health.ExternalCoreAnnotation</supertypeName>
 			<features>
 				<featureDescription>
@@ -910,7 +925,8 @@
 				<featureDescription>
 					<name>atc</name>
 					<description>!! DEPRECATED !! Please use the feature 'atcCodes'. The ATC Code of the
-						medication.</description>
+						medication.
+					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
@@ -928,7 +944,8 @@
 				<featureDescription>
 					<name>date</name>
 					<description>Temporal information (time, date or date interval) about the medication.
-						kind: Possible values: null, TIME, DATE, DATEINTERVAL
+						kind:
+						Possible values: null, TIME, DATE, DATEINTERVAL
 						value: value of the temporal information
 					</description>
 					<rangeTypeName>de.averbis.types.health.Timex3</rangeTypeName>
@@ -948,41 +965,46 @@
 				<featureDescription>
 					<name>doseFrequency</name>
 					<description>Dose frequency of the actual medication.
-						Possible forms are a general DoseFrequency or the more detailed DayTimeDoseFrequency,
-						WeekDayDoseFrequency, TimeMeasurementDoseFrequency etc.
+						Possible forms are a general DoseFrequency
+						or the more detailed DayTimeDoseFrequency,
+						WeekDayDoseFrequency, TimeMeasurementDoseFrequency
+						etc.
 					</description>
 					<rangeTypeName>de.averbis.types.health.DoseFrequency</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>drugs</name>
-					<description />
+					<description>Drug or multi drug of the medication.</description>
 					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
 					<elementType>de.averbis.types.health.Drug</elementType>
 					<multipleReferencesAllowed>true</multipleReferencesAllowed>
 				</featureDescription>
 				<featureDescription>
 					<name>rateQuantity</name>
-					<description />
+					<description>Amount of medication per unit of time, e.g. 2 doses.</description>
 					<rangeTypeName>uima.cas.Double</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>status</name>
 					<description>Status of the medication.
-						Possible values: null | NEGATED | CONSIDERED | INACTIVE | INTENDED | UNKNOWN
+						Possible values: null | NEGATED | CONSIDERED | INACTIVE |
+						INTENDED | UNKNOWN
 					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>category</name>
 					<description>Category of the medication.
-						Possible values: null | ADMISSION | ALLERGY | INPATIENT | DISCHARGE | FAMILY | CONDITIONING_TREATMENT
+						Possible values: null | ADMISSION | ALLERGY | INPATIENT
+						| DISCHARGE | FAMILY | CONDITIONING_TREATMENT
 					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>termTypes</name>
 					<description>Additional information on clinical drug, e.g. semantic clinical drug (RxNorm
-						TermType).</description>
+						TermType).
+					</description>
 					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
 					<elementType>de.averbis.types.health.TTY</elementType>
 					<multipleReferencesAllowed>true</multipleReferencesAllowed>
@@ -992,13 +1014,14 @@
 
 		<typeDescription>
 			<name>de.averbis.types.health.ATCCode</name>
-			<description />
+			<description>The ATC classification is an official classification for pharmacological substances.
+			</description>
 			<supertypeName>de.averbis.types.health.Concept</supertypeName>
 		</typeDescription>
 
 		<typeDescription>
 			<name>de.averbis.types.health.Morphology</name>
-			<description />
+			<description>Morphology concept based on ICD-O.</description>
 			<supertypeName>de.averbis.types.health.Concept</supertypeName>
 			<features>
 				<featureDescription>
@@ -1014,7 +1037,7 @@
 
 		<typeDescription>
 			<name>de.averbis.types.health.NYHA</name>
-			<description />
+			<description>NYHA (New York Heart Association) performance status scoring.</description>
 			<supertypeName>de.averbis.types.health.ExternalCoreAnnotation</supertypeName>
 			<features>
 				<featureDescription>
@@ -1034,7 +1057,8 @@
 				<featureDescription>
 					<name>status</name>
 					<description>Describes the status of the physical therapy.
-						Possible values: null | PLANNED | CANCELED | COMPLETED | NEGATED
+						Possible values: null | PLANNED |
+						CANCELED | COMPLETED | NEGATED
 					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
@@ -1056,7 +1080,7 @@
 
 		<typeDescription>
 			<name>de.averbis.types.health.Organism</name>
-			<description />
+			<description>Organisms based on SNOMED-CT Bacteria, Fungus and Virus.</description>
 			<supertypeName>de.averbis.types.health.Concept</supertypeName>
 			<features>
 				<featureDescription>
@@ -1081,7 +1105,8 @@
 				<featureDescription>
 					<name>organizationType</name>
 					<description>Type of the organization.
-						Possible values: general hospital | university hospital | specialist clinic | rehabilitation clinic |
+						Possible values: general hospital | university hospital |
+						specialist clinic | rehabilitation clinic |
 						physician's admitting hospital
 					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
@@ -1091,19 +1116,22 @@
 
 		<typeDescription>
 			<name>de.averbis.types.health.PathologyDocumentation</name>
-			<description />
+			<description>Single aggregated annotation encapsulating the most relevant pathology report
+				information.</description>
 			<supertypeName>de.averbis.types.health.ExternalCoreAnnotation</supertypeName>
 			<features>
 				<featureDescription>
 					<name>category</name>
 					<description>Classification of the pathology report by organ entity, e.g. "MAMMA", "COLON",
-						"PROSTATE" with confidence.</description>
+						"PROSTATE" with confidence.
+					</description>
 					<rangeTypeName>de.averbis.types.health.TumorCategory</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>diagnosis</name>
 					<description>The code of the relevant diagnosis based on ICD-10, e.g. "C50.9" for malignant
-						neoplasm of breast of unspecified site.</description>
+						neoplasm of breast of unspecified site.
+					</description>
 					<rangeTypeName>de.averbis.types.health.Diagnosis</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
@@ -1117,20 +1145,23 @@
 					<name>location</name>
 					<description>Further specification of the metastasis: Pulmonary (PUL), Bone marrow (MAR),
 						Osseous (OSS), Pleura (PLE), Hepatic (HEP), Peritoneum (PER),
-						Brain (BRA), Adrenals (ADR), Lymph nodes (LYM), Skin (SKI), Others (OTH)
+						Brain (BRA), Adrenals (ADR),
+						Lymph nodes (LYM), Skin (SKI), Others (OTH)
 					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>lymphnodesAffected</name>
 					<description>!! DEPRECATED !! Please use the feature 'lnAffected'. The amount of affected lymph
-						nodes.</description>
+						nodes.
+					</description>
 					<rangeTypeName>uima.cas.Integer</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>lymphnodesTested</name>
 					<description>!! DEPRECATED !! Please use the feature 'lnTested'. The amount of tested lymph
-						nodes.</description>
+						nodes.
+					</description>
 					<rangeTypeName>uima.cas.Integer</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
@@ -1161,20 +1192,23 @@
 				<featureDescription>
 					<name>rClass</name>
 					<description>Residual classification (R-Classification) of the tumor.
-						Possible values: null | Rx | R0 | R1 | R2
+						Possible values: null | Rx
+						| R0 | R1 | R2
 					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>sentinelLymphnodesAffected</name>
 					<description>!! DEPRECATED !! Please use the feature 'slnAffected'. The amount of affected
-						sentinel lymph nodes.</description>
+						sentinel lymph nodes.
+					</description>
 					<rangeTypeName>uima.cas.Integer</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>sentinelLymphnodesTested</name>
 					<description>!! DEPRECATED !! Please use the feature 'slnTested'. The amount of tested sentinel
-						lymph nodes.</description>
+						lymph nodes.
+					</description>
 					<rangeTypeName>uima.cas.Integer</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
@@ -1242,7 +1276,7 @@
 
 		<typeDescription>
 			<name>de.averbis.types.health.PathologyScore</name>
-			<description />
+			<description>Grouping of pathological scores</description>
 			<supertypeName>de.averbis.types.health.ExternalCoreAnnotation</supertypeName>
 			<features>
 				<featureDescription>
@@ -1269,7 +1303,8 @@
 		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.types.health.PatientInformation</name>
-			<description />
+			<description>Patient information such as admission and discharge dates, the gender of the patient
+				and whether the patient is deceased.</description>
 			<supertypeName>de.averbis.types.health.ExternalCoreAnnotation</supertypeName>
 			<features>
 				<featureDescription>
@@ -1287,19 +1322,20 @@
 				<featureDescription>
 					<name>firstName</name>
 					<description>The first part (before the semicolon) of the matching preferred term in the
-						terminology "patientnames".</description>
+						terminology "patientnames".
+					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>gender</name>
-					<description>Gender of the patient. Possible values (default is underlined): null, female, male
-					</description>
+					<description>Gender of the patient. Possible values: null | female | male</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>lastName</name>
 					<description>The last part (after the semicolon) of the matching preferred term in the
-						terminology "patientnames".</description>
+						terminology "patientnames".
+					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 			</features>
@@ -1307,7 +1343,8 @@
 
 		<typeDescription>
 			<name>de.averbis.types.health.Procedure</name>
-			<description />
+			<description>Information about surgical procedures. Based on SNOMED-CT Procedures in English and
+				OPS in German.</description>
 			<supertypeName>de.averbis.types.health.Concept</supertypeName>
 			<features>
 				<featureDescription>
@@ -1325,7 +1362,8 @@
 				<featureDescription>
 					<name>status</name>
 					<description>Describes the status of the procedure.
-						Possible values: null | PLANNED | CANCELED | COMPLETED | NEGATED
+						Possible values: null | PLANNED | CANCELED |
+						COMPLETED | NEGATED
 					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
@@ -1445,7 +1483,8 @@
 				<featureDescription>
 					<name>identifier</name>
 					<description>Identifier of the specimen.
-						Possible values: SINGLE (if only one specimen identified) or Number of Specimen (e.g. 1, 2, 3....)
+						Possible values: SINGLE (if only one specimen
+						identified) or Number of Specimen (e.g. 1, 2, 3....)
 					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
@@ -1459,13 +1498,15 @@
 				<featureDescription>
 					<name>morphology</name>
 					<description>The morphology of the specimen, according to ICD-O (see Morphology for more
-						details).</description>
+						details).
+					</description>
 					<rangeTypeName>de.averbis.types.health.Morphology</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>topography</name>
 					<description>The topography of the specimen, according to ICD-O. (see Topography for more
-						details).</description>
+						details).
+					</description>
 					<rangeTypeName>de.averbis.types.health.Topography</rangeTypeName>
 				</featureDescription>
 			</features>
@@ -1483,7 +1524,7 @@
 				</featureDescription>
 				<featureDescription>
 					<name>dimension</name>
-					<description />
+					<description>The dimension of the unit, e.g. [M] standing for mass.</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
@@ -1495,7 +1536,8 @@
 					<name>normalizedValue</name>
 					<description>Normalized value of the measurement. This value is the result of the
 						transformation of the numeric value according to the transformation of
-						the unit to its standard unit.
+						the unit to its standard
+						unit.
 					</description>
 					<rangeTypeName>uima.cas.Double</rangeTypeName>
 				</featureDescription>
@@ -1567,7 +1609,8 @@
 				<featureDescription>
 					<name>label</name>
 					<description>Label of the entity describing the type of the entity, e.g., LymphaticInvasion,
-						VascularInvasion, PerineuralInvasion.</description>
+						VascularInvasion, PerineuralInvasion.
+					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 			</features>
@@ -1607,7 +1650,8 @@
 		<typeDescription>
 			<name>de.averbis.types.health.TNMPostModifier</name>
 			<description>Postmodifier of an element: a, b, c. Among others subclassification of tumor size,
-				e.g. T1a: tumor under 0.1cm</description>
+				e.g. T1a: tumor under 0.1cm
+			</description>
 			<supertypeName>de.averbis.types.health.TNMBasic</supertypeName>
 		</typeDescription>
 
@@ -1726,9 +1770,12 @@
 				<featureDescription>
 					<name>modifier</name>
 					<description>Describes the characteristic of a qualitative value.
-						Possible values: null | ABNORMAL | ALTERNATING | BORDERLINE |
-						CENTROMERE | CIRCULAR | CONTINUOUS | CYTOPLASMATIC | DEMONSTRABLE | HOMOGENEOUS |
-						MODERATE | NOT_QUANTIFIABLE | NUCLEOLAR | PERINUCLEOLAR | QUANTIFIABLE |
+						Possible values: null |
+						ABNORMAL | ALTERNATING | BORDERLINE |
+						CENTROMERE | CIRCULAR | CONTINUOUS | CYTOPLASMATIC |
+						DEMONSTRABLE | HOMOGENEOUS |
+						MODERATE | NOT_QUANTIFIABLE | NUCLEOLAR | PERINUCLEOLAR |
+						QUANTIFIABLE |
 						QUALITATIVE | STRONG | WEAK
 					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
@@ -1736,8 +1783,10 @@
 				<featureDescription>
 					<name>value</name>
 					<description>Qualitative statement on a laboratory value.
-						Possible values: null | 1- | - - | 2- | - - - | 3- | 1+ | ++| 2+| +++| 3+
-						| APPROPRIATE | EVIDENCE | NEGATIVE | NO_EVIDENCE | POSITIVE | SPECKLED | STAINING | UNKOWN
+						Possible values: null | 1- | - - | 2-
+						| - - - | 3- | 1+ | ++| 2+| +++| 3+
+						| APPROPRIATE | EVIDENCE | NEGATIVE | NO_EVIDENCE |
+						POSITIVE | SPECKLED | STAINING | UNKOWN
 					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
