@@ -27,7 +27,7 @@
 				</featureDescription>
 				<featureDescription>
 					<name>dictCanon</name>
-					<description>Preferred term of the concept with respect to the source terminology..
+					<description>Preferred term of the concept with respect to the source terminology.
 					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
@@ -128,13 +128,13 @@
 			<features>
 				<featureDescription>
 					<name>kind</name>
-					<description>The type or kind of temporal expression (e.g. DATE, TIME, DURATION).
+					<description>The type or kind of temporal expression, e.g. DATE, TIME, DURATION.
 					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>value</name>
-					<description>The actual value of the temporal expression (e.g. the date or time).
+					<description>The actual value of the temporal expression, e.g. the date or time.
 					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
@@ -1484,7 +1484,7 @@
 					<name>identifier</name>
 					<description>Identifier of the specimen.
 						Possible values: SINGLE (if only one specimen
-						identified) or Number of Specimen (e.g. 1, 2, 3....)
+						identified) or Number of Specimen, e.g. 1, 2, 3...
 					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
@@ -1608,7 +1608,7 @@
 			<features>
 				<featureDescription>
 					<name>label</name>
-					<description>Label of the entity describing the type of the entity, e.g., LymphaticInvasion,
+					<description>Label of the entity describing the type of the entity, e.g. LymphaticInvasion,
 						VascularInvasion, PerineuralInvasion.
 					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
