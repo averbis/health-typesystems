@@ -43,13 +43,13 @@
 				</featureDescription>
 				<featureDescription>
 					<name>source</name>
-					<description>The source from which this concept was extracted, e.g. SNOMED or ICD10.
+					<description>The source terminology from which this concept was extracted, e.g. SNOMED or ICD10.
 					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>uniqueID</name>
-					<description>Unique identifier for this concept.</description>
+					<description>Unique identifier for this concept. Usually a concatenation of source and conceptID.</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 			</features>
@@ -883,7 +883,7 @@
 				</featureDescription>
 				<featureDescription>
 					<name>dimension</name>
-					<description />
+					<description>The dimension of the unit, e.g. [M] standing for mass.</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
