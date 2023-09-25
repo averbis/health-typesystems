@@ -7,6 +7,6 @@
 	<version>${project.version}</version>
 	<vendor>Averbis GmbH</vendor>
 	<imports>
-		<import name="de.averbis.textanalysis.types.health.TherapyTypeSystem" />
+		<import name="de.averbis.textanalysis.types.health.TNMTypeSystem" />
 	</imports>
 </typeSystemDescription>
