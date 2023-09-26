@@ -29,6 +29,6 @@ class ResolveTypeSystemTest {
 		TypeSystemDescription tsd = TypeSystemDescriptionFactory.createTypeSystemDescription(
 				"de.averbis.textanalysis.typesystems.health.TNMTypeSystem");
 		tsd.resolveImports();
-		assertThat(tsd.getTypes()).hasSize(96);
+		assertThat(tsd.getTypes()).hasSize(22);
 	}
 }
