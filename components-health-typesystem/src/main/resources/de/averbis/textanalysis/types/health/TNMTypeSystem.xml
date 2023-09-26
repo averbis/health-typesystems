@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
-	<name>de.averbis.textanalysis.typesystems.health.TNMTypeSystem</name>
+	<name>de.averbis.textanalysis.types.health.TNMTypeSystem</name>
 	<description>The type system for the TNM Classification of Malignant Tumors: A cancer staging
 		notation system that describes the stage of a cancer which originates from a solid tumor with
 		alphanumeric codes.</description>
