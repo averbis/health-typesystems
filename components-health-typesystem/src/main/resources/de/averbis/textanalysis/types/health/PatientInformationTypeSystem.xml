@@ -161,7 +161,7 @@
 		<!-- age -->
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.Age</name>
-			<description>The age of the patient.</description>
+			<description>The age of a person.</description>
 			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
 			<features>
 				<featureDescription>
