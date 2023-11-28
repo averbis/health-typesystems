@@ -1313,6 +1313,11 @@
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
+					<name>birthDate</name>
+					<description>Birth date of the patient.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
 					<name>deceased</name>
 					<description>Information as to whether the patient is deceased.
 						Possible values: false, true
@@ -1336,6 +1341,11 @@
 					<description>The last part (after the semicolon) of the matching preferred term in the
 						terminology "patientnames".
 					</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>age</name>
+					<description>Actual age of the patient.</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 			</features>

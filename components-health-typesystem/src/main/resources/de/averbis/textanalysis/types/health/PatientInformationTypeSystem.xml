@@ -9,6 +9,7 @@
 		<import name="de.averbis.textanalysis.types.temporal.TemporalTypeSystem" />
 		<import name="de.averbis.textanalysis.types.measurement.MeasurementTypeSystem"/>
 		<import name="de.averbis.textanalysis.types.NeuralTypeSystem"/>
+		<import name="de.averbis.textanalysis.types.numericvalue.NumericValueTypeSystem"/>
 		<import name="de.averbis.textanalysis.types.NamedEntityTypeSystem"/>
 	</imports>
 	<types>
@@ -21,6 +22,11 @@
 					<name>deathDate</name>
 					<description>Patient's date of death.</description>
 					<rangeTypeName>de.averbis.textanalysis.types.health.DeathDate</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>birthDate</name>
+					<description>Patient's date of birth.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.BirthDate</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>deceased</name>
@@ -36,6 +42,11 @@
 					<name>name</name>
 					<description>Patient's name.</description>
 					<rangeTypeName>de.averbis.textanalysis.types.health.PatientName</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>age</name>
+					<description>Patient's age.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.Age</rangeTypeName>
 				</featureDescription>
 			</features>
 		</typeDescription>
@@ -93,6 +104,18 @@
 				</featureDescription>
 			</features>
 		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.BirthDate</name>
+			<description>Recorded date of patient's birth.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>date</name>
+					<description>Patient's date of birth.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.temporal.Date</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
 		
 		<!-- Gender Extraction  -->
 		<typeDescription>
@@ -133,6 +156,25 @@
 			<name>de.averbis.textanalysis.types.health.PatientName</name>
 			<description>The patient's name.</description>
 			<supertypeName>de.averbis.textanalysis.types.PersonName</supertypeName>
+		</typeDescription>
+
+		<!-- age -->
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.Age</name>
+			<description>The age of a person.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>value</name>
+					<description>Age value.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.numericvalue.NumericValue</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>belongsTo</name>
+					<description>The subject of the age indicating whether it refers to patient or other people.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+			</features>
 		</typeDescription>
 
 	</types>
