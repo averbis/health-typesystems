@@ -1021,7 +1021,8 @@
 
 		<typeDescription>
 			<name>de.averbis.types.health.Morphology</name>
-			<description>Morphology concept based on ICD-O.</description>
+			<description>The histological classification of a neoplasm. The morphology code (conceptID) 
+				is based on ICD-O, e.g. 8140/3.</description>
 			<supertypeName>de.averbis.types.health.Concept</supertypeName>
 			<features>
 				<featureDescription>
@@ -1116,8 +1117,7 @@
 
 		<typeDescription>
 			<name>de.averbis.types.health.PathologyDocumentation</name>
-			<description>Single aggregated annotation encapsulating the most relevant pathology report
-				information.</description>
+			<description>Single aggregated annotation encapsulating the most relevant pathology report information.</description>
 			<supertypeName>de.averbis.types.health.ExternalCoreAnnotation</supertypeName>
 			<features>
 				<featureDescription>
@@ -1136,8 +1136,8 @@
 				</featureDescription>
 				<featureDescription>
 					<name>grading</name>
-					<description>The grading of the tumor.
-						Possible values: null | U | 1 | 2 | 3 | 4
+					<description>The grading of the tumor. Possible values: null | U (unknown) | 1 | 2 | 3 | 4 
+						and T ("trifft nicht zu"/"not applicable")
 					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
@@ -1152,83 +1152,86 @@
 				</featureDescription>
 				<featureDescription>
 					<name>lymphnodesAffected</name>
-					<description>!! DEPRECATED !! Please use the feature 'lnAffected'. The amount of affected lymph
-						nodes.
-					</description>
+					<description>!! DEPRECATED !! Please use the feature 'lnAffected'.</description>
 					<rangeTypeName>uima.cas.Integer</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>lymphnodesTested</name>
-					<description>!! DEPRECATED !! Please use the feature 'lnTested'. The amount of tested lymph
-						nodes.
-					</description>
+					<description>!! DEPRECATED !! Please use the feature 'lnTested'.</description>
 					<rangeTypeName>uima.cas.Integer</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>lnAffected</name>
-					<description>The amount of affected lymph nodes.</description>
+					<description>The amount of affected lymph nodes. Possible values: null or natural number.
+					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>lnTested</name>
-					<description>The amount of tested lymph nodes.</description>
+					<description>The amount of removed and tested lymph nodes. Possible values: null or natural 
+						number.
+					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>metastasis</name>
-					<description>M-Value according to TNM classification.</description>
+					<description>The value for metastasis (M) according to the TNM classification, e.g. pM1.
+					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>morphology</name>
-					<description>Morphology code based in ICD-O, e.g. "8520/3" with confidence.</description>
+					<description>The histological classification of a neoplasm.</description>
 					<rangeTypeName>de.averbis.types.health.Morphology</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>node</name>
-					<description>N-Value according to TNM classification.</description>
+					<description>The value for node (N) according to the TNM classification, e.g. pN0.
+					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>rClass</name>
-					<description>Residual classification (R-Classification) of the tumor.
-						Possible values: null | Rx
-						| R0 | R1 | R2
+					<description>Residual classification of the tumor. Possible values: null | 
+						RU (unknown) | Rx (not assessable) | R0 | R1 | R2
 					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>sentinelLymphnodesAffected</name>
-					<description>!! DEPRECATED !! Please use the feature 'slnAffected'. The amount of affected
-						sentinel lymph nodes.
-					</description>
+					<description>!! DEPRECATED !! Please use the feature 'slnAffected'.</description>
 					<rangeTypeName>uima.cas.Integer</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>sentinelLymphnodesTested</name>
-					<description>!! DEPRECATED !! Please use the feature 'slnTested'. The amount of tested sentinel
-						lymph nodes.
-					</description>
+					<description>!! DEPRECATED !! Please use the feature 'slnTested'.</description>
 					<rangeTypeName>uima.cas.Integer</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>slnAffected</name>
-					<description>The amount of affected sentinel lymph nodes.</description>
+					<description>The amount of affected sentinel lymph nodes. Possible values: 
+						null or natural number.
+					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>slnTested</name>
-					<description>The amount of tested sentinel lymph nodes.</description>
+					<description>The amount of removed and tested sentinel lymph nodes. 
+						Possible values: null or natural number.
+					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>side</name>
-					<description>The laterality of the pathology item, e.g. R,L,B,U</description>
+					<description>The laterality of the removed pathology item (e.g. tumor, biopsy). 
+						Possible values: R, L, B, U and T (right, left, both, unknown and "trifft nicht 
+						zu"/"not applicable")
+					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>topography</name>
-					<description>Topography code based on ICD-O, e.g. "C50.9"</description>
+					<description>The location of the neoplasm.</description>
 					<rangeTypeName>de.averbis.types.health.Topography</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
@@ -1238,7 +1241,9 @@
 				</featureDescription>
 				<featureDescription>
 					<name>tumor</name>
-					<description>T-Value according to TNM classification.</description>
+					<description>The value for tumor (T) according to the TNM classification, 
+						e.g. pT1c, cT2a, ypT3a etc.
+					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
@@ -1281,22 +1286,24 @@
 			<features>
 				<featureDescription>
 					<name>gleasonScore</name>
-					<description>Highest GleasonScore.</description>
+					<description>The highest Gleason Score in this pathology report. 
+						Possible values: 6, 7, 7a, 7b, 8, 9, 9a, 9b, 10
+					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>clarkLevel</name>
-					<description>Highest ClarkLevel.</description>
+					<description>The highest Clark level in this pathology report.</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>breslowScore</name>
-					<description>Highest BreslowScore.</description>
+					<description>The highest Breslow Score in this pathology report.</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>psaValue</name>
-					<description>Highest PSA Value.</description>
+					<description>The highest PSA value in this pathology report.</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 			</features>
@@ -1673,7 +1680,9 @@
 
 		<typeDescription>
 			<name>de.averbis.types.health.Topography</name>
-			<description />
+			<description>The location of the neoplasm. The topography code (conceptID) is based on ICD-O, 
+				e.g. C50.9.
+			</description>
 			<supertypeName>de.averbis.types.health.Concept</supertypeName>
 			<features>
 				<featureDescription>
@@ -1689,20 +1698,20 @@
 
 		<typeDescription>
 			<name>de.averbis.types.health.TumorCategory</name>
-			<description />
+			<description>Classification of the pathology report by organ entity, e.g. "MAMMA", "COLON", 
+				"PROSTATE" with confidence.</description>
 			<supertypeName>de.averbis.types.health.ExternalCoreAnnotation</supertypeName>
 			<features>
 				<featureDescription>
 					<name>confidence</name>
-					<description>For approaches using machine learning, the confidence is calculated that the
-						respective annotation has been correctly generated.
-						Possible value range: 0-1.
+					<description>The confidence is the lower value of the confidence of morphology and 
+						topography prediction. Possible value range: 0-1.
 					</description>
 					<rangeTypeName>uima.cas.Double</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>label</name>
-					<description>The label of the category, e.g. MAMMA, PROSTATA, COLON, MELANOMA, BASALIOM
+					<description>The label of the category, e.g. MAMMA, PROSTATA, COLON, MELANOMA
 					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
