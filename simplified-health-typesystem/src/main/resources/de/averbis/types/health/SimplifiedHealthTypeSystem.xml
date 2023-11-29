@@ -234,6 +234,11 @@
 					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
+				<featureDescription>
+					<name>date</name>
+					<description>The date of the blood pressure.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
 			</features>
 		</typeDescription>
 
@@ -867,6 +872,11 @@
 					<name>lowerLimit</name>
 					<description>Lower reference value of actual laboratory value.</description>
 					<rangeTypeName>de.averbis.types.health.Measurement</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>date</name>
+					<description>The date of the laboratory value.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 			</features>
 		</typeDescription>
