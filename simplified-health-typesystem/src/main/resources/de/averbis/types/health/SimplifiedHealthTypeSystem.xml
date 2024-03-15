@@ -188,6 +188,13 @@
 			<name>de.averbis.types.health.Anatomy</name>
 			<description>Contains information about anatomy, based on SNOMED-CT subtree.</description>
 			<supertypeName>de.averbis.types.health.Concept</supertypeName>
+			<features>
+				<featureDescription>
+					<name>confidence</name>
+					<description>The model's confidence in the correctness of the respective annotation. Possible value range: 0-1.</description>
+					<rangeTypeName>uima.cas.Double</rangeTypeName>
+				</featureDescription>
+			</features>
 		</typeDescription>
 
 		<typeDescription>
@@ -828,6 +835,11 @@
 			<supertypeName>de.averbis.types.health.ExternalCoreAnnotation</supertypeName>
 			<features>
 				<featureDescription>
+					<name>confidence</name>
+					<description>The model's confidence in the correctness of the respective annotation. Possible value range: 0-1.</description>
+					<rangeTypeName>uima.cas.Double</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
 					<name>belongsTo</name>
 					<description>Indicates, whether the laboratory value belongs to a donor or recipient (e.g. in
 						case of transplantations) or to a family member. Possible
@@ -926,6 +938,11 @@
 			</description>
 			<supertypeName>de.averbis.types.health.ExternalCoreAnnotation</supertypeName>
 			<features>
+				<featureDescription>
+					<name>confidence</name>
+					<description>The model's confidence in the correctness of the respective annotation. Possible value range: 0-1.</description>
+					<rangeTypeName>uima.cas.Double</rangeTypeName>
+				</featureDescription>
 				<featureDescription>
 					<name>administrations</name>
 					<description>The routes of administration of this medication.</description>
@@ -1130,6 +1147,11 @@
 			<description>Single aggregated annotation encapsulating the most relevant pathology report information.</description>
 			<supertypeName>de.averbis.types.health.ExternalCoreAnnotation</supertypeName>
 			<features>
+				<featureDescription>
+					<name>confidence</name>
+					<description>The model's confidence in the correctness of the respective annotation. Possible value range: 0-1.</description>
+					<rangeTypeName>uima.cas.Double</rangeTypeName>
+				</featureDescription>
 				<featureDescription>
 					<name>category</name>
 					<description>Classification of the pathology report by organ entity, e.g. "MAMMA", "COLON",
@@ -1907,6 +1929,13 @@
 			<name>de.averbis.types.health.Age</name>
 			<description />
 			<supertypeName>de.averbis.types.health.ExternalCoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>confidence</name>
+					<description>The model's confidence in the correctness of the respective annotation. Possible value range: 0-1.</description>
+					<rangeTypeName>uima.cas.Double</rangeTypeName>
+				</featureDescription>
+			</features>
 		</typeDescription>
 
 		<typeDescription>
@@ -1918,6 +1947,11 @@
 					<name>kind</name>
 					<description>Possible values: PHONE | FAX | EMAIL</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>confidence</name>
+					<description>The model's confidence in the correctness of the respective annotation. Possible value range: 0-1.</description>
+					<rangeTypeName>uima.cas.Double</rangeTypeName>
 				</featureDescription>
 			</features>
 		</typeDescription>
@@ -1931,6 +1965,11 @@
 					<name>kind</name>
 					<description>Possible values: PATIENTID | OTHER</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>confidence</name>
+					<description>The model's confidence in the correctness of the respective annotation. Possible value range: 0-1.</description>
+					<rangeTypeName>uima.cas.Double</rangeTypeName>
 				</featureDescription>
 			</features>
 		</typeDescription>
@@ -1946,6 +1985,11 @@
 					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
+				<featureDescription>
+					<name>confidence</name>
+					<description>The model's confidence in the correctness of the respective annotation. Possible value range: 0-1.</description>
+					<rangeTypeName>uima.cas.Double</rangeTypeName>
+				</featureDescription>
 			</features>
 		</typeDescription>
 
@@ -1960,6 +2004,11 @@
 					<description>possible values: PATIENT | DOCTOR | OTHER</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
+				<featureDescription>
+					<name>confidence</name>
+					<description>The model's confidence in the correctness of the respective annotation. Possible value range: 0-1.</description>
+					<rangeTypeName>uima.cas.Double</rangeTypeName>
+				</featureDescription>
 			</features>
 		</typeDescription>
 
@@ -1967,12 +2016,26 @@
 			<name>de.averbis.types.health.Profession</name>
 			<description />
 			<supertypeName>de.averbis.types.health.ExternalCoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>confidence</name>
+					<description>The model's confidence in the correctness of the respective annotation. Possible value range: 0-1.</description>
+					<rangeTypeName>uima.cas.Double</rangeTypeName>
+				</featureDescription>
+			</features>
 		</typeDescription>
 
 		<typeDescription>
 			<name>de.averbis.types.health.PHIOther</name>
 			<description />
 			<supertypeName>de.averbis.types.health.ExternalCoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>confidence</name>
+					<description>The model's confidence in the correctness of the respective annotation. Possible value range: 0-1.</description>
+					<rangeTypeName>uima.cas.Double</rangeTypeName>
+				</featureDescription>
+			</features>
 		</typeDescription>
 
 	</types>
