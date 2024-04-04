@@ -609,6 +609,12 @@
 					<description>The secondary grade (not always available).</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
+				<featureDescription>
+					<name>occasion</name>
+					<description>The method by which the tissue sample was obtained , i.e. SURGERY or PUNCH.
+					</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
 			</features>
 		</typeDescription>
 
@@ -1320,6 +1326,22 @@
 					<name>gleasonScore</name>
 					<description>The highest Gleason Score in this pathology report. 
 						Possible values: 6, 7, 7a, 7b, 8, 9, 9a, 9b, 10
+					</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>gleasonScorePrimary</name>
+					<description>The predominant Gleason Score pattern. Ranges from 1 to 5.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>gleasonScoreSecondary</name>
+					<description>The second most prevalent pattern. Ranges from 1 to 5.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>gleasonScoreOccasion</name>
+					<description>The method by which the tissue sample was obtained , i.e. SURGERY or PUNCH.
 					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
