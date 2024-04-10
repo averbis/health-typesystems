@@ -136,6 +136,21 @@
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
+					<name>punchesAffected</name>
+					<description>The number of affected punches.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>punchesTested</name>
+					<description>The number of tested punches.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>maxPunchInfestation</name>
+					<description>The carcinoma infestation of the most severely affected punch (in %).</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
 					<name>resultDate</name>
 					<description>The date of the latest result/findings.</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
@@ -252,6 +267,21 @@
 					<name>diagnosisDateAnnotation</name>
 					<description>Optional annotation representing the date of the earliest diagnosis result.</description>
 					<rangeTypeName>de.averbis.textanalysis.types.health.ResultDate</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>punchesAffectedAnnotation</name>
+					<description>Optional annotation representing the number of affected punches.</description>
+					<rangeTypeName>de.averbis.extraction.types.CoreAnnotation</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>punchesTestedAnnotation</name>
+					<description>Optional annotation representing the number of tested punches.</description>
+					<rangeTypeName>de.averbis.extraction.types.CoreAnnotation</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>maxPunchInfestationAnnotation</name>
+					<description>Optional annotation representing the carcinoma infestation of the most severely affected punch (in %).</description>
+					<rangeTypeName>de.averbis.extraction.types.CoreAnnotation</rangeTypeName>
 				</featureDescription>
 			</features>
 		</typeDescription>
