@@ -143,6 +143,12 @@
 					<description>The secondary score.</description>
 					<rangeTypeName>de.averbis.textanalysis.types.numericvalue.NumericValue</rangeTypeName>
 				</featureDescription>
+				<featureDescription>
+					<name>occasion</name>
+					<description>The method by which the tissue sample was obtained , i.e. SURGERY or PUNCH.
+					</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
 			</features>
 		</typeDescription>
 		<typeDescription>
