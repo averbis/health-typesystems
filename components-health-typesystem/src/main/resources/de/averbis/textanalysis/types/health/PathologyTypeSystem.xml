@@ -318,6 +318,11 @@
 			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
 		</typeDescription>
 		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PunchIndicator</name>
+			<description>Indicators that document contains punch report.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.BiopsyIndicator</supertypeName>
+		</typeDescription>
+		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.ClarkLevel</name>
 			<description>Level of anatomical invasion of the melanoma in the skin.</description>
 			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
