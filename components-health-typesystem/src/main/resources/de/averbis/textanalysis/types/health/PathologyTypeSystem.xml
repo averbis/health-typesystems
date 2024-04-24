@@ -56,6 +56,21 @@
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
+					<name>tPrefix</name>
+					<description>It indicates that the tumor category is based on a pathological or a clinical examination.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>nPrefix</name>
+					<description>It indicates that the node category is based on a pathological or a clinical examination.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>mPrefix</name>
+					<description>It indicates that the metastasis category is based on a pathological or a clinical examination.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
 					<name>grading</name>
 					<description>The relevant grading.</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
@@ -186,6 +201,27 @@
 					<name>metastasisAnnotation</name>
 					<description>Optional annotation representing the relevant metastasis.</description>
 					<rangeTypeName>de.averbis.textanalysis.types.health.TNMMetastasis</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>ySymbolAnnotation</name>
+					<description>It indicates that the TNM is assessed after the patient has received 
+						therapy or treatment for cancer.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.TNMModifier</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>rSymbolAnnotation</name>
+					<description>It represents recurrent tumors after a disease-free interval.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.TNMModifier</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>aSymbolAnnotation</name>
+					<description>It represents cases where the classification of the tumor stage is made posthumously.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.TNMModifier</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>mSymbolAnnotation</name>
+					<description>It indicates the presence of multiple primary tumors in a particular anatomical region.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.TNMModifier</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>gradingAnnotation</name>
