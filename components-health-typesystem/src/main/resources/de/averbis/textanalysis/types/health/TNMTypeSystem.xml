@@ -52,6 +52,11 @@
 					<description>The postfix modifier of the element.</description>
 					<rangeTypeName>de.averbis.textanalysis.types.health.TNMPostModifier</rangeTypeName>
 				</featureDescription>
+				<featureDescription>
+					<name>prefix</name>
+					<description>It indicates that the TNM categories are based on a pathological or a clinical examination.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.TNMModifier</rangeTypeName>
+				</featureDescription>
 			</features>
 		</typeDescription>
 		<typeDescription>
@@ -200,6 +205,27 @@
 					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
 					<multipleReferencesAllowed>true</multipleReferencesAllowed>
 				</featureDescription>
+				<featureDescription>
+					<name>ySymbol</name>
+					<description>It indicates that the TNM is assessed after the patient has received 
+						therapy or treatment for cancer.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.TNMModifier</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>rSymbol</name>
+					<description>It represents recurrent tumors after a disease-free interval.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.TNMModifier</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>aSymbol</name>
+					<description>It represents cases where the classification of the tumor stage is made posthumously.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.TNMModifier</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>mSymbol</name>
+					<description>It indicates the presence of multiple primary tumors in a particular anatomical region.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.TNMModifier</rangeTypeName>
+				</featureDescription>
 			</features>
 		</typeDescription>
 		<typeDescription>
@@ -298,6 +324,27 @@
 					<name>perineuralInvasion</name>
 					<description>perineuralInvasion</description>
 					<rangeTypeName>de.averbis.textanalysis.types.health.TNMPerineuralInvasion</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>ySymbol</name>
+					<description>It indicates that the TNM is assessed after the patient has received 
+						therapy or treatment for cancer.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.TNMModifier</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>rSymbol</name>
+					<description>It represents recurrent tumors after a disease-free interval.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.TNMModifier</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>aSymbol</name>
+					<description>It represents cases where the classification of the tumor stage is made posthumously.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.TNMModifier</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>mSymbol</name>
+					<description>It indicates the presence of multiple primary tumors in a particular anatomical region.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.TNMModifier</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>additional</name>

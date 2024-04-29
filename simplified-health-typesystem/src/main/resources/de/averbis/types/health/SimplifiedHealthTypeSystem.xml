@@ -1315,6 +1315,45 @@
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
+					<name>tPrefix</name>
+					<description>It indicates that the tumor category is based on a pathological or a clinical examination. 
+						Possible values: p, c or empty.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>nPrefix</name>
+					<description>It indicates that the node category is based on a pathological or a clinical examination. 
+						Possible values: p, c or empty.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>mPrefix</name>
+					<description>It indicates that the metastasis category is based on a pathological or a clinical examination. 
+						Possible values: p, c or empty.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>ySymbol</name>
+					<description>It indicates that the TNM is assessed after the patient has received 
+						therapy or treatment for cancer. </description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>rSymbol</name>
+					<description>It represents recurrent tumors after a disease-free interval.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>aSymbol</name>
+					<description>It represents cases where the classification of the tumor stage is made posthumously.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>mSymbol</name>
+					<description>It indicates the presence of multiple primary tumors in a particular anatomical region.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
 					<name>scores</name>
 					<description>List of different scores, e.g. Gleason Score, ClarkLevel.</description>
 					<rangeTypeName>de.averbis.types.health.PathologyScore</rangeTypeName>
@@ -1672,6 +1711,11 @@
 				<featureDescription>
 					<name>value</name>
 					<description>The value of the TNM mention.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>prefix</name>
+					<description>The prefix of the TNM mention.</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 			</features>
