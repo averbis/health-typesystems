@@ -382,5 +382,42 @@
 				</featureDescription>
 			</features>
 		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PunchStatus</name>
+			<description>Status (AFFECTED, NOT_AFFECTED, UNKNOWN, EMPTY) of a punch sample.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.Status</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PunchSampleInfo</name>
+			<description>All information aggregated for a single punch sample.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>identifier</name>
+					<description>The unique identifier that defines this punch sample.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>status</name>
+					<description>The status of the punch sample.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.PunchStatus</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>affectedCount</name>
+					<description>The number of punches that are affected in this sample (if multiple punches belong to the sample).</description>
+					<rangeTypeName>uima.cas.Double</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>multiplierCount</name>
+					<description>The number of punches in this sample (if multiple punches belong to the sample).</description>
+					<rangeTypeName>uima.cas.Double</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>side</name>
+					<description>The side that the sample was taken from.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
 	</types>
 </typeSystemDescription>
