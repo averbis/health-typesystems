@@ -419,5 +419,32 @@
 				</featureDescription>
 			</features>
 		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PunchQuantifier</name>
+			<description>Represents a quantifier like "in two out of three punches" or "in all punches on the right".</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>affectedCount</name>
+					<description>The number of affected punches referred to by the PunchQualifier.</description>
+					<rangeTypeName>uima.cas.Double</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>totalCount</name>
+					<description>The total number of punches referred to by the PunchQualifier.</description>
+					<rangeTypeName>uima.cas.Double</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>side</name>
+					<description>The side that the PunchQuantifier refers to.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>all</name>
+					<description>True if PunchQuantifier refers to ALL punches and False otherwise.</description>
+					<rangeTypeName>uima.cas.Boolean</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
 	</types>
 </typeSystemDescription>
