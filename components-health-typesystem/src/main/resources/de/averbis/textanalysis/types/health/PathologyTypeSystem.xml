@@ -463,5 +463,32 @@
 				</featureDescription>
 			</features>
 		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.SpecialAffectedPunchPara</name>
+			<description>Specific paragraph containing information about how many/which punches are affected.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>status</name>
+					<description>The status of the punches in this paragraph.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.PunchStatus</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>quantifier</name>
+					<description>The PunchQuantifier of the paragraph (if given).</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.PunchQuantifier</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>identifiers</name>
+					<description>List of identifier that the paragraph refers to.</description>
+					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>affectedResult</name>
+					<description>The number of affected punches that this paragraph mentions.</description>
+					<rangeTypeName>uima.cas.Integer</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
 	</types>
 </typeSystemDescription>
