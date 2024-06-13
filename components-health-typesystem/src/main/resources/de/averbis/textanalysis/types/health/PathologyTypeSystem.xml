@@ -405,12 +405,12 @@
 				<featureDescription>
 					<name>affectedCount</name>
 					<description>The number of punches that are affected in this sample (if multiple punches belong to the sample).</description>
-					<rangeTypeName>uima.cas.Double</rangeTypeName>
+					<rangeTypeName>uima.cas.Integer</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>multiplierCount</name>
 					<description>The number of punches in this sample (if multiple punches belong to the sample).</description>
-					<rangeTypeName>uima.cas.Double</rangeTypeName>
+					<rangeTypeName>uima.cas.Integer</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>side</name>
@@ -427,12 +427,12 @@
 				<featureDescription>
 					<name>affectedCount</name>
 					<description>The number of affected punches referred to by the PunchQualifier.</description>
-					<rangeTypeName>uima.cas.Double</rangeTypeName>
+					<rangeTypeName>uima.cas.Integer</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>totalCount</name>
 					<description>The total number of punches referred to by the PunchQualifier.</description>
-					<rangeTypeName>uima.cas.Double</rangeTypeName>
+					<rangeTypeName>uima.cas.Integer</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>side</name>
