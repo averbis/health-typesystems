@@ -479,7 +479,7 @@
 		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.PunchesResult</name>
-			<description>The result (tested or affected) of a document containing information about punches.</description>
+			<description>The result of a document containing information about punches.</description>
 			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
 			<features>
 				<featureDescription>
@@ -496,7 +496,7 @@
 				</featureDescription>
 				<featureDescription>
 					<name>value</name>
-					<description>The result itself (number of tested or affected punches).</description>
+					<description>The punch result value.</description>
 					<rangeTypeName>uima.cas.Integer</rangeTypeName>
 				</featureDescription>
 			</features>
@@ -508,7 +508,7 @@
 		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.Punches</name>
-			<description>The annotation.</description>
+			<description>Annotation with the aggregated information about the punches.</description>
 			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
 			<features>
 				<featureDescription>
