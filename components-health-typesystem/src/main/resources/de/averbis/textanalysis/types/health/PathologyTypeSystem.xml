@@ -369,7 +369,7 @@
 		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.PunchStatus</name>
-			<description>Status (AFFECTED, NOT_AFFECTED, UNKNOWN, EMPTY) of a punch sample.</description>
+			<description>Status of a punch sample. Possible values: AFFECTED, NOT_AFFECTED, UNKNOWN, EXCLUDE</description>
 			<supertypeName>de.averbis.textanalysis.types.health.Status</supertypeName>
 		</typeDescription>
 		<typeDescription>
@@ -425,7 +425,7 @@
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
-					<name>all</name>
+					<name>affectsAll</name>
 					<description>True if PunchQuantifier refers to ALL punches and False otherwise.</description>
 					<rangeTypeName>uima.cas.Boolean</rangeTypeName>
 				</featureDescription>
@@ -465,8 +465,9 @@
 				</featureDescription>
 				<featureDescription>
 					<name>identifiers</name>
-					<description>List of identifier that the paragraph refers to.</description>
+					<description>List of identifiers that the paragraph refers to.</description>
 					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
+					<elementType>de.averbis.textanalysis.types.health.PunchIdentifier</elementType>
 					<multipleReferencesAllowed>true</multipleReferencesAllowed>
 				</featureDescription>
 				<featureDescription>
@@ -483,7 +484,7 @@
 			<features>
 				<featureDescription>
 					<name>resultType</name>
-					<description>Either "TESTED" or "AFFECTED".</description>
+					<description>The type of the result. Possible values: TESTED, AFFECTED, MAX_INFESTATION</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
@@ -504,13 +505,6 @@
 			<name>de.averbis.textanalysis.types.health.MaxPunchInfestation</name>
 			<description>The carcinoma infestation of the most severely affected punch.</description>
 			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
-			<features>
-				<featureDescription>
-					<name>value</name>
-					<description>The carcinoma infestation of the most severely affected punch (in %).</description>
-					<rangeTypeName>uima.cas.String</rangeTypeName>
-				</featureDescription>
-			</features>
 		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.Punches</name>
@@ -518,19 +512,19 @@
 			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
 			<features>
 				<featureDescription>
-					<name>punchesResultTested</name>
+					<name>tested</name>
 					<description>The result for punches tested.</description>
 					<rangeTypeName>de.averbis.textanalysis.types.health.PunchesResult</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
-					<name>punchesResultAffected</name>
+					<name>affected</name>
 					<description>The result for punches affected.</description>
 					<rangeTypeName>de.averbis.textanalysis.types.health.PunchesResult</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
-					<name>maxPunchInfestation</name>
-					<description>The carcinoma infestation of the most severely affected punch.</description>
-					<rangeTypeName>de.averbis.textanalysis.types.health.MaxPunchInfestation</rangeTypeName>
+					<name>maxInfestation</name>
+					<description>The result of the infestation of the most severely affected punch.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.PunchesResult</rangeTypeName>
 				</featureDescription>
 			</features>
 		</typeDescription>
