@@ -1358,6 +1358,25 @@
 					<description>List of different scores, e.g. Gleason Score, ClarkLevel.</description>
 					<rangeTypeName>de.averbis.types.health.PathologyScore</rangeTypeName>
 				</featureDescription>
+				<featureDescription>
+					<name>punchesAffected</name>
+					<description>The number of affected punches. Possible values: null or natural number.
+					</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>punchesTested</name>
+					<description>The number of tested punches. Possible values: null or natural number.
+					</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>maxPunchInfestation</name>
+					<description>The carcinoma infestation of the most severely affected punch (in %).
+						Possible values: null or natural number.
+					</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
 			</features>
 		</typeDescription>
 

@@ -151,6 +151,21 @@
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
+					<name>punchesAffected</name>
+					<description>The number of affected punches.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>punchesTested</name>
+					<description>The number of tested punches.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>maxPunchInfestation</name>
+					<description>The carcinoma infestation of the most severely affected punch (in %).</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
 					<name>resultDate</name>
 					<description>The date of the latest result/findings.</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
@@ -289,6 +304,11 @@
 					<description>Optional annotation representing the date of the earliest diagnosis result.</description>
 					<rangeTypeName>de.averbis.textanalysis.types.health.ResultDate</rangeTypeName>
 				</featureDescription>
+				<featureDescription>
+					<name>punchesAnnotation</name>
+					<description>Optional annotation representing the punches.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.Punches</rangeTypeName>
+				</featureDescription>
 			</features>
 		</typeDescription>
 		<typeDescription>
@@ -344,6 +364,167 @@
 					<name>score</name>
 					<description>The value of the breslow score.</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PunchStatus</name>
+			<description>Status of a punch sample. Possible values: AFFECTED, NOT_AFFECTED, UNKNOWN, EXCLUDE</description>
+			<supertypeName>de.averbis.textanalysis.types.health.Status</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PunchSampleInfo</name>
+			<description>All information aggregated for a single punch sample.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>identifier</name>
+					<description>The unique identifier that defines this punch sample.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>status</name>
+					<description>The status of the punch sample.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.PunchStatus</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>affectedCount</name>
+					<description>The number of punches that are affected in this sample (if multiple punches belong to the sample).</description>
+					<rangeTypeName>uima.cas.Integer</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>multiplierCount</name>
+					<description>The number of punches in this sample (if multiple punches belong to the sample).</description>
+					<rangeTypeName>uima.cas.Integer</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>side</name>
+					<description>The side that the sample was taken from.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PunchQuantifier</name>
+			<description>Represents a quantifier like "in two out of three punches" or "in all punches on the right".</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>affectedCount</name>
+					<description>The number of affected punches referred to by the PunchQualifier.</description>
+					<rangeTypeName>uima.cas.Integer</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>totalCount</name>
+					<description>The total number of punches referred to by the PunchQualifier.</description>
+					<rangeTypeName>uima.cas.Integer</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>side</name>
+					<description>The side that the PunchQuantifier refers to.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>affectsAll</name>
+					<description>True if PunchQuantifier refers to ALL punches and False otherwise.</description>
+					<rangeTypeName>uima.cas.Boolean</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PunchIdentifier</name>
+			<description>An identifier representing a punch sample.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>value</name>
+					<description>The (unique) identifier of a punch sample.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>side</name>
+					<description>The side that the punch sample was taken from.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.SpecialAffectedPunchPara</name>
+			<description>Specific paragraph containing information about how many/which punches are affected.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>status</name>
+					<description>The status of the punches in this paragraph.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.PunchStatus</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>quantifier</name>
+					<description>The PunchQuantifier of the paragraph (if given).</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.PunchQuantifier</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>identifiers</name>
+					<description>List of identifiers that the paragraph refers to.</description>
+					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
+					<elementType>de.averbis.textanalysis.types.health.PunchIdentifier</elementType>
+					<multipleReferencesAllowed>true</multipleReferencesAllowed>
+				</featureDescription>
+				<featureDescription>
+					<name>affectedResult</name>
+					<description>The number of affected punches that this paragraph mentions.</description>
+					<rangeTypeName>uima.cas.Integer</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PunchesResult</name>
+			<description>The result of a document containing information about punches.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>resultType</name>
+					<description>The type of the result. Possible values: TESTED, AFFECTED, MAX_INFESTATION</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>info</name>
+					<description>The annotation(s) that lead to the result.</description>
+					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
+					<elementType>de.averbis.extraction.types.CoreAnnotation</elementType>
+					<multipleReferencesAllowed>true</multipleReferencesAllowed>
+				</featureDescription>
+				<featureDescription>
+					<name>value</name>
+					<description>The punch result value.</description>
+					<rangeTypeName>uima.cas.Integer</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.MaxPunchInfestation</name>
+			<description>The carcinoma infestation of the most severely affected punch.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.Punches</name>
+			<description>Annotation with the aggregated information about the punches.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>tested</name>
+					<description>The result for punches tested.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.PunchesResult</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>affected</name>
+					<description>The result for punches affected.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.PunchesResult</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>maxInfestation</name>
+					<description>The result of the infestation of the most severely affected punch.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.PunchesResult</rangeTypeName>
 				</featureDescription>
 			</features>
 		</typeDescription>
