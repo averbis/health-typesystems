@@ -402,7 +402,7 @@
 			<supertypeName>de.averbis.textanalysis.types.health.MiscClinicalSection</supertypeName>
 		</typeDescription>		
 		<typeDescription>
-			<name>de.averbis.textanalysis.types.health.BadInsertion</name>
+			<name>de.averbis.textanalysis.types.health.PageInsertion</name>
 			<description>Section that have been misplaced in a document.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.MiscClinicalSection</supertypeName>
 		</typeDescription>		
