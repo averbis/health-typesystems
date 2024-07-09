@@ -404,12 +404,12 @@
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.PageInsertion</name>
 			<description>Section that have been misplaced in a document.</description>
-			<supertypeName>de.averbis.textanalysis.types.health.MiscClinicalSection</supertypeName>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
 		</typeDescription>		
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.BrokenLayout</name>
 			<description>Represent a document whose layout is broken.</description>
-			<supertypeName>de.averbis.textanalysis.types.health.MiscClinicalSection</supertypeName>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
 		</typeDescription>		
 	</types>
 </typeSystemDescription>
