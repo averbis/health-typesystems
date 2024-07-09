@@ -53,6 +53,11 @@
 			<name>de.averbis.textanalysis.types.health.ClinicalSectionContent</name>
 			<description>Clinical section content.</description>
 			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<featureDescription>
+					<name>value</name>
+					<description>The content of the clinical section, cleaned from any unwanted insertions.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+			</featureDescription>
 		</typeDescription>
 
 		<typeDescription>
