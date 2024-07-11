@@ -253,7 +253,7 @@
 				</featureDescription>
 				<featureDescription>
 					<name>kind</name>
-					<description>The kind of blood pressure mentioned in the text. The value is empty/null for normal blood pressure measurments, "TARGET" for intended blood pressures, and "CONDITIONAL" for mentions of specific constraints.</description>
+					<description>The kind of blood pressure mentioned in the text. The value is empty/null for normal blood pressure measurements, "TARGET" for intended blood pressures, and "CONDITIONAL" for mentions of specific constraints.</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
