@@ -247,6 +247,16 @@
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
+					<name>mode</name>
+					<description>The mode in which the blood pressure was measured: empty/null for normal measurements and "EXERCISE" for measurements under stress.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>kind</name>
+					<description>The kind of blood pressure mentioned in the text. The value is empty/null for normal blood pressure measurements, "TARGET" for intended blood pressures, and "CONDITIONAL" for mentions of specific constraints.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
 					<name>date</name>
 					<description>The date of the blood pressure.</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>

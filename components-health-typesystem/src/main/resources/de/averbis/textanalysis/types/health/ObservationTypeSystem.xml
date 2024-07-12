@@ -443,6 +443,11 @@
 					<description>Interpretation of fact depending on reference values or interpretation in text.</description>
 					<rangeTypeName>de.averbis.textanalysis.types.health.AbstractInterpretation</rangeTypeName>
 				</featureDescription>
+				<featureDescription>
+					<name>kind</name>
+					<description>Kind of blood pressure mentioned: STRESS, CONDITIONAL, TARGET and DEFAULT</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.Status</rangeTypeName>
+				</featureDescription>
 	    	</features>
 		</typeDescription>
 		<typeDescription>
