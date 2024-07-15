@@ -53,6 +53,11 @@
 			<name>de.averbis.textanalysis.types.health.ClinicalSectionContent</name>
 			<description>Clinical section content.</description>
 			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<featureDescription>
+					<name>value</name>
+					<description>The content of the clinical section, cleaned from any unwanted insertions.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+			</featureDescription>
 		</typeDescription>
 
 		<typeDescription>
@@ -395,6 +400,21 @@
 			<name>de.averbis.textanalysis.types.health.DocumentFooterSection</name>
 			<description>Section containing document footer.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.MiscClinicalSection</supertypeName>
+		</typeDescription>		
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.DocumentHeaderSection</name>
+			<description>Section containing document header.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.MiscClinicalSection</supertypeName>
+		</typeDescription>		
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PageInsertion</name>
+			<description>Section that have been misplaced in a document.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+		</typeDescription>		
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.BrokenLayout</name>
+			<description>Represent a document whose layout is broken.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
 		</typeDescription>		
 	</types>
 </typeSystemDescription>
