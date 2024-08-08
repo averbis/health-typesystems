@@ -451,26 +451,32 @@
 			<description>Section containing other information.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.ClinicalSection</supertypeName>
 		</typeDescription>
-		
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.DocumentFooterSection</name>
 			<description>Section containing document footer.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.MiscClinicalSection</supertypeName>
-		</typeDescription>		
+		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.DocumentHeaderSection</name>
 			<description>Section containing document header.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.MiscClinicalSection</supertypeName>
-		</typeDescription>		
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.BrokenLayoutSection</name>
+			<description>Section containing layout issues.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.MiscClinicalSection</supertypeName>
+		</typeDescription>
+
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.PageInsertion</name>
 			<description>Section that have been misplaced in a document.</description>
 			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
-		</typeDescription>		
+		</typeDescription>
+		
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.BrokenLayout</name>
 			<description>Represent a document whose layout is broken.</description>
 			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
-		</typeDescription>		
+		</typeDescription>
 	</types>
 </typeSystemDescription>
