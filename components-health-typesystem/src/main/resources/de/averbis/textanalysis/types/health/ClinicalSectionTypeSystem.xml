@@ -261,8 +261,58 @@
 			<supertypeName>de.averbis.textanalysis.types.health.ObservationSection</supertypeName>
 		</typeDescription>
 		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.NuclearMedicineSection</name>
+			<description>Section containing information about nuclear medicine.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.ObservationSection</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.MRISection</name>
+			<description>Section containing information about MRI (Magnetic Resonance Imaging).</description>
+			<supertypeName>de.averbis.textanalysis.types.health.ObservationSection</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.CTSection</name>
+			<description>Section containing information about CT (Computer Tomography).</description>
+			<supertypeName>de.averbis.textanalysis.types.health.ObservationSection</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.XRaySection</name>
+			<description>Section containing information about x-ray.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.ObservationSection</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.EndoscopySection</name>
+			<description>Section containing information about endoscopy.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.ObservationSection</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.ConsultationSection</name>
+			<description>Section containing information about consultation.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.ObservationSection</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PulmonaryFunctionSection</name>
+			<description>Section containing information about lung function.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.ObservationSection</supertypeName>
+		</typeDescription>
+		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.ECGSection</name>
-			<description>Section containing information about ECG.</description>
+			<description>Section containing information about ECG (Electrocardiogram).</description>
+			<supertypeName>de.averbis.textanalysis.types.health.ObservationSection</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.EEGSection</name>
+			<description>Section containing information about EEG (Electroencephalogram).</description>
+			<supertypeName>de.averbis.textanalysis.types.health.ObservationSection</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.EMGSection</name>
+			<description>Section containing information about EMG (Electromyogram).</description>
+			<supertypeName>de.averbis.textanalysis.types.health.ObservationSection</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.ENGSection</name>
+			<description>Section containing information about ENG (Electroneurography).</description>
 			<supertypeName>de.averbis.textanalysis.types.health.ObservationSection</supertypeName>
 		</typeDescription>
 		<typeDescription>
@@ -277,32 +327,38 @@
 		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.VisualAcuitySection</name>
-			<description>Section containing information about the visual acuity.</description>
+			<description>!!!DEPRECATED!!! refer to OphthalmologySection instead.
+				Section containing information about the visual acuity.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.OphthalmologySection</supertypeName>
 		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.TensioSection</name>
-			<description>Section containing information about the tensio.</description>
+			<description>!!!DEPRECATED!!! refer to OphthalmologySection instead.
+				Section containing information about the tensio.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.OphthalmologySection</supertypeName>
 		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.AnteriorEyeSegmentSection</name>
-			<description>Section containing information about the anterior eye segment.</description>
+			<description>!!!DEPRECATED!!! refer to OphthalmologySection instead.
+				Section containing information about the anterior eye segment.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.OphthalmologySection</supertypeName>
 		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.OcularFundusSection</name>
-			<description>Section containing information about the ocular fundus.</description>
+			<description>!!!DEPRECATED!!! refer to OphthalmologySection instead.
+				Section containing information about the ocular fundus.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.OphthalmologySection</supertypeName>
 		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.OpticalCoherenceTomographySection</name>
-			<description>Section containing information about the optical coherence tomography.</description>
+			<description>!!!DEPRECATED!!! refer to OphthalmologySection instead.
+				Section containing information about the optical coherence tomography.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.OphthalmologySection</supertypeName>
 		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.FunctionalAngiographySection</name>
-			<description>Section containing information about the functional angiography.</description>
+			<description>!!!DEPRECATED!!! refer to TODO instead.
+				Section containing information about the functional angiography.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.OphthalmologySection</supertypeName>
 		</typeDescription>
 		<typeDescription>
@@ -395,26 +451,32 @@
 			<description>Section containing other information.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.ClinicalSection</supertypeName>
 		</typeDescription>
-		
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.DocumentFooterSection</name>
 			<description>Section containing document footer.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.MiscClinicalSection</supertypeName>
-		</typeDescription>		
+		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.DocumentHeaderSection</name>
 			<description>Section containing document header.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.MiscClinicalSection</supertypeName>
-		</typeDescription>		
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.BrokenLayoutSection</name>
+			<description>Section containing layout issues.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.MiscClinicalSection</supertypeName>
+		</typeDescription>
+
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.PageInsertion</name>
 			<description>Section that have been misplaced in a document.</description>
 			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
-		</typeDescription>		
+		</typeDescription>
+		
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.BrokenLayout</name>
 			<description>Represent a document whose layout is broken.</description>
 			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
-		</typeDescription>		
+		</typeDescription>
 	</types>
 </typeSystemDescription>
