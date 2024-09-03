@@ -23,6 +23,11 @@
 					<description>Content of actual clinical section candidate.</description>
 					<rangeTypeName>de.averbis.textanalysis.types.health.ClinicalSectionContent</rangeTypeName>
 				</featureDescription>
+				<featureDescription>
+					<name>endIndicator</name>
+					<description>Annotation that follows the clinical section candidate and indicates its end.</description>
+					<rangeTypeName>de.averbis.extraction.types.CoreAnnotation</rangeTypeName>
+				</featureDescription>
 			</features>
 		</typeDescription>
 		<typeDescription>
