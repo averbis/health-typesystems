@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>de.averbis.textanalysis</groupId>
 		<artifactId>parent-pom-typesystems</artifactId>
-		<version>4.1.0</version>
+		<version>4.2.0-SNAPSHOT</version>
 	</parent>
 
 	<artifactId>health-typesystems</artifactId>
@@ -15,13 +15,13 @@
 	<url>https://github.com/averbis/health-typesystems</url>
 
 	<properties>
-		<uima-version>3.4.1</uima-version>
-		<uimafit-version>3.4.0</uimafit-version>
+		<bnd-annotation-version>7.0.0</bnd-annotation-version>
+		<uima-version>3.6.0-SNAPSHOT</uima-version>
 		<ruta-version>3.3.0</ruta-version>
-		<core-typesystems-version>4.5.0</core-typesystems-version>
-		<junit-jupiter-version>5.9.2</junit-jupiter-version>
+		<core-typesystems-version>4.8.0-SNAPSHOT</core-typesystems-version>
+		<junit-jupiter-version>5.11.1</junit-jupiter-version>
 		<assertj-version>3.24.2</assertj-version>
-		<slf4j-version>1.7.36</slf4j-version>
+		<slf4j-version>2.0.16</slf4j-version>
 	</properties>
 
 	<licenses>
@@ -83,6 +83,11 @@
 
 	<dependencies>
 		<dependency>
+			<groupId>biz.aQute.bnd</groupId>
+			<artifactId>biz.aQute.bnd.annotation</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter-api</artifactId>
 			<scope>test</scope>
@@ -110,18 +115,29 @@
 			</dependency>
 			<dependency>
 				<groupId>org.apache.uima</groupId>
-				<artifactId>uimafit-core</artifactId>
-				<version>${uimafit-version}</version>
+				<artifactId>uimaj-bom</artifactId>
+				<version>${uima-version}</version>
+				<type>pom</type>
+				<scope>import</scope>
 			</dependency>
 			<dependency>
 				<groupId>org.assertj</groupId>
-				<artifactId>assertj-core</artifactId>
+				<artifactId>assertj-bom</artifactId>
 				<version>${assertj-version}</version>
+				<type>pom</type>
+				<scope>import</scope>
 			</dependency>
 			<dependency>
 				<groupId>org.slf4j</groupId>
-				<artifactId>slf4j-simple</artifactId>
+				<artifactId>slf4j-bom</artifactId>
 				<version>${slf4j-version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>biz.aQute.bnd</groupId>
+				<artifactId>biz.aQute.bnd.annotation</artifactId>
+				<version>${bnd-annotation-version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
@@ -131,7 +147,6 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<version>3.0.0-M7</version>
 				<dependencies>
 					<dependency>
 						<groupId>org.junit.jupiter</groupId>

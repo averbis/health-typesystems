@@ -15,10 +15,9 @@
  */
 package de.averbis.textanalysis.typesystems.health;
 
+import static org.apache.uima.fit.factory.TypeSystemDescriptionFactory.createTypeSystemDescription;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import org.apache.uima.fit.factory.TypeSystemDescriptionFactory;
-import org.apache.uima.resource.metadata.TypeSystemDescription;
 import org.junit.jupiter.api.Test;
 
 class ResolveTypeSystemTest {
@@ -26,9 +25,9 @@ class ResolveTypeSystemTest {
 	@Test
 	void thatTypeSystemCanBeAutoDetectedAndResolved() throws Exception {
 
-		TypeSystemDescription tsd = TypeSystemDescriptionFactory.createTypeSystemDescription(
+		var tsd = createTypeSystemDescription(
 				"de.averbis.textanalysis.typesystems.health.InternalTypeSystem");
 		tsd.resolveImports();
-		assertThat(tsd.getTypes()).hasSize(573);
+		assertThat(tsd.getTypes()).hasSize(574);
 	}
 }
