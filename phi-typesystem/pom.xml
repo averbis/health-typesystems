@@ -8,7 +8,6 @@
 	</parent>
 
 	<artifactId>phi-typesystem</artifactId>
-	<packaging>bundle</packaging>
 
 	<description>Typesystem for Protected Health Information</description>
 	

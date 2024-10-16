@@ -8,7 +8,6 @@
 	</parent>
 
 	<artifactId>components-health-typesystem</artifactId>
-	<packaging>bundle</packaging>
 
 	<description>The type system of the health components</description>
 	
@@ -16,7 +15,6 @@
 		<dependency>
 			<groupId>org.apache.uima</groupId>
 			<artifactId>uimaj-core</artifactId>
-			<version>${uima-version}</version>
 		</dependency>
 		
 		<!-- Ruta -->
@@ -30,42 +28,34 @@
 		<dependency>
 			<groupId>de.averbis.textanalysis</groupId>
 			<artifactId>components-core-typesystem</artifactId>
-			<version>${core-typesystems-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>de.averbis.textanalysis</groupId>
 			<artifactId>evaluation-typesystem</artifactId>
-			<version>${core-typesystems-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>de.averbis.textanalysis</groupId>
 			<artifactId>measurement-typesystem</artifactId>
-			<version>${core-typesystems-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>de.averbis.textanalysis</groupId>
 			<artifactId>named-entity-typesystem</artifactId>
-			<version>${core-typesystems-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>de.averbis.textanalysis</groupId>
 			<artifactId>numeric-value-typesystem</artifactId>
-			<version>${core-typesystems-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>de.averbis.textanalysis</groupId>
 			<artifactId>temporal-typesystem</artifactId>
-			<version>${core-typesystems-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>de.averbis.textanalysis</groupId>
 			<artifactId>text-typesystem</artifactId>
-			<version>${core-typesystems-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>de.averbis.textanalysis</groupId>
 			<artifactId>search-typesystem</artifactId>
-			<version>${core-typesystems-version}</version>
 		</dependency>
 
 		<!-- TESTS -->
@@ -75,29 +65,4 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.felix</groupId>
-				<artifactId>maven-bundle-plugin</artifactId>
-				<configuration>
-					<instructions>
-						<Import-Package>
-							org.apache.uima.ruta.type,
-							org.apache.uima.ruta.engine,
-							de.averbis.extraction.types,
-							de.averbis.textanalysis.types,
-							de.averbis.textanalysis.types.evaluation,
-							de.averbis.textanalysis.types.measurement,
-							de.averbis.textanalysis.types.numericvalue,
-							de.averbis.textanalysis.types.temporal,
-							de.averbis.textanalysis.types.text,
-							*
-						</Import-Package>
-					</instructions>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
 </project>

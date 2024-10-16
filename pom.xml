@@ -107,6 +107,13 @@
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
+				<groupId>de.averbis.textanalysis</groupId>
+				<artifactId>core-typesystems-bom</artifactId>
+				<version>${core-typesystems-version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
 				<groupId>org.junit</groupId>
 				<artifactId>junit-bom</artifactId>
 				<version>${junit-jupiter-version}</version>

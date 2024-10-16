@@ -8,7 +8,6 @@
 	</parent>
 
 	<artifactId>ehr-information-typesystem</artifactId>
-	<packaging>bundle</packaging>
 
 	<description>Typesystem for Electronic Health Records Information</description>
 	
