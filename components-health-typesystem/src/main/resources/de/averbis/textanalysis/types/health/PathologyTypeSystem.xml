@@ -344,30 +344,6 @@
 			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
 		</typeDescription>
 		<typeDescription>
-			<name>de.averbis.textanalysis.types.health.ClarkLevel</name>
-			<description>Level of anatomical invasion of the melanoma in the skin.</description>
-			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
-			<features>
-				<featureDescription>
-					<name>level</name>
-					<description>The integer value of the clark level.</description>
-					<rangeTypeName>uima.cas.Integer</rangeTypeName>
-				</featureDescription>
-			</features>
-		</typeDescription>
-		<typeDescription>
-			<name>de.averbis.textanalysis.types.health.BreslowScore</name>
-			<description>Depth of anatomical invasion of the melanoma in the skin.</description>
-			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
-			<features>
-				<featureDescription>
-					<name>score</name>
-					<description>The value of the breslow score.</description>
-					<rangeTypeName>uima.cas.String</rangeTypeName>
-				</featureDescription>
-			</features>
-		</typeDescription>
-		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.PunchStatus</name>
 			<description>Status of a punch sample. Possible values: AFFECTED, NOT_AFFECTED, UNKNOWN, EXCLUDE</description>
 			<supertypeName>de.averbis.textanalysis.types.health.Status</supertypeName>
