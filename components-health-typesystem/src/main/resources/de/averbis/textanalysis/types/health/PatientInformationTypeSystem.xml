@@ -48,6 +48,11 @@
 					<description>Patient's age.</description>
 					<rangeTypeName>de.averbis.textanalysis.types.health.Age</rangeTypeName>
 				</featureDescription>
+				<featureDescription>
+					<name>hospitalisations</name>
+					<description>The hospitalisations of the patient.</description>
+					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
+				</featureDescription>
 			</features>
 		</typeDescription>
 		<typeDescription>

@@ -1487,6 +1487,11 @@
 					<description>Actual age of the patient.</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
+				<featureDescription>
+					<name>hospitalisations</name>
+					<description>The hospitalisations of the patient.</description>
+					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
+				</featureDescription>
 			</features>
 		</typeDescription>
 
