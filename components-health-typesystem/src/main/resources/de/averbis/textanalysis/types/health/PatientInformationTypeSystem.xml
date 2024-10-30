@@ -76,6 +76,11 @@
 					<description>Duration of stay in hospital.</description>
 					<rangeTypeName>de.averbis.textanalysis.types.measurement.Measurement</rangeTypeName>
 				</featureDescription>
+				<featureDescription>
+					<name>kind</name>
+					<description>The kind of the hospitalisation, e.g. 'RECENT' for the main hospitalisations in the document.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
 			</features>
 		</typeDescription>
 		<typeDescription>
