@@ -1492,6 +1492,7 @@
 					<description>The hospitalisations of the patient.</description>
 					<elementType>de.averbis.types.health.Hospitalisation</elementType>
 					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
+					<multipleReferencesAllowed>true</multipleReferencesAllowed>
 				</featureDescription>
 			</features>
 		</typeDescription>
