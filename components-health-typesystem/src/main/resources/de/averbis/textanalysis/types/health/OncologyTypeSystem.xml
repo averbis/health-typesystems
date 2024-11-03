@@ -301,6 +301,11 @@
       	<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
       	<features>
       		<featureDescription>
+    	     	<name>kind</name>
+   		     	<description>Cancer type.</description>
+        		<rangeTypeName>uima.cas.String</rangeTypeName>
+        	</featureDescription>
+      		<featureDescription>
     	     	<name>diagnosis</name>
    		     	<description>Main diagnosis in this document.</description>
         		<rangeTypeName>de.averbis.textanalysis.types.health.Diagnosis</rangeTypeName>
