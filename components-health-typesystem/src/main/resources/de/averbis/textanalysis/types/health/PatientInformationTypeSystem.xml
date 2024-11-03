@@ -48,6 +48,13 @@
 					<description>Patient's age.</description>
 					<rangeTypeName>de.averbis.textanalysis.types.health.Age</rangeTypeName>
 				</featureDescription>
+				<featureDescription>
+					<name>hospitalisations</name>
+					<description>The hospitalisations of the patient.</description>
+					<elementType>de.averbis.textanalysis.types.health.Hospitalisation</elementType>
+					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
+					<multipleReferencesAllowed>true</multipleReferencesAllowed>
+				</featureDescription>
 			</features>
 		</typeDescription>
 		<typeDescription>
@@ -69,6 +76,11 @@
 					<name>duration</name>
 					<description>Duration of stay in hospital.</description>
 					<rangeTypeName>de.averbis.textanalysis.types.measurement.Measurement</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>focal</name>
+					<description>Indicates if the hospitalisation is focal, i.e., the main hospitalisation discussed in the document.</description>
+					<rangeTypeName>uima.cas.Boolean</rangeTypeName>
 				</featureDescription>
 			</features>
 		</typeDescription>
