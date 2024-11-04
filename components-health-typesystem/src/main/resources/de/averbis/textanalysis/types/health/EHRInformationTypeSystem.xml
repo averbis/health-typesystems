@@ -64,18 +64,5 @@
 			</features>
 		</typeDescription>
 		
-		<typeDescription>
-			<name>de.averbis.textanalysis.types.health.DocumentDate</name>
-			<description>The document creation date.</description>
-			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
-			<features>
-				<featureDescription>
-					<name>date</name>
-					<description>Date annotation holding the normalized value.</description>
-					<rangeTypeName>de.averbis.textanalysis.types.temporal.Date</rangeTypeName>
-				</featureDescription>
-			</features>
-		</typeDescription>
-		
 	</types>
 </typeSystemDescription>
