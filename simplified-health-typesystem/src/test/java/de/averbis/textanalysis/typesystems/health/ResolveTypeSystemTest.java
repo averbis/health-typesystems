@@ -26,9 +26,9 @@ class ResolveTypeSystemTest {
 	@Test
 	void thatTypeSystemCanBeAutoDetectedAndResolved() throws Exception {
 
-		TypeSystemDescription tsd = TypeSystemDescriptionFactory.createTypeSystemDescription(
-				"de.averbis.types.health.SimplifiedHealthTypeSystem");
+		TypeSystemDescription tsd = TypeSystemDescriptionFactory
+				.createTypeSystemDescription("de.averbis.types.health.SimplifiedHealthTypeSystem");
 		tsd.resolveImports();
-		assertThat(tsd.getTypes()).hasSize(86);
+		assertThat(tsd.getTypes()).hasSize(87);
 	}
 }

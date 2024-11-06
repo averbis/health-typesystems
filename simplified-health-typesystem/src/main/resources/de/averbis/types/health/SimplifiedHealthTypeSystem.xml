@@ -168,6 +168,12 @@
 				</featureDescription>
 			</features>
 		</typeDescription>
+		
+		<typeDescription>
+			<name>de.averbis.types.health.DocumentDate</name>
+			<description>The document creation date.</description>
+			<supertypeName>de.averbis.types.health.Timex3</supertypeName>
+		</typeDescription>
 
 		<typeDescription>
 			<name>de.averbis.types.health.DateInterval</name>
