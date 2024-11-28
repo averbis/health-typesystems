@@ -28,6 +28,6 @@ class ResolveTypeSystemTest {
 		var tsd = createTypeSystemDescription(
 				"de.averbis.textanalysis.typesystems.health.InternalTypeSystem");
 		tsd.resolveImports();
-		assertThat(tsd.getTypes()).hasSize(574);
+		assertThat(tsd.getTypes()).hasSize(575);
 	}
 }

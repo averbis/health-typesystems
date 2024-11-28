@@ -3,16 +3,12 @@
 
 	<parent>
 		<groupId>de.averbis.textanalysis</groupId>
-		<artifactId>parent-pom-typesystems</artifactId>
-		<version>4.2.0-SNAPSHOT</version>
+		<artifactId>health-typesystems</artifactId>
+		<version>3.24.0-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>health-typesystems</artifactId>
-	<version>3.24.0-SNAPSHOT</version>
+	<artifactId>health-typesystems-parent</artifactId>
 	<packaging>pom</packaging>
-
-	<description>The UIMA type systems of the Averbis health components</description>
-	<url>https://github.com/averbis/health-typesystems</url>
 
 	<properties>
 		<bnd-annotation-version>7.1.0</bnd-annotation-version>
@@ -23,67 +19,6 @@
 		<assertj-version>3.26.3</assertj-version>
 		<slf4j-version>2.0.16</slf4j-version>
 	</properties>
-
-	<licenses>
-		<license>
-			<name>Apache License, Version 2.0</name>
-			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-			<distribution>repo</distribution>
-		</license>
-	</licenses>
-
-	<developers>
-		<developer>
-			<email>info@averbis.com</email>
-			<organization>Averbis</organization>
-			<organizationUrl>https://averbis.com/</organizationUrl>
-		</developer>
-	</developers>
-
-	<scm>
-		<connection>scm:git:git://github.com/averbis/health-typesystems</connection>
-		<developerConnection>scm:git:git@github.com:averbis/health-typesystems.git</developerConnection>
-		<url>https://github.com/averbis/health-typesystems</url>
-		<tag>HEAD</tag>
-	</scm>
-
-	<distributionManagement>
-		<repository>
-			<id>ossrh</id>
-			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
-		</repository>
-		<snapshotRepository>
-			<id>github</id>
-			<name>GitHub Packages</name>
-			<url>https://maven.pkg.github.com/averbis/health-typesystems</url>
-		</snapshotRepository>
-	</distributionManagement>
-
-	<modules>
-		<module>health-typesystems-bom</module>
-		<module>health-typesystems-parent</module>
-
-		<module>components-health-typesystem</module>
-		<module>simplified-health-typesystem</module>
-
-		<module>tnm-typesystem</module>
-		<module>diagnosis-typesystem</module>
-		<module>oncology-typesystem</module>
-		<module>therapy-typesystem</module>
-		<module>medication-typesystem</module>
-		<module>observation-typesystem</module>
-		<module>laboratory-value-typesystem</module>
-		<module>clinical-section-typesystem</module>
-		<module>medical-negation-typesystem</module>
-		<module>patient-information-typesystem</module>
-		<module>ehr-information-typesystem</module>
-		<module>procedure-typesystem</module>
-		<module>medical-disambiguation-typesystem</module>
-		<module>pathology-typesystem</module>
-		<module>phi-typesystem</module>
-		<module>anatomy-typesystem</module>
-		<module>internal-typesystem</module>
-	</modules>
 
 	<dependencies>
 		<dependency>
