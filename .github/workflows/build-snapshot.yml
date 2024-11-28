@@ -12,16 +12,16 @@ jobs:
 
     strategy:
       matrix:
-        java-version: [ 8 ]
+        java-version: [ 17 ]
 
     steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-java@v3
+    - uses: actions/checkout@v4
+    - uses: actions/setup-java@v4
       with:
         distribution: adopt
         java-version: ${{ matrix.java-version }}
     - name: maven-settings-xml-action
-      uses: whelk-io/maven-settings-xml-action@v20
+      uses: whelk-io/maven-settings-xml-action@v22
       with:
         servers: >
           [{ 
@@ -42,15 +42,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Set up settings.xml for GitHub Packages
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           distribution: adopt
-          java-version: 8
+          java-version: 17
       - name: maven-settings-xml-action
-        uses: whelk-io/maven-settings-xml-action@v20
+        uses: whelk-io/maven-settings-xml-action@v22
         with:
           servers: >
             [{ 
