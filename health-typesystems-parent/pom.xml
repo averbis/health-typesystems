@@ -14,7 +14,7 @@
 		<bnd-annotation-version>7.1.0</bnd-annotation-version>
 		<uima-version>3.6.0</uima-version>
 		<ruta-version>3.4.1</ruta-version>
-		<core-typesystems-version>4.8.0-SNAPSHOT</core-typesystems-version>
+		<core-typesystems-version>4.8.0</core-typesystems-version>
 		<junit-jupiter-version>5.11.3</junit-jupiter-version>
 		<assertj-version>3.26.3</assertj-version>
 		<slf4j-version>2.0.16</slf4j-version>
