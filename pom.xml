@@ -8,7 +8,7 @@
 	</parent>
 
 	<artifactId>health-typesystems</artifactId>
-	<version>3.24.0</version>
+	<version>3.25.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<description>The UIMA type systems of the Averbis health components</description>
@@ -34,7 +34,7 @@
 		<connection>scm:git:git://github.com/averbis/health-typesystems</connection>
 		<developerConnection>scm:git:git@github.com:averbis/health-typesystems.git</developerConnection>
 		<url>https://github.com/averbis/health-typesystems</url>
-		<tag>health-typesystems-3.24.0</tag>
+		<tag>HEAD</tag>
 	</scm>
 
 	<distributionManagement>
