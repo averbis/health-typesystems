@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>de.averbis.textanalysis</groupId>
 		<artifactId>parent-pom-typesystems</artifactId>
-		<version>4.1.0</version>
+		<version>4.2.1</version>
 	</parent>
 
 	<artifactId>health-typesystems</artifactId>
@@ -13,16 +13,6 @@
 
 	<description>The UIMA type systems of the Averbis health components</description>
 	<url>https://github.com/averbis/health-typesystems</url>
-
-	<properties>
-		<uima-version>3.4.1</uima-version>
-		<uimafit-version>3.4.0</uimafit-version>
-		<ruta-version>3.3.0</ruta-version>
-		<core-typesystems-version>4.5.0</core-typesystems-version>
-		<junit-jupiter-version>5.9.2</junit-jupiter-version>
-		<assertj-version>3.24.2</assertj-version>
-		<slf4j-version>1.7.36</slf4j-version>
-	</properties>
 
 	<licenses>
 		<license>
@@ -60,7 +50,12 @@
 	</distributionManagement>
 
 	<modules>
+		<module>health-typesystems-bom</module>
+		<module>health-typesystems-parent</module>
+
 		<module>components-health-typesystem</module>
+		<module>simplified-health-typesystem</module>
+
 		<module>tnm-typesystem</module>
 		<module>diagnosis-typesystem</module>
 		<module>oncology-typesystem</module>
@@ -76,70 +71,7 @@
 		<module>medical-disambiguation-typesystem</module>
 		<module>pathology-typesystem</module>
 		<module>phi-typesystem</module>
-		<module>simplified-health-typesystem</module>
 		<module>anatomy-typesystem</module>
 		<module>internal-typesystem</module>
 	</modules>
-
-	<dependencies>
-		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-api</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.assertj</groupId>
-			<artifactId>assertj-core</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-simple</artifactId>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
-
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>org.junit</groupId>
-				<artifactId>junit-bom</artifactId>
-				<version>${junit-jupiter-version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.uima</groupId>
-				<artifactId>uimafit-core</artifactId>
-				<version>${uimafit-version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.assertj</groupId>
-				<artifactId>assertj-core</artifactId>
-				<version>${assertj-version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.slf4j</groupId>
-				<artifactId>slf4j-simple</artifactId>
-				<version>${slf4j-version}</version>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>3.0.0-M7</version>
-				<dependencies>
-					<dependency>
-						<groupId>org.junit.jupiter</groupId>
-						<artifactId>junit-jupiter-engine</artifactId>
-						<version>${junit-jupiter-version}</version>
-					</dependency>
-				</dependencies>
-			</plugin>
-		</plugins>
-	</build>
 </project>

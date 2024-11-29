@@ -15,30 +15,25 @@
  */
 package de.averbis.textanalysis.types.health;
 
-import static org.apache.uima.util.TypeSystemUtil.loadTypeSystemDescriptionsFromClasspath;
+import static aQute.bnd.annotation.Resolution.OPTIONAL;
 
-import java.util.ArrayList;
-import java.util.List;
+import org.apache.uima.spi.TypeSystemProvider;
+import org.apache.uima.spi.TypeSystemProvider_ImplBase;
 
-import org.apache.uima.jcas.cas.TOP;
-import org.apache.uima.resource.metadata.TypeDescription;
-import org.apache.uima.resource.metadata.TypeSystemDescription;
-import org.apache.uima.spi.JCasClassProvider;
-import org.apache.uima.spi.TypeSystemDescriptionProvider;
+import aQute.bnd.annotation.spi.ServiceProvider;
 
-public class HealthTypeSystemDescriptionProvider
-		implements TypeSystemDescriptionProvider, JCasClassProvider {
+@ServiceProvider(value = TypeSystemProvider.class, resolution = OPTIONAL)
+public class HealthTypeSystemDescriptionProvider extends TypeSystemProvider_ImplBase {
 
-	@Override
-	public List<TypeSystemDescription> listTypeSystemDescriptions() {
+	public HealthTypeSystemDescriptionProvider() {
 
-		return loadTypeSystemDescriptionsFromClasspath(getClass(), //
+		setTypeSystemLocations( //
 				"AnatomyTypeSystem.xml", //
 				"ClinicalSectionTypeSystem.xml", //
 				"DiagnosisTypeSystem.xml", //
 				"EHRInformationTypeSystem.xml", //
 				"HealthTypeSystem.xml", //
-				// "InternalTypeSystem.xml", // Excluded because it is an aggregation
+				"InternalTypeSystem.xml", //
 				"LaboratoryValueTypeSystem.xml", //
 				"MedicalDisambiguationTypeSystem.xml", //
 				"MedicalNegationTypeSystem.xml", //
@@ -51,27 +46,5 @@ public class HealthTypeSystemDescriptionProvider
 				"ProcedureTypeSystem.xml", //
 				"TherapyTypeSystem.xml", //
 				"TNMTypeSystem.xml");
-	}
-
-
-	@SuppressWarnings("unchecked")
-	@Override
-	public List<Class<? extends TOP>> listJCasClasses() {
-
-		List<Class<? extends TOP>> classes = new ArrayList<>();
-		ClassLoader cl = getClass().getClassLoader();
-
-		List<TypeSystemDescription> typeSystemDescriptions = listTypeSystemDescriptions();
-		for (TypeSystemDescription tsd : typeSystemDescriptions) {
-			for (TypeDescription td : tsd.getTypes()) {
-				try {
-					classes.add((Class<? extends TOP>) cl.loadClass(td.getName()));
-				} catch (ClassNotFoundException e) {
-					// This is acceptable - there may not be a JCas class
-				}
-			}
-		}
-
-		return classes;
 	}
 }

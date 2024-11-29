@@ -18,7 +18,6 @@ package de.averbis.textanalysis.typesystems.health;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.apache.uima.fit.factory.TypeSystemDescriptionFactory;
-import org.apache.uima.resource.metadata.TypeSystemDescription;
 import org.junit.jupiter.api.Test;
 
 class ResolveTypeSystemTest {
@@ -26,9 +25,9 @@ class ResolveTypeSystemTest {
 	@Test
 	void thatTypeSystemCanBeAutoDetectedAndResolved() throws Exception {
 
-		TypeSystemDescription tsd = TypeSystemDescriptionFactory.createTypeSystemDescription(
+		var tsd = TypeSystemDescriptionFactory.createTypeSystemDescription(
 				"de.averbis.textanalysis.typesystems.health.MedicalNegationTypeSystem");
 		tsd.resolveImports();
-		assertThat(tsd.getTypes()).hasSize(59);
+		assertThat(tsd.getTypes()).hasSize(60);
 	}
 }
