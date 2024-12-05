@@ -27,6 +27,11 @@
 	        		<description>The date of the observation.</description>
 	        		<rangeTypeName>de.averbis.textanalysis.types.temporal.Date</rangeTypeName>
 	        	</featureDescription>
+	        	<featureDescription>
+	        		<name>status</name>
+	        		<description>State of the laboratory value: STRESS, CONDITIONAL, TARGET, DEFAULT</description>
+	        		<rangeTypeName>de.averbis.textanalysis.types.health.Status</rangeTypeName>
+	        	</featureDescription>
 	    	</features>
 		</typeDescription>
 
@@ -445,7 +450,7 @@
 				</featureDescription>
 				<featureDescription>
 					<name>kind</name>
-					<description>Kind of blood pressure mentioned: STRESS, CONDITIONAL, TARGET and DEFAULT</description>
+					<description>!! DEPRECATED !! Please use the feature 'status'</description>
 					<rangeTypeName>de.averbis.textanalysis.types.health.Status</rangeTypeName>
 				</featureDescription>
 	    	</features>
