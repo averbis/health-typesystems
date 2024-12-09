@@ -17,17 +17,22 @@
 			<description>Abstract type for observations, like laboratory values, vital signs, etc.</description>
 			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
 			<features>
-	        	<featureDescription>
-	        		<name>parameter</name>
-	        		<description>The actual parameter of the observation.</description>
-	        		<rangeTypeName>de.averbis.extraction.types.Concept</rangeTypeName>
-	        	</featureDescription>
-	        	<featureDescription>
-	        		<name>date</name>
-	        		<description>The date of the observation.</description>
-	        		<rangeTypeName>de.averbis.textanalysis.types.temporal.Date</rangeTypeName>
-	        	</featureDescription>
-	    	</features>
+				<featureDescription>
+					<name>parameter</name>
+					<description>The actual parameter of the observation.</description>
+					<rangeTypeName>de.averbis.extraction.types.Concept</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>date</name>
+					<description>The date of the observation.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.temporal.Date</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>category</name>
+					<description>The category of the observation, e.g. 'laboratory' or 'vital-signs'</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+		</features>
 		</typeDescription>
 
 		<typeDescription>
@@ -104,7 +109,7 @@
 					<name>normalized</name>
 					<description>Normalized value of the modifier, e.g. 'WEAK'.</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
-	        	</featureDescription>
+				</featureDescription>
 		</typeDescription>
 
 		<typeDescription>
