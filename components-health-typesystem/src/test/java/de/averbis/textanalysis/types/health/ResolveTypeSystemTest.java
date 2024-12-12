@@ -13,25 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package de.averbis.textanalysis.typesystems.health;
+package de.averbis.textanalysis.types.health;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.ServiceLoader;
 
 import org.apache.uima.fit.factory.TypeSystemDescriptionFactory;
-import org.apache.uima.resource.metadata.TypeSystemDescription;
-import org.apache.uima.spi.TypeSystemDescriptionProvider;
+import org.apache.uima.spi.TypeSystemProvider;
 import org.junit.jupiter.api.Test;
-
-import de.averbis.textanalysis.types.health.HealthTypeSystemDescriptionProvider;
 
 class ResolveTypeSystemTest {
 
 	@Test
 	void thatTypeSystemCanBeAutoDetectedAndResolved() throws Exception {
 
-		TypeSystemDescription tsd = TypeSystemDescriptionFactory.createTypeSystemDescription(
+		var tsd = TypeSystemDescriptionFactory.createTypeSystemDescription(
 				"de.averbis.textanalysis.typesystems.health.HealthTypeSystem");
 		tsd.resolveImports();
 		assertThat(tsd.getTypes()).hasSize(64);
@@ -42,8 +39,7 @@ class ResolveTypeSystemTest {
 	@Test
 	void thatSpiDetectionWorks() {
 
-		ServiceLoader<TypeSystemDescriptionProvider> loader = ServiceLoader
-				.load(TypeSystemDescriptionProvider.class);
+		var loader = ServiceLoader.load(TypeSystemProvider.class);
 
 		assertThat(loader) //
 				.extracting(Object::getClass) //

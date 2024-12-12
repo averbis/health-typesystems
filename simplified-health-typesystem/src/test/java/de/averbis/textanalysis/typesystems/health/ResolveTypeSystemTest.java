@@ -17,18 +17,34 @@ package de.averbis.textanalysis.typesystems.health;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import java.util.ServiceLoader;
+
 import org.apache.uima.fit.factory.TypeSystemDescriptionFactory;
-import org.apache.uima.resource.metadata.TypeSystemDescription;
+import org.apache.uima.spi.TypeSystemProvider;
 import org.junit.jupiter.api.Test;
+
+import de.averbis.types.health.SimplifiedHealthTypeSystemDescriptionProvider;
 
 class ResolveTypeSystemTest {
 
 	@Test
 	void thatTypeSystemCanBeAutoDetectedAndResolved() throws Exception {
 
-		TypeSystemDescription tsd = TypeSystemDescriptionFactory
+		var tsd = TypeSystemDescriptionFactory
 				.createTypeSystemDescription("de.averbis.types.health.SimplifiedHealthTypeSystem");
 		tsd.resolveImports();
 		assertThat(tsd.getTypes()).hasSize(87);
+	}
+
+
+	@SuppressWarnings("unchecked")
+	@Test
+	void thatSpiDetectionWorks() {
+
+		var loader = ServiceLoader.load(TypeSystemProvider.class);
+
+		assertThat(loader) //
+				.extracting(Object::getClass) //
+				.contains((Class) SimplifiedHealthTypeSystemDescriptionProvider.class);
 	}
 }
