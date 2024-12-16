@@ -32,6 +32,11 @@
 	        		<description>State of the laboratory value: STRESS, CONDITIONAL, TARGET, DEFAULT</description>
 	        		<rangeTypeName>de.averbis.textanalysis.types.health.Status</rangeTypeName>
 	        	</featureDescription>
+    				<featureDescription>
+              <name>category</name>
+              <description>The category of the observation, e.g. 'laboratory' or 'vital-signs'</description>
+              <rangeTypeName>uima.cas.String</rangeTypeName>
+          </featureDescription>
 	    	</features>
 		</typeDescription>
 
@@ -109,7 +114,7 @@
 					<name>normalized</name>
 					<description>Normalized value of the modifier, e.g. 'WEAK'.</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
-	        	</featureDescription>
+				</featureDescription>
 		</typeDescription>
 
 		<typeDescription>
