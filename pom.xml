@@ -48,6 +48,29 @@
 			<url>https://maven.pkg.github.com/averbis/health-typesystems</url>
 		</snapshotRepository>
 	</distributionManagement>
+	
+	<repositories>
+		<repository>
+			<id>github-parent-pom-typesystems</id>
+			<url>https://maven.pkg.github.com/averbis/parent-pom-typesystems</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>github-core-typesystems</id>
+			<url>https://maven.pkg.github.com/averbis/core-typesystems</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
 
 	<modules>
 		<module>health-typesystems-bom</module>
@@ -56,22 +79,22 @@
 		<module>components-health-typesystem</module>
 		<module>simplified-health-typesystem</module>
 
-		<module>tnm-typesystem</module>
-		<module>diagnosis-typesystem</module>
-		<module>oncology-typesystem</module>
-		<module>therapy-typesystem</module>
-		<module>medication-typesystem</module>
-		<module>observation-typesystem</module>
-		<module>laboratory-value-typesystem</module>
-		<module>clinical-section-typesystem</module>
-		<module>medical-negation-typesystem</module>
-		<module>patient-information-typesystem</module>
-		<module>ehr-information-typesystem</module>
-		<module>procedure-typesystem</module>
-		<module>medical-disambiguation-typesystem</module>
-		<module>pathology-typesystem</module>
-		<module>phi-typesystem</module>
-		<module>anatomy-typesystem</module>
-		<module>internal-typesystem</module>
+<!--		<module>tnm-typesystem</module>-->
+<!--		<module>diagnosis-typesystem</module>-->
+<!--		<module>oncology-typesystem</module>-->
+<!--		<module>therapy-typesystem</module>-->
+<!--		<module>medication-typesystem</module>-->
+<!--		<module>observation-typesystem</module>-->
+<!--		<module>laboratory-value-typesystem</module>-->
+<!--		<module>clinical-section-typesystem</module>-->
+<!--		<module>medical-negation-typesystem</module>-->
+<!--		<module>patient-information-typesystem</module>-->
+<!--		<module>ehr-information-typesystem</module>-->
+<!--		<module>procedure-typesystem</module>-->
+<!--		<module>medical-disambiguation-typesystem</module>-->
+<!--		<module>pathology-typesystem</module>-->
+<!--		<module>phi-typesystem</module>-->
+<!--		<module>anatomy-typesystem</module>-->
+<!--		<module>internal-typesystem</module>-->
 	</modules>
 </project>
