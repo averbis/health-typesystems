@@ -55,6 +55,13 @@
 			<name>de.averbis.textanalysis.types.health.LaboratoryConcept</name>
 			<description>Laboratory parameter concept.</description>
 			<supertypeName>de.averbis.extraction.types.Concept</supertypeName>
+			<features>
+				<featureDescription>
+						<name>category</name>
+						<description>The category of the concept, e.g. 'laboratory' or 'vital-signs'</description>
+						<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+			</features>
 		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.OrganismConcept</name>
