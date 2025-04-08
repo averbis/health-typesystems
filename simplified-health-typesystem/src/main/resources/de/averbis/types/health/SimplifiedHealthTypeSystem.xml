@@ -982,13 +982,6 @@
 					<multipleReferencesAllowed>true</multipleReferencesAllowed>
 				</featureDescription>
 				<featureDescription>
-					<name>atc</name>
-					<description>!! DEPRECATED !! Please use the feature 'atcCodes'. The ATC Code of the
-						medication.
-					</description>
-					<rangeTypeName>uima.cas.String</rangeTypeName>
-				</featureDescription>
-				<featureDescription>
 					<name>atcCodes</name>
 					<description>The ATC Codes of the medication.</description>
 					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
@@ -1215,16 +1208,6 @@
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
-					<name>lymphnodesAffected</name>
-					<description>!! DEPRECATED !! Please use the feature 'lnAffected'.</description>
-					<rangeTypeName>uima.cas.Integer</rangeTypeName>
-				</featureDescription>
-				<featureDescription>
-					<name>lymphnodesTested</name>
-					<description>!! DEPRECATED !! Please use the feature 'lnTested'.</description>
-					<rangeTypeName>uima.cas.Integer</rangeTypeName>
-				</featureDescription>
-				<featureDescription>
 					<name>lnAffected</name>
 					<description>The amount of affected lymph nodes. Possible values: null or natural number.
 					</description>
@@ -1260,16 +1243,6 @@
 						RU (unknown) | Rx (not assessable) | R0 | R1 | R2
 					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
-				</featureDescription>
-				<featureDescription>
-					<name>sentinelLymphnodesAffected</name>
-					<description>!! DEPRECATED !! Please use the feature 'slnAffected'.</description>
-					<rangeTypeName>uima.cas.Integer</rangeTypeName>
-				</featureDescription>
-				<featureDescription>
-					<name>sentinelLymphnodesTested</name>
-					<description>!! DEPRECATED !! Please use the feature 'slnTested'.</description>
-					<rangeTypeName>uima.cas.Integer</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>slnAffected</name>

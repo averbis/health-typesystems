@@ -453,12 +453,7 @@
 					<description>Interpretation of fact depending on reference values or interpretation in text.</description>
 					<rangeTypeName>de.averbis.textanalysis.types.health.AbstractInterpretation</rangeTypeName>
 				</featureDescription>
-				<featureDescription>
-					<name>kind</name>
-					<description>!! DEPRECATED !! Please use the feature 'status'</description>
-					<rangeTypeName>de.averbis.textanalysis.types.health.Status</rangeTypeName>
-				</featureDescription>
-	    	</features>
+		</features>
 		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.BloodPressureIgnore</name>
