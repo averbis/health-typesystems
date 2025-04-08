@@ -330,42 +330,7 @@
 			<description>Section containing information about ophthalmology.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.ObservationSection</supertypeName>
 		</typeDescription>
-		<typeDescription>
-			<name>de.averbis.textanalysis.types.health.VisualAcuitySection</name>
-			<description>!!!DEPRECATED!!! refer to OphthalmologySection instead.
-				Section containing information about the visual acuity.</description>
-			<supertypeName>de.averbis.textanalysis.types.health.OphthalmologySection</supertypeName>
-		</typeDescription>
-		<typeDescription>
-			<name>de.averbis.textanalysis.types.health.TensioSection</name>
-			<description>!!!DEPRECATED!!! refer to OphthalmologySection instead.
-				Section containing information about the tensio.</description>
-			<supertypeName>de.averbis.textanalysis.types.health.OphthalmologySection</supertypeName>
-		</typeDescription>
-		<typeDescription>
-			<name>de.averbis.textanalysis.types.health.AnteriorEyeSegmentSection</name>
-			<description>!!!DEPRECATED!!! refer to OphthalmologySection instead.
-				Section containing information about the anterior eye segment.</description>
-			<supertypeName>de.averbis.textanalysis.types.health.OphthalmologySection</supertypeName>
-		</typeDescription>
-		<typeDescription>
-			<name>de.averbis.textanalysis.types.health.OcularFundusSection</name>
-			<description>!!!DEPRECATED!!! refer to OphthalmologySection instead.
-				Section containing information about the ocular fundus.</description>
-			<supertypeName>de.averbis.textanalysis.types.health.OphthalmologySection</supertypeName>
-		</typeDescription>
-		<typeDescription>
-			<name>de.averbis.textanalysis.types.health.OpticalCoherenceTomographySection</name>
-			<description>!!!DEPRECATED!!! refer to OphthalmologySection instead.
-				Section containing information about the optical coherence tomography.</description>
-			<supertypeName>de.averbis.textanalysis.types.health.OphthalmologySection</supertypeName>
-		</typeDescription>
-		<typeDescription>
-			<name>de.averbis.textanalysis.types.health.FunctionalAngiographySection</name>
-			<description>!!!DEPRECATED!!! refer to TODO instead.
-				Section containing information about the functional angiography.</description>
-			<supertypeName>de.averbis.textanalysis.types.health.OphthalmologySection</supertypeName>
-		</typeDescription>
+	
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.FindingSection</name>
 			<description>Section containing information about findings.</description>

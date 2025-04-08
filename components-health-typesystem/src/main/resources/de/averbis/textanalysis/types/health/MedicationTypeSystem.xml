@@ -73,11 +73,6 @@
 					<multipleReferencesAllowed>true</multipleReferencesAllowed>
 				</featureDescription>
 				<featureDescription>
-					<name>atc</name>
-					<description>!! DEPRECATED !! Please use the feature 'atcCodes'. The ATC Code of the medication.</description>
-					<rangeTypeName>uima.cas.String</rangeTypeName>
-				</featureDescription>
-				<featureDescription>
 					<name>atcCodes</name>
 					<description>The ATC Codes of the medication.</description>
 					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
