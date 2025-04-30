@@ -52,6 +52,21 @@
 			<description>Mention of a date.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.PHI</supertypeName>
 		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PHIBirthDate</name>
+			<description>Mention of a birth date.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.PHIDate</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PHIDeathDate</name>
+			<description>Mention of a death date.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.PHIDate</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PHICommonDate</name>
+			<description>Mention of a common date.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.PHIDate</supertypeName>
+		</typeDescription>
 
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.PHIAge</name>
@@ -61,17 +76,27 @@
 
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.PHIName</name>
-			<description>Name of the patient, doctor, or a user name</description>
+			<description>Name of a person.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.PHI</supertypeName>
 		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.PHIPatient</name>
-			<description>Mention of patient's name.</description>
+			<description>Mention of patient's name or an other person like a relative or representative of the patient.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.PHIName</supertypeName>
 		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.PHIDoctor</name>
-			<description>Mention of doctor's name.</description>
+			<description>Mention of doctor's name or an other staff member.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.PHIName</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PHINameTitle</name>
+			<description>Mention of title of a person.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.PHIName</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PHINameOther</name>
+			<description>Mention of an other person not represented by the patient or doctor group.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.PHIName</supertypeName>
 		</typeDescription>
 		<typeDescription>
