@@ -81,12 +81,12 @@
 		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.PHIPatient</name>
-			<description>Mention of patient's name or an other person like a relative or representative of the patient.</description>
+			<description>Mention of the patient's name or another person's name like a relative or representative of the patient.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.PHIName</supertypeName>
 		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.PHIDoctor</name>
-			<description>Mention of doctor's name or an other staff member.</description>
+			<description>Mention of doctor's name or another staff member.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.PHIName</supertypeName>
 		</typeDescription>
 		<typeDescription>
@@ -96,7 +96,7 @@
 		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.textanalysis.types.health.PHINameOther</name>
-			<description>Mention of an other person not represented by the patient or doctor group.</description>
+			<description>Mention of another person not linked to the patient or doctors.</description>
 			<supertypeName>de.averbis.textanalysis.types.health.PHIName</supertypeName>
 		</typeDescription>
 		<typeDescription>
