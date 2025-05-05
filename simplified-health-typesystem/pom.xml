@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>de.averbis.textanalysis</groupId>
 		<artifactId>health-typesystems-parent</artifactId>
-		<version>3.27.0-SNAPSHOT</version>
+		<version>3.27.0</version>
 		<relativePath>../health-typesystems-parent</relativePath>
 	</parent>
 
