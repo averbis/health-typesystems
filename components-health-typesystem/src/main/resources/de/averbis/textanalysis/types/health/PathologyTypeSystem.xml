@@ -131,8 +131,13 @@
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
-					<name>thickness</name>
+					<name>tumorThickness</name>
 					<description>The thickness of the skin tumor.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>thickness</name>
+					<description>!! DEPRECATED !!. Please use feature tumorThickness instead. The thickness of the skin tumor.</description>
 					<rangeTypeName>uima.cas.Double</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
@@ -269,8 +274,13 @@
 					<rangeTypeName>de.averbis.textanalysis.types.health.TNMLymphNodesSentinel</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
-					<name>thicknessAnnotation</name>
+					<name>tumorThicknessAnnotation</name>
 					<description>Optional annotation representing the thickness of the skin tumor.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.LaboratoryValue</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>thicknessAnnotation</name>
+					<description>!! DEPRECATED !!. Please use feature tumorThicknessAnnotation instead. Optional annotation representing the thickness of the skin tumor.</description>
 					<rangeTypeName>de.averbis.textanalysis.types.health.LaboratoryValue</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
