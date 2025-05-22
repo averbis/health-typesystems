@@ -29,6 +29,7 @@ public class HealthTypeSystemDescriptionProvider extends TypeSystemProvider_Impl
 
 		setTypeSystemLocations( //
 				"AnatomyTypeSystem.xml", //
+				"BiomarkerTypeSystem.xml", //
 				"ClinicalSectionTypeSystem.xml", //
 				"DiagnosisTypeSystem.xml", //
 				"EHRInformationTypeSystem.xml", //

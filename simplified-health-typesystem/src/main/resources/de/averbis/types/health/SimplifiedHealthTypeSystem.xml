@@ -1300,7 +1300,7 @@
 				</featureDescription>
 				<featureDescription>
 					<name>thickness</name>
-					<description>Information about the tumor thickness.</description>
+					<description>!! DEPRECATED !! Please use the feature 'additionals'. Information about the tumor thickness.</description>
 					<rangeTypeName>de.averbis.types.health.TumorThickness</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
@@ -1388,19 +1388,19 @@
 				</featureDescription>
 				<featureDescription>
 					<name>punchesAffected</name>
-					<description>The number of affected punches. Possible values: null or natural number.
+					<description>!! DEPRECATED !! Please use the feature 'additionals'. The number of affected punches. Possible values: null or natural number.
 					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>punchesTested</name>
-					<description>The number of tested punches. Possible values: null or natural number.
+					<description>!! DEPRECATED !! Please use the feature 'additionals'. The number of tested punches. Possible values: null or natural number.
 					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>maxPunchInfestation</name>
-					<description>The carcinoma infestation of the most severely affected punch (in %).
+					<description>!! DEPRECATED !! Please use the feature 'additionals'. The carcinoma infestation of the most severely affected punch (in %).
 						Possible values: null or natural number.
 					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
@@ -1934,7 +1934,7 @@
 
 		<typeDescription>
 			<name>de.averbis.types.health.TumorThickness</name>
-			<description />
+			<description>>!! DEPRECATED !! Please use the type 'PathologyAdditionalEntry'.</description>
 			<supertypeName>de.averbis.types.health.ExternalCoreAnnotation</supertypeName>
 			<features>
 				<featureDescription>
