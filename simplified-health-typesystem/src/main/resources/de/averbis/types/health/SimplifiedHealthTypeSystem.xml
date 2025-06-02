@@ -1410,7 +1410,7 @@
 
 		<typeDescription>
 			<name>de.averbis.types.health.PathologyScore</name>
-			<description>!! DEPRECATED !! Please use the type 'additionals'. Grouping of pathological scores</description>
+			<description>!! DEPRECATED !! Please use the type 'PathologyAdditionalEntry'. Grouping of pathological scores</description>
 			<supertypeName>de.averbis.types.health.ExternalCoreAnnotation</supertypeName>
 			<features>
 				<featureDescription>
