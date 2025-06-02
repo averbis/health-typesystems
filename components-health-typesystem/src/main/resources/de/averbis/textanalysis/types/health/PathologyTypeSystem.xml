@@ -132,7 +132,7 @@
 				</featureDescription>
 				<featureDescription>
 					<name>thickness</name>
-					<description>The thickness of the skin tumor.</description>
+					<description>!! DEPRECATED !!. Please use feature tumorThickness instead. The thickness of the skin tumor.</description>
 					<rangeTypeName>uima.cas.Double</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
@@ -152,17 +152,17 @@
 				</featureDescription>
 				<featureDescription>
 					<name>punchesAffected</name>
-					<description>The number of affected punches.</description>
+					<description>!! DEPRECATED !! Please use the feature 'additionals'. The number of affected punches.</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>punchesTested</name>
-					<description>The number of tested punches.</description>
+					<description>!! DEPRECATED !! Please use the feature 'additionals'. The number of tested punches.</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>maxPunchInfestation</name>
-					<description>The carcinoma infestation of the most severely affected punch (in %).</description>
+					<description>!! DEPRECATED !! Please use the feature 'additionals'. The carcinoma infestation of the most severely affected punch (in %).</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
@@ -177,7 +177,14 @@
 				</featureDescription>
 				<featureDescription>
 					<name>scores</name>
-					<description>List of different scores, e.g. GleasonScore, ClarkLevel.</description>
+					<description>!! DEPRECATED !! Please use the feature 'additionals'. List of different scores, e.g. GleasonScore, ClarkLevel.</description>
+					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
+					<elementType>de.averbis.extraction.types.CoreAnnotation</elementType>
+					<multipleReferencesAllowed>true</multipleReferencesAllowed>
+				</featureDescription>
+				<featureDescription>
+					<name>additionals</name>
+					<description>List of different additional pathology information, like biomarkers or organ-specific characteristics.</description>
 					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
 					<elementType>de.averbis.extraction.types.CoreAnnotation</elementType>
 					<multipleReferencesAllowed>true</multipleReferencesAllowed>
@@ -270,7 +277,7 @@
 				</featureDescription>
 				<featureDescription>
 					<name>thicknessAnnotation</name>
-					<description>Optional annotation representing the thickness of the skin tumor.</description>
+					<description>!! DEPRECATED !! Please use the feature 'additionals'. Optional annotation representing the thickness of the skin tumor.</description>
 					<rangeTypeName>de.averbis.textanalysis.types.health.LaboratoryValue</rangeTypeName>
 				</featureDescription>
 				<featureDescription>

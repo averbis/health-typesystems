@@ -1300,7 +1300,7 @@
 				</featureDescription>
 				<featureDescription>
 					<name>thickness</name>
-					<description>Information about the tumor thickness.</description>
+					<description>!! DEPRECATED !! Please use the feature 'additionals'. Information about the tumor thickness.</description>
 					<rangeTypeName>de.averbis.types.health.TumorThickness</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
@@ -1375,25 +1375,32 @@
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
+					<name>additionals</name>
+					<description>List of different additional pathology information, like biomarkers or organ-specific characteristics.</description>
+					<elementType>uima.tcas.Annotation</elementType>
+					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
+					<multipleReferencesAllowed>true</multipleReferencesAllowed>
+				</featureDescription>
+				<featureDescription>
 					<name>scores</name>
-					<description>List of different scores, e.g. Gleason Score, ClarkLevel.</description>
+					<description>!! DEPRECATED !! Please use the feature 'additionals'. List of different scores, e.g. Gleason Score, ClarkLevel.</description>
 					<rangeTypeName>de.averbis.types.health.PathologyScore</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>punchesAffected</name>
-					<description>The number of affected punches. Possible values: null or natural number.
+					<description>!! DEPRECATED !! Please use the feature 'additionals'. The number of affected punches. Possible values: null or natural number.
 					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>punchesTested</name>
-					<description>The number of tested punches. Possible values: null or natural number.
+					<description>!! DEPRECATED !! Please use the feature 'additionals'. The number of tested punches. Possible values: null or natural number.
 					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>maxPunchInfestation</name>
-					<description>The carcinoma infestation of the most severely affected punch (in %).
+					<description>!! DEPRECATED !! Please use the feature 'additionals'. The carcinoma infestation of the most severely affected punch (in %).
 						Possible values: null or natural number.
 					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
@@ -1403,7 +1410,7 @@
 
 		<typeDescription>
 			<name>de.averbis.types.health.PathologyScore</name>
-			<description>Grouping of pathological scores</description>
+			<description>!! DEPRECATED !! Please use the type 'PathologyAdditionalEntry'. Grouping of pathological scores</description>
 			<supertypeName>de.averbis.types.health.ExternalCoreAnnotation</supertypeName>
 			<features>
 				<featureDescription>
@@ -1446,6 +1453,43 @@
 				</featureDescription>
 			</features>
 		</typeDescription>
+
+		<typeDescription>
+			<name>de.averbis.types.health.PathologyAdditionalEntry</name>
+			<description>Grouping of different pathological additional information</description>
+			<supertypeName>de.averbis.types.health.ExternalCoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>name</name>
+					<description>The identifier of the additional information entry, e.g. 'gleasonScore', 'gleasonScoreOccasion', 'clarkLevel', 'p53', etc.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>value</name>
+					<description>The value of the additional information with different ranges based on the type.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>kind</name>
+					<description>The kind of the additional information, e.g. 'biomarker', 'score'.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>confidence</name>
+					<description>For approaches using machine learning, the confidence is calculated that the
+						respective annotation has been correctly generated.
+						Possible value range: 0-1.
+					</description>
+					<rangeTypeName>uima.cas.Double</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>supplementalValue</name>
+					<description>Optional, supplemental value that extends the value. For example in the case of a biomarker, the value could be 'POSITIVE' and the supplementalValue could contain a numerical information.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+
 		<typeDescription>
 			<name>de.averbis.types.health.PatientInformation</name>
 			<description>Patient information such as admission and discharge dates, the gender of the patient
@@ -1890,7 +1934,7 @@
 
 		<typeDescription>
 			<name>de.averbis.types.health.TumorThickness</name>
-			<description />
+			<description>>!! DEPRECATED !! Please use the type 'PathologyAdditionalEntry'.</description>
 			<supertypeName>de.averbis.types.health.ExternalCoreAnnotation</supertypeName>
 			<features>
 				<featureDescription>

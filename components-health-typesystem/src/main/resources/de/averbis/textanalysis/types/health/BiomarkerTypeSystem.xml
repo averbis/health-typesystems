@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+	<name>de.averbis.textanalysis.types.health.BiomarkerTypeSystem</name>
+	<description>Typesystem used to represent Biomarkers.</description>
+	<version>${project.version}</version>
+	<vendor>Averbis GmbH</vendor>
+	<imports>
+		<import name="de.averbis.extraction.types.AverbisTypeSystem" />
+	</imports>
+	<types>
+		
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.Biomarker</name>
+			<description>The biomarker mention.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>name</name>
+					<description>Standardized name of the biomarker, e.g. p16, KRAS, PD-L1.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>status</name>
+					<description>The status of the biomarker, i.e. POSITIVE, NEGATIVE, OTHER.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.Status</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>additionalInfo</name>
+					<description>Optional, additional info that further specifies the status with quantitative information.</description>
+					<rangeTypeName>de.averbis.extraction.types.CoreAnnotation</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+		
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.BiomarkerDocumentClassification</name>
+			<description>The classification of a biomarker regarding the whole document.</description>
+			<supertypeName>de.averbis.textanalysis.types.health.Biomarker</supertypeName>
+		</typeDescription>
+		
+	</types>
+</typeSystemDescription>

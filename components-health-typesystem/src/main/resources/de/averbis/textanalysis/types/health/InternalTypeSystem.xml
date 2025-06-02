@@ -23,6 +23,7 @@
 
 		<!-- Internal Health -->
 		<import name="de.averbis.textanalysis.types.health.AnatomyTypeSystem"/>
+		<import name="de.averbis.textanalysis.types.health.BiomarkerTypeSystem"/>
 		<import name="de.averbis.textanalysis.types.health.ClinicalSectionTypeSystem"/>
 		<import name="de.averbis.textanalysis.types.health.HealthTypeSystem"/>
 		<import name="de.averbis.textanalysis.types.health.DiagnosisTypeSystem"/>

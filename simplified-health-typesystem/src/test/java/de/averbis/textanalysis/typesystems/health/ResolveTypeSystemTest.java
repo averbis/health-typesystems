@@ -33,7 +33,7 @@ class ResolveTypeSystemTest {
 		var tsd = TypeSystemDescriptionFactory
 				.createTypeSystemDescription("de.averbis.types.health.SimplifiedHealthTypeSystem");
 		tsd.resolveImports();
-		assertThat(tsd.getTypes()).hasSize(87);
+		assertThat(tsd.getTypes()).hasSize(88);
 	}
 
 
