@@ -186,7 +186,7 @@
 					<name>additionals</name>
 					<description>List of different additional pathology information, like biomarkers or organ-specific characteristics.</description>
 					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
-					<elementType>de.averbis.extraction.types.CoreAnnotation</elementType>
+					<elementType>de.averbis.textanalysis.types.health.PathologyAdditionalEntry</elementType>
 					<multipleReferencesAllowed>true</multipleReferencesAllowed>
 				</featureDescription>
 				<featureDescription>
@@ -508,6 +508,38 @@
 					<name>maxInfestation</name>
 					<description>The result of the infestation of the most severely affected punch.</description>
 					<rangeTypeName>de.averbis.textanalysis.types.health.PunchesResult</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.textanalysis.types.health.PathologyAdditionalEntry</name>
+			<description>Grouping of different pathological additional information</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>name</name>
+					<description>The identifier of the additional information entry, e.g. 'gleasonScore', 'gleasonScoreOccasion', 'clarkLevel', 'p53', etc.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>value</name>
+					<description>The value of the additional information with different ranges based on the type.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>kind</name>
+					<description>The kind of the additional information, e.g. 'biomarker', 'score'.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>supplementalValue</name>
+					<description>Optional, supplemental value that extends the value. For example in the case of a biomarker, the value could be 'POSITIVE' and the supplementalValue could contain a numerical information.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>annotation</name>
+					<description>The underlying annotation of the additional entry.</description>
+					<rangeTypeName>de.averbis.extraction.types.CoreAnnotation</rangeTypeName>
 				</featureDescription>
 			</features>
 		</typeDescription>
