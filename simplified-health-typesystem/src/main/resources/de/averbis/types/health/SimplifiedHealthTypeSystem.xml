@@ -1060,6 +1060,20 @@
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
+					<name>indication</name>
+					<description>Indication of the medication. The indication is the reason why the
+						medication is prescribed.
+					</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>hint</name>
+					<description>Hint for the medication. The hint provides additional information about the
+						medication.
+					</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
 					<name>termTypes</name>
 					<description>Additional information on clinical drug, e.g. semantic clinical drug (RxNorm
 						TermType).
