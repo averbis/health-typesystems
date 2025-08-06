@@ -48,8 +48,8 @@ jobs:
         servers: |
           [{
             "id": "central", 
-            "username": "${MAVEN_CENTRAL_USERNAME}", 
-            "password": "${MAVEN_CENTRAL_PASSWORD}"
+            "username": "${env.MAVEN_CENTRAL_USERNAME}", 
+            "password": "${env.MAVEN_CENTRAL_PASSWORD}"
           },{
             "id": "github-parent-pom-typesystems", 
             "username": "${env.GITHUB_ACTOR}", 
