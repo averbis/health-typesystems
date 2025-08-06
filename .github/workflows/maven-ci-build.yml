@@ -80,6 +80,10 @@ jobs:
             "password": "${{ secrets.GITHUB_TOKEN }}"
           }]          
 
+    - name: Debug
+      shell: bash
+      run: cat ~/.m2/settings.xml 
+
     - name: Build with Maven
       shell: bash
       run: >
