@@ -15,6 +15,7 @@ on:
         description: 'Runner for runs-on'
         required: false
         type: string
+        default: 'ubuntu-latest'
 
 permissions:
   contents: write
