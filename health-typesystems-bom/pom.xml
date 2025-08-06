@@ -8,6 +8,7 @@
 	</parent>
 
 	<artifactId>health-typesystems-bom</artifactId>
+	<packaging>pom</packaging>
 
 	<dependencyManagement>
 		<dependencies>
