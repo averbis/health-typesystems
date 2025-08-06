@@ -1,0 +1,153 @@
+name: Maven release build
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_version:
+        description: 'Release Version'
+        required: true
+        type: string
+      next_version:
+        description: 'Next Version'
+        required: true
+        type: string
+      runner:
+        description: 'Runner for runs-on'
+        required: false
+        type: string
+
+permissions:
+  contents: write
+  checks: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    environment: release
+    runs-on: ${{ inputs.runner || 'ubuntu-latest' }}
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      with:
+        ref: ${{ github.head_ref || github.ref }}
+        lfs: true
+
+    - uses: actions/setup-java@c5195efecf7bdfc987ee8bae7a71cb8b11521c00 # v4.7.1
+      with:
+        distribution: temurin
+        java-version: 17
+        cache: maven
+    
+    - uses: s4u/maven-settings-action@64e42c454dbd42ef6370ac8539685755aedd205b # 3.1.0
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        servers: |
+          [{
+            "id": "central", 
+            "username": "${{ secrets.MAVEN_CENTRAL_USERNAME }}", 
+            "password": "${{ secrets.MAVEN_CENTRAL_PASSWORD }}"
+          },{
+            "id": "github-parent-pom-typesystems", 
+            "username": "${{ github.actor }}", 
+            "password": "${{ secrets.GITHUB_TOKEN }}"
+          },{
+            "id": "github-core-typesystems", 
+            "username": "${{ github.actor }}", 
+            "password": "${{ secrets.GITHUB_TOKEN }}"
+          }]          
+
+    - name: Get artifactId
+      id: get_artifact
+      run: |
+        ARTIFACT_ID=$(mvn help:evaluate -Dexpression=project.artifactId -q -DforceStdout)
+        echo "artifactId=$ARTIFACT_ID" >> $GITHUB_OUTPUT
+
+    - name: Fail if remote tag already exists
+      run: |
+        TAG_NAME="${{ steps.get_artifact.outputs.artifactId }}-${{ inputs.release_version }}"
+        echo "Checking if remote tag '$TAG_NAME' exists..."
+        if git ls-remote --tags origin "refs/tags/$TAG_NAME" | grep "$TAG_NAME"; then
+          echo "❌ Error: Remote tag '$TAG_NAME' already exists."
+          exit 1
+        else
+          echo "✅ Remote tag '$TAG_NAME' does not exist. Continuing..."
+        fi
+  
+    - name: Set git identity
+      shell: bash
+      run: |
+        git config user.name "${{ github.actor }}"
+        git config user.email "${{ github.actor }}@users.noreply.github.com"
+
+    - name: Import GPG key
+      shell: bash
+      env:
+        PGP_PRIVATE_KEY: ${{ secrets.PGP_PRIVATE_KEY }}
+      run: |
+        echo "$PGP_PRIVATE_KEY" | gpg --batch --import
+
+    - name: Prepare release
+      shell: bash
+      env:
+          MAVEN_GPG_PASSPHRASE: ${{ secrets.PGP_PRIVATE_KEY_SECRET }}
+      run: >
+        set -o pipefail &&
+        mvn release:prepare
+        --batch-mode
+        --no-transfer-progress
+        --fail-at-end
+        "-DreleaseVersion=${{ github.event.inputs.release_version }}"
+        "-DdevelopmentVersion=${{ github.event.inputs.next_version }}"
+        "-Darguments=--no-transfer-progress"
+        -DautoVersionSubmodules=true
+        -DpushChanges=false
+        2>&1 | tee mvn-build-prepare.log
+
+    - name: Publish test report
+      if: success() || failure() # always run even if the previous step fails
+      uses: mikepenz/action-junit-report@cf701569b05ccdd861a76b8607a66d76f6fd4857 # v5.5.1
+      with:
+        fail_on_failure: true
+        include_passed: false
+        check_name: |
+          Surefire Test Report
+          Failsafe Test Report
+        report_paths: |
+          **/target/surefire-reports/TEST-*.xml
+          **/target/failsafe-reports/TEST-*.xml
+
+    - name: Perform release
+      shell: bash
+      env:
+          MAVEN_GPG_PASSPHRASE: ${{ secrets.PGP_PRIVATE_KEY_SECRET }}
+      run: >
+        set -o pipefail &&
+        mvn release:perform
+        --batch-mode
+        -DlocalCheckout=true
+        -Pintegration
+        2>&1 | tee mvn-build-perform.log
+
+    - name: Push changes and tags to the repository
+      shell: bash
+      run: |
+        git push --follow-tags
+
+    - name: Capture mvn-build-prepare.log
+      if: success() || failure() # always run even if the previous step fails
+      uses: actions/upload-artifact@6f51ac03b9356f520e9adb1b1b7802705f340c2b # v4.5.0
+      with:
+        name: Maven Prepare Release Build Log
+        path: mvn-build-prepare.log
+
+    - name: Capture mvn-build-perform.log
+      if: success() || failure() # always run even if the previous step fails
+      uses: actions/upload-artifact@6f51ac03b9356f520e9adb1b1b7802705f340c2b # v4.5.0
+      with:
+        name: Maven Perform Release Build Log
+        path: mvn-build-perform.log
