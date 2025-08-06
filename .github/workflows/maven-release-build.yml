@@ -113,8 +113,6 @@ jobs:
       uses: mikepenz/action-junit-report@cf701569b05ccdd861a76b8607a66d76f6fd4857 # v5.5.1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        MAVEN_CENTRAL_USERNAME: ${{ secrets.MAVEN_CENTRAL_USERNAME }}
-        MAVEN_CENTRAL_PASSWORD: ${{ secrets.MAVEN_CENTRAL_PASSWORD }}
       with:
         fail_on_failure: true
         include_passed: false
@@ -128,7 +126,9 @@ jobs:
     - name: Perform release
       shell: bash
       env:
-          MAVEN_GPG_PASSPHRASE: ${{ secrets.PGP_PRIVATE_KEY_SECRET }}
+        MAVEN_GPG_PASSPHRASE: ${{ secrets.PGP_PRIVATE_KEY_SECRET }}
+        MAVEN_CENTRAL_USERNAME: ${{ secrets.MAVEN_CENTRAL_USERNAME }}
+        MAVEN_CENTRAL_PASSWORD: ${{ secrets.MAVEN_CENTRAL_PASSWORD }}
       run: >
         set -o pipefail &&
         mvn release:perform
