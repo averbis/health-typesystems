@@ -44,21 +44,22 @@ jobs:
     
     - uses: s4u/maven-settings-action@64e42c454dbd42ef6370ac8539685755aedd205b # 3.1.0
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        MAVEN_CENTRAL_USERNAME: ${{ secrets.MAVEN_CENTRAL_USERNAME }}
+        MAVEN_CENTRAL_PASSWORD: ${{ secrets.MAVEN_CENTRAL_PASSWORD }}
       with:
         servers: |
           [{
             "id": "central", 
-            "username": "${{ secrets.MAVEN_CENTRAL_USERNAME }}", 
-            "password": "${{ secrets.MAVEN_CENTRAL_PASSWORD }}"
+            "username": "${MAVEN_CENTRAL_USERNAME}", 
+            "password": "${MAVEN_CENTRAL_PASSWORD}"
           },{
             "id": "github-parent-pom-typesystems", 
-            "username": "${{ github.actor }}", 
-            "password": "${{ secrets.GITHUB_TOKEN }}"
+            "username": "${env.GITHUB_ACTOR}", 
+            "password": "${env.GITHUB_TOKEN}"
           },{
             "id": "github-core-typesystems", 
-            "username": "${{ github.actor }}", 
-            "password": "${{ secrets.GITHUB_TOKEN }}"
+            "username": "${env.GITHUB_ACTOR}", 
+            "password": "${env.GITHUB_TOKEN}"
           }]          
 
     - name: Get artifactId

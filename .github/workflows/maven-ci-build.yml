@@ -66,18 +66,16 @@ jobs:
         cache: maven
     
     - uses: s4u/maven-settings-action@64e42c454dbd42ef6370ac8539685755aedd205b # 3.1.0
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         servers: |
           [{
             "id": "github-parent-pom-typesystems", 
-            "username": "${{ github.actor }}", 
-            "password": "${{ secrets.GITHUB_TOKEN }}"
+            "username": "${env.GITHUB_ACTOR}", 
+            "password": "${env.GITHUB_TOKEN}"
           },{
             "id": "github-core-typesystems", 
-            "username": "${{ github.actor }}", 
-            "password": "${{ secrets.GITHUB_TOKEN }}"
+            "username": "${env.GITHUB_ACTOR}", 
+            "password": "${env.GITHUB_TOKEN}"
           }]          
 
     - name: Debug
