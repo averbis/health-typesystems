@@ -78,12 +78,10 @@ jobs:
             "password": "${env.GITHUB_TOKEN}"
           }]          
 
-    - name: Debug
-      shell: bash
-      run: cat ~/.m2/settings.xml 
-
     - name: Build with Maven
       shell: bash
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: >
         set -o pipefail &&
         mvn install
@@ -125,6 +123,8 @@ jobs:
         path: mvn-build.log
 
     - name: Deploy
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       if: |
         matrix.runner == 'ubuntu-latest' && (
         inputs.deploy-strategy == 'always' || 
