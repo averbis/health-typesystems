@@ -10,6 +10,10 @@
 	<artifactId>health-typesystems-bom</artifactId>
 	<packaging>pom</packaging>
 
+	<name>Averbis Health Type Systems :: BOM</name>
+	<description>Bill of materials</description>
+	<url>https://github.com/averbis/health-typesystems</url>
+
 	<dependencyManagement>
 		<dependencies>
 			<dependency>

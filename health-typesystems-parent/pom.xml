@@ -10,6 +10,9 @@
 	<artifactId>health-typesystems-parent</artifactId>
 	<packaging>pom</packaging>
 
+	<name>Averbis Health Type Systems :: Root</name>
+	<url>https://github.com/averbis/health-typesystems</url>
+
 	<properties>
 		<bnd-annotation-version>7.1.0</bnd-annotation-version>
 		<uima-version>3.6.0</uima-version>

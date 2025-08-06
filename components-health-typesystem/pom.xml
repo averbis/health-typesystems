@@ -10,7 +10,9 @@
 
 	<artifactId>components-health-typesystem</artifactId>
 
+	<name>Averbis Health Type Systems :: Internal Types</name>
 	<description>The type system of the health components</description>
+	<url>https://github.com/averbis/health-typesystems</url>
 	
 	<dependencies>
 		<dependency>

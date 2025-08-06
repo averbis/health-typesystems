@@ -10,6 +10,8 @@
 
 	<artifactId>simplified-health-typesystem</artifactId>
 
+	<name>Averbis Health Type Systems :: External Types</name>
+	<url>https://github.com/averbis/health-typesystems</url>
 	<description>Type system for simplified health annotations</description>
 	
 	<dependencies>
