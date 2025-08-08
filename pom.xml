@@ -73,27 +73,8 @@
 	<modules>
 		<module>health-typesystems-bom</module>
 		<module>health-typesystems-parent</module>
-
 		<module>components-health-typesystem</module>
 		<module>simplified-health-typesystem</module>
-
-<!--		<module>tnm-typesystem</module>-->
-<!--		<module>diagnosis-typesystem</module>-->
-<!--		<module>oncology-typesystem</module>-->
-<!--		<module>therapy-typesystem</module>-->
-<!--		<module>medication-typesystem</module>-->
-<!--		<module>observation-typesystem</module>-->
-<!--		<module>laboratory-value-typesystem</module>-->
-<!--		<module>clinical-section-typesystem</module>-->
-<!--		<module>medical-negation-typesystem</module>-->
-<!--		<module>patient-information-typesystem</module>-->
-<!--		<module>ehr-information-typesystem</module>-->
-<!--		<module>procedure-typesystem</module>-->
-<!--		<module>medical-disambiguation-typesystem</module>-->
-<!--		<module>pathology-typesystem</module>-->
-<!--		<module>phi-typesystem</module>-->
-<!--		<module>anatomy-typesystem</module>-->
-<!--		<module>internal-typesystem</module>-->
 	</modules>
 	
 	<build>
