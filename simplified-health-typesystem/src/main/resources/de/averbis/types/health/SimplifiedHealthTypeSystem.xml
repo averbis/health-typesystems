@@ -196,6 +196,28 @@
 		<!-- Health Annotations (alphabetically)  -->
 
 		<typeDescription>
+			<name>de.averbis.types.health.Allergy</name>
+			<description>A clinical allergy.</description>
+			<supertypeName>de.averbis.types.health.ExternalCoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>name</name>
+					<description>The name of the allergy.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>onsetDate</name>
+					<description>
+						The onset date of the allergy, if given in the text.
+						Format: YYYY-MM-DD:
+						Year-Month-Day with leading zeros (e.g. 2020-02-17)
+					</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+
+		<typeDescription>
 			<name>de.averbis.types.health.Anatomy</name>
 			<description>Contains information about anatomy, based on SNOMED-CT subtree.</description>
 			<supertypeName>de.averbis.types.health.Concept</supertypeName>
@@ -517,6 +539,44 @@
 				</featureDescription>
 			</features>
 		</typeDescription>
+
+		<typeDescription>
+			<name>de.averbis.types.health.PrincipalDiagnosis</name>
+			<description>A principal diagnosis of a patient.</description>
+			<supertypeName>de.averbis.types.health.ExternalCoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>conceptID</name>
+					<description>The id of the principal diagnosis.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>relevance</name>
+					<description>
+						The relevance score of the principal diagnosis.
+						The higher the score, the more relevant the diagnosis.
+					</description>
+					<rangeTypeName>uima.cas.Double</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>dictCanon</name>
+					<description>
+						An optional preferred term corresponding to the principal diagnosis conceptID.
+					</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>onsetDate</name>
+					<description>
+						The onset date of the diagnosis, if given in the text.
+						Format: YYYY-MM-DD:
+						Year-Month-Day with leading zeros (e.g. 2020-02-17)
+					</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+
 		<typeDescription>
 			<name>de.averbis.types.health.DoseForm</name>
 			<description>The type of dose form.</description>
@@ -1082,6 +1142,12 @@
 					<elementType>de.averbis.types.health.TTY</elementType>
 					<multipleReferencesAllowed>true</multipleReferencesAllowed>
 				</featureDescription>
+				<featureDescription>
+					<name>name</name>
+					<description>The simplified name of the medication. Usually a composition of brandname and ingredient dictCanons, without strength and dosage information.
+						For example 'Aspirin 1000mg' and 'Aspirin 100mg' should have the name 'Aspirin (Acetylsalicylsäure)'</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
 			</features>
 		</typeDescription>
 
@@ -1090,6 +1156,36 @@
 			<description>The ATC classification is an official classification for pharmacological substances.
 			</description>
 			<supertypeName>de.averbis.types.health.Concept</supertypeName>
+		</typeDescription>
+
+		<typeDescription>
+			<name>de.averbis.types.health.MedicationIndication</name>
+			<description>The relation between a medication and its indication.</description>
+			<supertypeName>de.averbis.types.health.ExternalCoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>medicationName</name>
+					<description>
+						The name of the medication.
+					</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>indication</name>
+					<description>
+						The reason for prescribing the medication.
+					</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>evidence</name>
+					<description>
+						The snippet in the document that supports the indication.
+						If no snippet is available, this feature may be empty or contain 'NO_EVIDENCE'.
+					</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+			</features>
 		</typeDescription>
 
 		<typeDescription>

@@ -84,6 +84,12 @@
 					<elementType>de.averbis.textanalysis.types.health.ATCCodeConcept</elementType>
 					<multipleReferencesAllowed>true</multipleReferencesAllowed>
 				</featureDescription>
+				<featureDescription>
+					<name>name</name>
+					<description>The simplified name of the medication. Usually a composition of brandname and ingredient dictCanons, without strength and dosage information.
+						For example 'Aspirin 1000mg' and 'Aspirin 100mg' should have the name 'Aspirin (Acetylsalicylsäure)'</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
 			</features>
 		</typeDescription>
 		<typeDescription>
