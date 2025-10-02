@@ -214,6 +214,13 @@
 					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
+				<featureDescription>
+					<name>evidence</name>
+					<description>
+						The snippet in the document that supports the allergy.
+					</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
 			</features>
 		</typeDescription>
 
@@ -556,7 +563,7 @@
 						The relevance score of the principal diagnosis.
 						The higher the score, the more relevant the diagnosis.
 					</description>
-					<rangeTypeName>uima.cas.Double</rangeTypeName>
+					<rangeTypeName>uima.cas.Integer</rangeTypeName>
 				</featureDescription>
 				<featureDescription>
 					<name>dictCanon</name>
@@ -571,6 +578,13 @@
 						The onset date of the diagnosis, if given in the text.
 						Format: YYYY-MM-DD:
 						Year-Month-Day with leading zeros (e.g. 2020-02-17)
+					</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>evidence</name>
+					<description>
+						The snippet in the document that supports the principal diagnosis.
 					</description>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>
